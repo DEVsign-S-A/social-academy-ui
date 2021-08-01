@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { SocialAcademyApp } from './SocialAcademyApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hola Mundo</h1>
+    <SocialAcademyApp/>
   </React.StrictMode>,
   document.getElementById('root')
 );
