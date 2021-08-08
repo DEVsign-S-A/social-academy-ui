@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+//, Redirect
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { Navbar } from '../Components/UI/Navbar';
 //import { NavbarAuth } from '../Components/UI/NavbarAuth';
 import AboutScreen from '../Views/AboutScreen';
