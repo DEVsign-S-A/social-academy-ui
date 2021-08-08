@@ -9,8 +9,8 @@ export const AboutUs = () => {
         <h2>Quienes Somos</h2>
         <div className="section-title"></div>
       </div>
-      <div className="flex flex justify-between">
-      <div className='mx-10 bg-gray-100 flex items-center py-10 rounded-full shadow-2xl -mt-16'>
+      <div className="flex justify-between">
+      <div className='mx-10 bg-gray-100 flex items-center py-16 rounded-full shadow-2xl -mt-16'>
           <img src={Logo} alt="Logo Social Academy" className='LogoImg'/>
       </div>
         <div className="mx-10 text-gray-500 text-xl">
