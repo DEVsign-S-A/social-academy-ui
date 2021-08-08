@@ -1,0 +1,40 @@
+#ImageBanner{
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.content-image{
+    background-image: url(../../assets/UI-About/patternBG.png);
+    background-size: cover;
+}
+
+.section-title{
+    content: "";
+    width: 64px;
+    height: 0.20rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    border-radius: 15px;
+    background-color: rgb(107, 118, 182);
+}
+
+.letterLine{
+    line-height: 35px;
+    text-align: justify;
+}
+
+.LogoImg{
+    width: 1500px;
+}
