@@ -14,8 +14,9 @@
 }
 
 .content-image{
-    background-image: url(../../assets/UI-About/patternBG.png);
-    background-size: cover;
+    background-image: url(../../assets/UI-About/Abract01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .section-title{
