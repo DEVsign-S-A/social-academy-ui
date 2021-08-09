@@ -1,0 +1,58 @@
+footer{
+    margin-top: 5%;
+    background-color: $GrisOscuro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    
+    .footer__Logo{
+        width: 25%;
+    }
+
+    .Enlaces{
+        width: 35%;
+        margin-top: 2%;
+
+        .Enlace{
+            color: lightgrey;
+            font-family: $Montserrat;
+            font-size: 1.5vw;
+            transition: .2s;
+
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+    .SocialBar{
+        width: 20%;
+        margin: 2% 0;
+
+        .media{
+            width: 3.2vw;
+            height: 3.2vw;
+            font-size: 1.5vw;
+            color: lightgrey;
+            border: lightgrey solid 2px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .2s;
+
+            &:hover{
+                border: white solid 2px;
+                color: white;
+            }
+        }
+    }
+
+    h1{
+        font-size: 1.2vw;
+        color: white;
+        font-family: $Montserrat;
+    }
+}
