@@ -1,0 +1,170 @@
+footer{
+    margin-top: 5%;
+    background-color: $GrisOscuro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
+    
+    .footer__Logo{
+        width: 20%;
+    }
+
+    .Enlaces{
+        width: 35%;
+        margin-top: 3%;
+
+        .Enlace{
+            color: lightgrey;
+            font-family: $Montserrat;
+            font-size: 1.4vw;
+            transition: .2s;
+
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+    .SocialBar{
+        width: 20%;
+        margin: 3% 0;
+
+        .media{
+            width: 3vw;
+            height: 3vw;
+            font-size: 1.3vw;
+            color: lightgrey;
+            border: lightgrey solid 2px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .2s;
+
+            &:hover{
+                border: white solid 2px;
+                color: white;
+            }
+        }
+    }
+
+    h1{
+        font-size: 1vw;
+        color: white;
+        font-family: $Montserrat;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    footer{
+        padding: 3%;
+        
+        .footer__Logo{
+            width: 25%;
+        }
+    
+        .Enlaces{
+            width: 40%;
+    
+            .Enlace{
+                font-size: 2vw;
+            }
+        }
+    
+        .SocialBar{
+            width: 25%;
+    
+            .media{
+                width: 4vw;
+                height: 4vw;
+                font-size: 2vw;
+            }
+        }
+    
+        h1{
+            font-size: 1.5vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    footer{
+        margin-top: 5%;
+        padding: 4%;
+        
+        .footer__Logo{
+            width: 30%;
+        }
+    
+        .Enlaces{
+            width: 50%;
+            margin-top: 3%;
+    
+            .Enlace{
+                font-size: 2.7vw;
+            }
+        }
+    
+        .SocialBar{
+            width: 35%;
+            margin: 3% 0;
+    
+            .media{
+                width: 5.7vw;
+                height: 5.7vw;
+                font-size: 2.7vw;
+                border: lightgrey solid 2px;
+    
+                &:hover{
+                    border: white solid 2px;
+                }
+            }
+        }
+    
+        h1{
+            font-size: 2.1vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    footer{
+        margin-top: 5%;
+        padding: 5%;
+        
+        .footer__Logo{
+            width: 40%;
+        }
+    
+        .Enlaces{
+            width: 70%;
+            margin-top: 5%;
+    
+            .Enlace{
+                font-size: 3.8vw;
+            }
+        }
+    
+        .SocialBar{
+            width: 45%;
+            margin: 5% 0;
+    
+            .media{
+                width: 7.3vw;
+                height: 7.3vw;
+                font-size: 3.7vw;
+                border: lightgrey solid 2px;
+    
+                &:hover{
+                    border: white solid 2px;
+                }
+            }
+        }
+    
+        h1{
+            font-size: 2.7vw;
+        }
+    }
+}
