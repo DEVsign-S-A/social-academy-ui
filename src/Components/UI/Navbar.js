@@ -86,7 +86,7 @@ export const Navbar = () => {
             }
           </NavLink>
 
-          <NavLink exact to="/Pasantias">
+          <NavLink exact to="/Pasantias" >
             {
               <div className="iconP cursor-pointer flex items-center font-md p-1 mt-2">
                 <img
