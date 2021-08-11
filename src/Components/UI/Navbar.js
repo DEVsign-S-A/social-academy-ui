@@ -21,13 +21,16 @@ export const Navbar = () => {
 
         <div className="hidden md:flex transition-all ease-in-out duration-700">
           <Link to="/Inicio">
-            <div className="iconN cursor-pointer flex items-center p-2">
+            <div className="iconI cursor-pointer flex items-center p-2">
               <img
                 className="w-7 mx-5"
                 src={`./assets/ICONS/HOME.svg`}
                 alt="icon-user"
               />
-              <div className='tooltip'>Inicio</div>
+              <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                <div class="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+                Inicio
+              </div>
             </div>
           </Link>
 
@@ -39,7 +42,10 @@ export const Navbar = () => {
                   src={`./assets/ICONS/FOROS.svg`}
                   alt="icon-user"
                 />
-              <div className='tooltip'>Foros</div>
+              <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                <div class="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+                Foros
+              </div>
               </div>
             }
           </NavLink>
@@ -52,46 +58,55 @@ export const Navbar = () => {
                   src={`./assets/ICONS/CURSOS.svg`}
                   alt="icon-user"
                 />
-                <div className='tooltip'>Cursos</div>
+                <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div class="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+                  About
+                </div>               
               </div>
             }
           </NavLink>
 
           <NavLink exact to="/Login">
             {
-              <div className="iconL cursor-pointer flex items-center text-white font-md p-2 mt-1">
+              <div className="iconL cursor-pointer flex items-center font-md p-2 mt-1">
                 <img
                   className="w-8 mx-5"
                   src={`./assets/ICONS/LOGIN.svg`}
                   alt="icon-user"
                 />
-                <div className='tooltip'>Login</div>
+               <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div class="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+                  Login
+                </div>               
               </div>
             }
           </NavLink>
 
           <NavLink exact to="/Pasantias">
             {
-              <div className="iconP cursor-pointer flex items-center">
+              <div className="iconP cursor-pointer flex items-center font-md p-1 mt-2">
                 <img
-                  className="w-8 mx-5"
+                  className="w-6 mx-5"
                   src={`./assets/ICONS/PASANTIAS.svg`}
                   alt="icon-user"
                 />
-                <div className='tooltip'>Pasantias</div>
+                
+                <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-2 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div class="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+                  Pasantias
+                </div>
               </div>
             }
           </NavLink>
 
           <NavLink exact to="/Cursos">
             {
-              <div className="iconC cursor-pointer flex items-center">
+              <div className="iconC cursor-pointer flex items-center font-md p-2 mt-2">
                 <img
-                  className="w-8 mx-5"
+                  className="w-7 mx-5"
                   src={`./assets/ICONS/Filter.svg`}
                   alt="icon-user"
-                />
-                <div className='tooltip'>Cursos</div>
+                />    
               </div>
             }
           </NavLink>
@@ -103,7 +118,10 @@ export const Navbar = () => {
                   src={`./assets/ICONS/APRENDE.svg`}
                   alt="icon-user"
                 />
-                <div className='tooltip'>Aprende</div>
+               <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-3 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div class="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
+                  Recursos
+                </div>
               </div>
             }
           </NavLink>
