@@ -1,0 +1,98 @@
+#ImageBanner {
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(-3.5rem);
+    }
+}
+
+/*
+.content-image{
+     background-image: url(../../assets/UI-About/11.png);
+    background-size: 65vh; 
+    
+}
+*/
+
+.section-title {
+    content: "";
+    width: 64px;
+    height: 0.20rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    border-radius: 15px;
+    background-color: rgb(107, 118, 182);
+}
+
+.letterLine {
+    line-height: 35px;
+    text-align: justify;
+}
+
+.LogoImg {
+    width: 1500px;
+}
+.bannerMision{
+    background-image: url(../../assets/UI-About/11.png);
+    background-size: cover;
+}
+
+.imgMision{
+    width: 1800px;
+}
+
+/***Azul**/
+.BeforeConatiner{
+    @apply bg-BlueSocial w-60 h-72 flex flex-col justify-center items-center rounded-xl transition-all duration-500 ease-in
+}
+
+.BeforeConatinerBlank{
+    @apply bg-white w-60 h-72 flex flex-col justify-center items-center transition-all duration-500 ease-in
+
+}
+
+.BeforeRoundedConatiner{
+    @apply w-14 h-14 bg-BlueSocial top-6 text-white relative rounded-full flex flex-col justify-center items-center  transition-all duration-500 ease-in
+}
+
+.BeforeRoundedConatinerBlank{
+    @apply w-14 h-14 bg-white top-6 text-white relative flex flex-col justify-center items-center  transition-all duration-500 ease-in
+}
+
+/***YellowSocial**/
+.BeforeConatinerYellow{
+    @apply bg-YellowSocial w-60 h-72 flex flex-col justify-center items-center rounded-xl transition-all duration-500 ease-in
+}
+
+.BeforeRoundedConatinerYellow{
+    @apply w-14 h-14 bg-YellowSocial top-6 text-white relative rounded-full flex flex-col justify-center items-center  transition-all duration-500 ease-in
+}
+
+/***SkySocial**/
+.BeforeConatinerSky{
+    @apply bg-SkySocial w-60 h-72 flex flex-col justify-center items-center rounded-xl transition-all duration-500 ease-in
+}
+
+.BeforeRoundedConatinerSky{
+    @apply w-14 h-14 bg-SkySocial top-6 text-white relative rounded-full flex flex-col justify-center items-center  transition-all duration-500 ease-in
+}
+
+/***GreenSocial**/
+.BeforeConatinerGreen{
+    @apply bg-GreenSocial w-60 h-72 flex flex-col justify-center items-center rounded-xl transition-all duration-500 ease-in
+}
+
+.BeforeRoundedConatinerGreen{
+    @apply w-14 h-14 bg-GreenSocial top-6 text-white relative rounded-full flex flex-col justify-center items-center  transition-all duration-500 ease-in
+}

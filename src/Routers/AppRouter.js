@@ -2,7 +2,6 @@ import React from 'react';
 //, Redirect
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { Footer } from '../Components/UI/Footer/Footer';
-
 import { Navbar } from '../Components/UI/Navbar';
 //import { NavbarAuth } from '../Components/UI/NavbarAuth';
 import AboutScreen from '../Views/AboutScreen';
