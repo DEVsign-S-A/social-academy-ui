@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './sass-styles/styles.scss'
 import { SocialAcademyApp } from './SocialAcademyApp';
 
 ReactDOM.render(
