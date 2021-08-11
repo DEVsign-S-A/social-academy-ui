@@ -14,8 +14,16 @@ module.exports = {
     extend:{
       colors:{
         primary: "#24345F",
-        second: "#DB255D"
-      }
+        second: "#DB255D",
+        BlueSocial: '#409FFF',
+        GreenSocial: "#3DCC79",
+        SkySocial: "#22CCE2",
+        YellowSocial: "#FFD454"
+      },
+      fontFamily: {
+        Poppins: ['Poppins'],
+        Montserrat: ['Montserrat'],
+      },
     },
   },
   variants: {
