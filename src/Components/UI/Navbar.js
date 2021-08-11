@@ -8,7 +8,11 @@ export const Navbar = () => {
     <>
       <nav className="flex items-center justify-between flex-wrap bg-primary overflow-hidden shadow-xl transition-all ease-in-out duration-700">
         <div className="flex text-white font-bold text-2xl m-5">
-          Social Academy
+          <img
+            className="w-9/12 mx-0"
+            src={`./assets/ICONS/SOCIALACADEMY_LOGO.svg`}
+            alt="icon-user"
+          />
         </div>
 
         <div className="flex md:hidden">
@@ -82,7 +86,7 @@ export const Navbar = () => {
             }
           </NavLink>
 
-          <NavLink exact to="/Pasantias">
+          <NavLink exact to="/Pasantias" >
             {
               <div className="iconP cursor-pointer flex items-center font-md p-1 mt-2">
                 <img
