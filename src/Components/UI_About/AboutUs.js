@@ -13,7 +13,7 @@ export const AboutUs = () => {
       <div className="flex justify-between">
       <div>
       <div className='mx-10 bg-gray-50 border-2 border-gray-200 flex items-center rounded-full shadow-2xl -mt-28'>
-          <img src={Logo} alt="Logo Social Academy" className='LogoImg py-20'/>
+          <img src={Logo} alt="Logo Social Academy" className='LogoImg py-16 px-6'/>
       </div>
       </div>
 

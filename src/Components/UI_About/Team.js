@@ -33,9 +33,9 @@ export const Team = () => {
 
         <div className="grid grid-cols-2 grid-rows-2 gap-4 w-2/3 mt-8 mx-5">
           
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around">
+          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
             <div>
-              <p className="font-Montserrat font-bold text-gray-600 mt-5">
+              <p className="font-Montserrat font-bold text-gray-600 mt-5 ">
                 Jeisson Ñurinda
               </p>
               <br />
@@ -62,7 +62,7 @@ export const Team = () => {
             </div>
           </div>
 
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around">
+          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
             <div>
               <p className="font-Montserrat font-bold text-gray-600 mt-5">
                 Kevin García
@@ -86,7 +86,7 @@ export const Team = () => {
             </div>
           </div>
 
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around">
+          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
             <div>
               <p className="font-Montserrat font-bold text-gray-600 mt-7">
                 Genesis
@@ -115,10 +115,10 @@ export const Team = () => {
             </div>
           </div>
 
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around">
+          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
             <div>
               <p className="font-Montserrat font-bold text-gray-600 mt-5">
-                Maria
+                María
               </p>
               <br />
               <p className="font-Poppins font-medium text-gray-600">

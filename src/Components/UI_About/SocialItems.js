@@ -2,7 +2,7 @@ import React from 'react'
 
 export const SocialItems = ({path, enlace}) => {
     return (
-        <div className ="hover:text-gray-700">
+        <div className ="hover:text-gray-600">
             <a href = {enlace} 
                 target="_blank" 
                 rel="noopener noreferrer">

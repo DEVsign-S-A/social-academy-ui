@@ -58,33 +58,29 @@ export const Reason = () => {
 						</div>
 					</div>
 
-                    <div className="flex flex-col justify-center items-center mx-10">
-                        <div className="shadow-lg border-2 px-5 py-4 border-gray-200 rounded-full w-28">
-                            <img src={Mochila} alt="Schoolback" />
-                        </div>
-    
-                        <div className="flex flex-col justify-center items-center mt-4">
-                            <p className="text-xs font-medium text-center text-gray-700">
-                                Un ambiente en el
-                                <br />
-                                que puedes proyectarte
-                                <br />
-                                hacia un mejor futuro
-                            </p>
-                        </div>
-                    </div>
+					<div className="flex flex-col justify-center items-center mx-10">
+						<div className="shadow-lg border-2 px-5 py-4 border-gray-200 rounded-full w-28">
+							<img src={Mochila} alt="Schoolback" />
+						</div>
+
+						<div className="flex flex-col justify-center items-center mt-4">
+							<p className="text-xs font-medium text-center text-gray-700">
+								Un ambiente en el
+								<br />
+								que puedes proyectarte
+								<br />
+								hacia un mejor futuro
+							</p>
+						</div>
+					</div>
 				</div>
 
-
-				<div className="text-gray-500 mt-14 text-xl letterLine font-Montserrat">
+				<div className="text-gray-500 mt-14 text-xl letterLine font-Montserrat text-center">
 					<p>
 						<span className="font-bold">Razones &nbsp;</span>
-						por las cuales
-						<br />
-						somos la mejor plataforma
-						<br />
-						educativa de comunicación
-						<br />y colaboración en Nicaragua
+						<br/>por las cuales somos la mejor plataforma 
+						<br/>educativa de comunicación y colaboración
+						 <br/> en Nicaragua
 					</p>
 				</div>
 			</div>
