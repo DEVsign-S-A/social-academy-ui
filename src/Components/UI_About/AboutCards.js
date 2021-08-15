@@ -4,24 +4,29 @@ import Evaluation from "../../assets/UI-About/Evaluation.svg";
 import Diploma from "../../assets/UI-About/Diploma.svg";
 import Rating from "../../assets/UI-About/Rating.svg";
 import "./style.css";
-export const Cita = () => {
+export const Cita = ({cita, autor, image}) => {
+
+  
+
   return (
     <>
       <div className="mt-24 flex flex-col justify-center items-center mx-10 mb-16">
-        <div className="p-5 mx-28 bg-gray-50 shadow-lg rounded-xl my-3 font-Poppins">
-          <p className="font-normal text-lg text-gray-500 text-center">
-            <span className="font-extrabold text-xl">"</span>El aprendizaje
-            activo, controlado por el propio alumno, empieza también cuando damos
-            a cada uno libertad para determinar dónde y cuándo van a aprender. 
-            Ahí reside la belleza de internet y de los ordenadores.
+        <div className="p-5 mx-28 bg-gray-50 ring-2 ring-gray-100 shadow-lg rounded-xl my-3 font-Poppins">
+          <p className="font-normal text-lg text-gray-500 text-center mt-4">
+            <span className="font-extrabold text-xl">"</span>
+            {cita}
             <span className="font-extrabold text-xl">"</span>
             <br />
             <br />
             <span className="text-center font-light font-Montserrat">
-              Rancière, J. (2003) El maestro ignorante. Barcelona Laertes
-              Educación.
+              {autor}
             </span>
           </p>
+          <img
+            src={image}
+            alt='Autor'
+            className="rounded-full w-16 float-right relative mb-4 mr-3"
+          />
         </div>
       </div>
     </>
@@ -63,7 +68,7 @@ export const AboutCards = () => {
             setDivModal3(false);
             setDivModal2(false);
             setDivModal(false);
-            break;
+            break; 
         default:
             break;
     }
@@ -72,12 +77,12 @@ export const AboutCards = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-center items-center font-Poppins">
+      <div className="flex flex-row justify-center items-center font-Poppins mx-10">
         <div className={`${ divModal ? 'BeforeConatiner' : 'BeforeConatinerBlank'}`}>
           <div className={`${ divModal ? 'BeforeRoundedConatiner' : 'BeforeRoundedConatinerBlank'}`}>
               1
           </div>
-          <div className="shadow-xl cursor-pointer w-56 h-52 bg-white flex flex-col justify-center items-center">
+          <div className="shadow-xl rounded-xl cursor-pointer w-56 h-52 bg-white flex flex-col justify-center items-center">
             <img
               src={Presentation}
               alt="icono"
@@ -96,7 +101,7 @@ export const AboutCards = () => {
           <div className={`${ divModal2 ? 'BeforeRoundedConatinerYellow' : 'BeforeRoundedConatinerBlank'}`}>
               2
           </div>
-          <div className="shadow-xl cursor-pointer w-56 h-52 bg-white flex flex-col justify-center items-center">
+          <div className="shadow-xl rounded-xl cursor-pointer w-56 h-52 bg-white flex flex-col justify-center items-center">
             <img
               src={Evaluation}
               alt="icono"
@@ -114,7 +119,7 @@ export const AboutCards = () => {
           <div className={`${ divModal3 ? 'BeforeRoundedConatinerSky' : 'BeforeRoundedConatinerBlank'}`}>
               3
           </div>
-          <div className="shadow-xl cursor-pointer w-56 h-52 bg-white flex flex-col justify-center items-center pt-5">
+          <div className="shadow-xl rounded-xl cursor-pointer w-56 h-52 bg-white flex flex-col justify-center items-center pt-5">
             <img
               src={Diploma}
               alt="icono"
@@ -132,7 +137,7 @@ export const AboutCards = () => {
           <div className={`${ divModal4 ? 'BeforeRoundedConatinerGreen' : 'BeforeRoundedConatinerBlank'}`}>
               4
           </div>
-          <div className="shadow-xl cursor-pointe w-56 h-52 bg-white flex flex-col justify-center items-center pt-4">
+          <div className="shadow-xl rounded-xl cursor-pointe w-56 h-52 bg-white flex flex-col justify-center items-center pt-4">
             <img
               src={Rating}
               alt="icono"
