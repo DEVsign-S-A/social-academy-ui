@@ -8,7 +8,7 @@ export const Reason = () => {
 	return (
 		<>
 			<div className="flex justify-around mt-20">
-				<div className="flex center justify-center items-center justify-items-center font-Poppins">
+				<div className="flex center justify-center items-center justify-items-center font-Poppins select-none">
 					<div className="flex flex-col justify-center items-center px-5 m-5">
 						<div className="shadow-lg border-2 border-gray-200 px-5 py-4 rounded-full w-28">
 							<img src={libros} alt="Libros" className="" />

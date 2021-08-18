@@ -1,0 +1,24 @@
+.card__inner{
+    width: 100%;
+    height: 100%;
+    transition: all ease .7s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped{
+    transform: rotateX(180deg);
+}
+.card__face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.face__card-back{
+    transform: rotateX(180deg);
+}

@@ -77,7 +77,7 @@ export const AboutCards = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-center items-center font-Poppins mx-10">
+      <div className="flex flex-row justify-center items-center font-Poppins mx-10 select-none">
         <div className={`${ divModal ? 'BeforeConatiner' : 'BeforeConatinerBlank'}`}>
           <div className={`${ divModal ? 'BeforeRoundedConatiner' : 'BeforeRoundedConatinerBlank'}`}>
               1
