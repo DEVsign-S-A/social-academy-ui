@@ -7,21 +7,28 @@ export const FormCompany = () => {
         <form>
 
             <div className='flex'>
-                <p>Nombre: </p>
+                <p>Nombre de la Empresa: </p>
                 <input
                     type='text'
                 />
             </div>
 
             <div className='flex'>
-                <p>Apellidos: </p>
+                <p>Dirección: </p>
                 <input
                     type='text'
                 />
             </div>
 
             <div className='flex'>
-                <p>Email: </p>
+                <p>Ciudad: </p>
+                <input
+                    type='text'
+                />
+            </div>
+
+            <div className='flex'>
+                <p>Departamento: </p>
                 <input
                     type='text'
                 />
@@ -34,11 +41,11 @@ export const FormCompany = () => {
                 />
             </div>
 
-
-
-            <div className='flex'>
-                <p>Mensaje: </p>
-               <textarea></textarea>
+ <div className='flex'>
+                <p>Correo Electronico: </p>
+                <input
+                    type='email'
+                />
             </div>
 
             <div className='flex'>
@@ -46,6 +53,12 @@ export const FormCompany = () => {
                <textarea></textarea>
             </div>
 
+
+ <input
+                value='Enviar'
+                type='submit'
+            />
+          
         </form>
 
     </div>

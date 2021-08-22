@@ -23,7 +23,7 @@
 
 .content-image2{
     background-image: url(../../assets/UI-About/00.svg);
-   background-size: contain; 
+   background-size: cover; 
    transform: rotateX(180deg);
 }
 .root{

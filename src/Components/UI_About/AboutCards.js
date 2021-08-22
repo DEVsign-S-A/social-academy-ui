@@ -137,7 +137,7 @@ export const AboutCards = () => {
           <div className={`${ divModal4 ? 'BeforeRoundedConatinerGreen' : 'BeforeRoundedConatinerBlank'}`}>
               4
           </div>
-          <div className="shadow-xl rounded-xl cursor-pointe w-56 h-52 bg-white flex flex-col justify-center items-center pt-4">
+          <div className="shadow-xl rounded-xl cursor-pointer w-56 h-52 bg-white flex flex-col justify-center items-center pt-4">
             <img
               src={Rating}
               alt="icono"
