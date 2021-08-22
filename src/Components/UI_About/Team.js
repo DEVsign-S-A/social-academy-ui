@@ -18,10 +18,15 @@ export const Team = () => {
       nombre: 'Kevin García',
       cargo: 'Co-Founder & CTO',
       image: 'https://res.cloudinary.com/devsing/image/upload/v1629260403/IMG_20210410_113432_zt0jxq.jpg',
+<<<<<<< HEAD
       description: "Un simple desarrollador, con aspiraciones y sueños que lo superan.",
       cita: `Things happen, but we don't really know why.
         If it's supposed to be like this. 
         Why do most of us ignore the chance to miss?... BFMV (2005)`
+=======
+      description: "Un simple desarrollador, con aspiraciones que lo superan.",
+      cita: `"Things happen, but we don't really know why if it's supposed to be like this. Why do most of us ignore the chance to miss?... BFMV (2005)"`
+>>>>>>> 6ad3ea5fed0ece44cc225918663844bb97e3ec46
     },
     {
       id: 3,
