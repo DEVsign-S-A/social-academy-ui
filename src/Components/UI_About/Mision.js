@@ -11,12 +11,9 @@ export const Mision = () => {
 
       <div className="flex justify-between">
         {" "}
-        <div className="mx-10 text-gray-500 text-xl font-Poppins">
+        <div className="mt-16 mx-10 text-gray-500 text-xl font-Poppins">
           <p className="letterLine">
-            <br />
-            <br />
-            <br />
-            <br />
+
             Brindar a los estudiantes una plataforma en la que encuentren la
             información que necesitan para su formación profesional con
             distintos perfiles académicos, por medio de secciones con

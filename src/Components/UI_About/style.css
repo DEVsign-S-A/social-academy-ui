@@ -15,13 +15,21 @@
     }
 }
 
-/*
+
 .content-image{
-     background-image: url(../../assets/UI-About/11.png);
-    background-size: 65vh; 
-    
+     background-image: url(../../assets/UI-About/00.svg);
+    background-size: contain; 
 }
-*/
+
+.content-image2{
+    background-image: url(../../assets/UI-About/00.svg);
+   background-size: cover; 
+   transform: rotateX(180deg);
+}
+.root{
+   transform: rotateX(180deg);
+}
+
 
 .section-title {
     content: "";

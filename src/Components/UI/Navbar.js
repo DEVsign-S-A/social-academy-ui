@@ -105,12 +105,16 @@ export const Navbar = () => {
 
           <NavLink exact to="/Cursos">
             {
-              <div className="iconC cursor-pointer flex items-center font-md p-2 mt-2">
+              <div className="iconR cursor-pointer flex items-center font-md p-2 mt-2">
                 <img
-                  className="w-7 mx-5"
-                  src={`./assets/ICONS/Filter.svg`}
+                  className="w-8 mx-5"
+                  src={`./assets/ICONS/videos.svg`}
                   alt="icon-user"
-                />    
+                />
+               <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-3 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
+                  Cursos
+                </div>
               </div>
             }
           </NavLink>

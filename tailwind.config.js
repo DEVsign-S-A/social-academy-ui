@@ -18,7 +18,8 @@ module.exports = {
         BlueSocial: '#409FFF',
         GreenSocial: "#3DCC79",
         SkySocial: "#22CCE2",
-        YellowSocial: "#FFD454"
+        YellowSocial: "#FFD454",
+        WhiteSocial: "#fafafa"
       },
       fontFamily: {
         Poppins: ['Poppins'],
