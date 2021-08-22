@@ -1,16 +1,44 @@
 import React from "react";
-import kevin from "../../assets/UI-About/IMG_20210410_113432.jpg";
-import jeisson from "../../assets/UI-About/72113139.jpg";
-import maria from "../../assets/UI-About/pexels-fauxels-3182759.jpg";
-import genesis from "../../assets/UI-About/51d51b7b-c792-4831-b8e2-e7ec4dcbaf5a.jpg";
-import { SocialItems } from "./SocialItems";
+import { TeamCards } from "./TeamCards";
+
 
 export const Team = () => {
-  const socialMedia = [
-    { id: 1, path: "fab fa-facebook-f", enlace: "https://www.facebook.com/" },
-    { id: 2, path: "fab fa-twitter", enlace: "https://www.twitter.com/" },
-    { id: 3, path: "fab fa-instagram", enlace: "https://www.instagram.com/" },
-    { id: 4, path: "fab fa-linkedin-in", enlace: "https://www.youtube.com/" },
+
+
+  const MembersTeam = [
+    {
+      id: 1,
+      nombre: 'Jeisson Ñurinda',
+      cargo: 'Co-Founder & CEO',
+      image: 'https://res.cloudinary.com/devsing/image/upload/v1629260402/72113139_zaw6km.jpg',
+      description: ""
+    },
+    {
+      id: 2,
+      nombre: 'Kevin García',
+      cargo: 'Co-Founder & CTO',
+      image: 'https://res.cloudinary.com/devsing/image/upload/v1629260403/IMG_20210410_113432_zt0jxq.jpg',
+      description: "Un simple desarrollador, con aspiraciones y sueños que lo superan.",
+      cita: `Things happen, but we don't really know why.
+        If it's supposed to be like this. 
+        Why do most of us ignore the chance to miss?... BFMV (2005)`
+    },
+    {
+      id: 3,
+      nombre: 'Genesis',
+      cargo: 'CIO - Chief Innovation Officer',
+      image: 'https://res.cloudinary.com/devsing/image/upload/v1629260402/51d51b7b-c792-4831-b8e2-e7ec4dcbaf5a_tiz8wl.jpg',
+      description: ""
+    },
+    {
+      id: 4,
+      nombre: 'Maria',
+      cargo: 'CMO - Chief Marketing Officer',
+      image:'../../assets/UI-About/pexels-fauxels-3182759.jpg',
+      description: ""
+
+    },
+    
   ];
 
   return (
@@ -31,113 +59,16 @@ export const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-2/3 mt-8 mx-5">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-2/3 mt-8 mx-5 select-none">
           
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
-            <div>
-              <p className="font-Montserrat font-bold text-gray-600 mt-5 ">
-                Jeisson Ñurinda
-              </p>
-              <br />
-              <p className="font-Poppins font-medium text-gray-600">
-                Co-Founder & CEO
-              </p>
-              <div className="flex-row mt-5 text-gray-400 text-lg">
-                {socialMedia.map((media) => (
-                  <SocialItems
-                    key={media.id}
-                    path={media.path}
-                    enlace={media.enlace}
+        {
+          MembersTeam.map((member) => (
+                  <TeamCards
+                    key={member.id}
+                    {...member}
                   />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <img
-                src={jeisson}
-                alt="Kevin"
-                className="rounded-full w-24 mt-9"
-              />
-            </div>
-          </div>
-
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
-            <div>
-              <p className="font-Montserrat font-bold text-gray-600 mt-5">
-                Kevin García
-              </p>
-              <br />
-              <p className="font-Poppins font-medium text-gray-600">
-                Co-Founder & CTO
-              </p>
-              <div className="flex-row mt-5 text-gray-400 text-lg">
-                {socialMedia.map((media) => (
-                  <SocialItems
-                    key={media.id}
-                    path={media.path}
-                    enlace={media.enlace}
-                  />
-                ))}
-              </div>
-            </div>
-            <div>
-              <img src={kevin} alt="Kevin" className="rounded-full w-24 mt-9" />
-            </div>
-          </div>
-
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
-            <div>
-              <p className="font-Montserrat font-bold text-gray-600 mt-7">
-                Genesis
-              </p>
-              <br />
-              <p className="font-Poppins font-medium text-gray-600">
-                CIO - Chief Innovation Officer
-              </p>
-              <div className="flex-row mt-5 text-gray-400 text-lg mx-5">
-                {socialMedia.map((media) => (
-                  <SocialItems
-                    key={media.id}
-                    path={media.path}
-                    enlace={media.enlace}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <img
-                src={genesis}
-                alt="Kevin"
-                className="rounded-full w-24 mt-9"
-              />
-            </div>
-          </div>
-
-          <div className="bg-WhiteSocial rounded-3xl shadow-2xl flex px-5 justify-around pb-5">
-            <div>
-              <p className="font-Montserrat font-bold text-gray-600 mt-5">
-                María
-              </p>
-              <br />
-              <p className="font-Poppins font-medium text-gray-600">
-                CMO - Chief Marketing Officer
-              </p>
-              <div className="flex-row mt-5 text-gray-400 text-lg mx-5">
-                {socialMedia.map((media) => (
-                  <SocialItems
-                    key={media.id}
-                    path={media.path}
-                    enlace={media.enlace}
-                  />
-                ))}
-              </div>
-            </div>
-            <div>
-              <img src={maria} alt="Kevin" className="rounded-full w-24 mt-9" />
-            </div>
-          </div>
+                ))
+        }
            
         </div>
       </div>
