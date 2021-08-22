@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 
 export const FormPerson = () => {
@@ -26,29 +25,29 @@ export const FormPerson = () => {
         <div className="grid grid-cols-1 gap-4 col-span-2">
           <input
             type="text"
-            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700"
+            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700 rounded-lg"
             placeholder="Mateo"
             required={true}
           />
           <input
             type="text"
-            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700"
+            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700 rounded-lg" 
             placeholder="García"
             required={true}
           />
           <input
             type="email"
-            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700"
+            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700 rounded-lg"
             placeholder="mateo@example.com"
             required={true}
           />
           <input
             type="text"
-            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700"
+            className="bg-gray-200 w-full h-10 px-5 outline-none font-Poppins font-medium text-gray-700 rounded-lg"
             placeholder="+505 - #### ####"
           />
           <textarea
-            className="bg-gray-200 w-full resize-none h-28 px-5 py-2 outline-none font-Poppins font-medium text-gray-700"
+            className="bg-gray-200 w-full resize-none h-28 px-5 py-2 outline-none font-Poppins font-medium text-gray-700 rounded-lg"
             required={true}
             placeholder="Hablanos acerca de algún proyecto, necesidad, molestia o mejora en relación a la plataforma"
 
@@ -66,53 +65,3 @@ export const FormPerson = () => {
     </div>
   );
 };
-=======
-import React from 'react'
-
-export const FormPerson = () => {
-    return (
-        <div className='bg-WhiteSocial shadow-2xl rounded-3xl mx-8 my-5 w-2/3'>
-
-        <form>
-
-            <div className='flex'>
-                <p>Nombre: </p>
-                <input
-                    type='text'
-                />
-            </div>
-
-            <div className='flex'>
-                <p>Apellidos: </p>
-                <input
-                    type='text'
-                />
-            </div>
-
-            <div className='flex'>
-                <p>Email: </p>
-                <input
-                    type='text'
-                />
-            </div>
-
-            <div className='flex'>
-                <p>Telefono: </p>
-                <input
-                    type='text'
-                />
-            </div>
-
-
-
-            <div className='flex'>
-                <p>Mensaje: </p>
-               <textarea></textarea>
-            </div>
-
-        </form>
-
-    </div>
-    )
-}
->>>>>>> 6ad3ea5fed0ece44cc225918663844bb97e3ec46
