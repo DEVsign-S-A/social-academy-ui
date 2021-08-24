@@ -1,0 +1,200 @@
+.BotonUnete{
+    font-size: 1.2vw;
+    margin: 1.5vw 0 0;
+    display:  inline-block;
+    background-color: $SArosa;
+    padding: 0.5vw 3vw;
+    border: 0.3vw solid $SArosa;
+    border-radius: 2.5vw;
+    transition: all .3s ease-out;
+
+    &:hover{
+        background: transparent;
+        color: $SArosa;
+        transition: all .3s ease-out;
+    }
+}
+
+.BannerWelcome{
+
+     > img{
+         position: absolute;
+         z-index: -1;
+     }
+
+     .ContenidoSlider{
+        padding-top: 7%;
+        padding-left: 12%;
+        width: 70%;
+        font-family: $Poppins;
+        color: white;
+        font-weight: 700;
+
+        > img{
+            width: 7%;
+        }
+
+        h1 {
+            padding: 2% 0;
+            font-size: 3.1vw;
+            line-height: 3.5vw;
+        }
+
+        h2{
+            width: 80%;
+            padding-top: 1%;
+            font-size: 1.2vw;
+            padding-bottom: 2%;
+        }
+     }
+
+     .BannerDescripcion{
+        padding-top: 6%;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-around;
+
+        .DescripcionIndividual{
+            width: 21%;
+			padding: 2.5%;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			border-radius: 1.5vw;
+			box-shadow: 0vw 0.4vw 0.7vw 0.5vw  rgba(0, 0, 0, 0.4);
+            font-family: $Poppins;
+            color: $AzulTitulo;
+            font-size: 1.1vw;
+            font-weight: 700;
+
+            img{
+				width: 50%;
+				padding: 5%;
+			}
+
+            h1{
+                width: 90%;
+                padding: 4%;
+                border-radius: 2.5vw;
+                text-align: center;
+            }
+
+            h2{
+				width: 100%;
+				padding: 10% 3%;
+				text-align: center;
+		    }
+        }
+     }
+}
+
+@media only screen and (max-width: 800px) {
+    .BotonUnete{
+        font-size: 1.7vw;
+		margin: 1.5vw 0 0;
+		padding: 0.7vw 3vw;
+		border-radius: 2.5vw;
+    }
+    
+    .BannerWelcome{
+         .ContenidoSlider{
+            padding-top: 8%;
+	        width: 80%;
+    
+            > img{
+                width: 8%;
+            }
+    
+            h1 {
+                font-size: 3.4vw;
+		        line-height: 4vw;
+            }
+    
+            h2{
+                width: 75%;
+		        font-size: 1.6vw;
+            }
+         }
+    
+         .BannerDescripcion{    
+            .DescripcionIndividual{
+                padding: 3%;
+    
+                img{
+                    width: 50%;
+                }
+    
+                h1{
+                    padding: 4%;
+					font-size: 1.9vw;
+                }
+    
+                h2{
+                    width: 90%;
+				    font-size: 1.3vw;
+				    padding: 0;
+                }
+            }
+         }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .BotonUnete{
+        font-size: 2.7vw;
+		margin: 1.5vw 0 0;
+		padding: 0.7vw 3vw;
+		border-radius: 2.5vw;
+    }
+    
+    .BannerWelcome{
+         .ContenidoSlider{
+            padding-top: 6%;
+	        width: 97%;
+    
+            > img{
+                width: 10%;
+            }
+    
+            h1 {
+                font-size: 4.6vw;
+		        line-height: 5.5vw;
+		        text-align: justify;
+            }
+    
+            h2{
+                width: 85%;
+		        font-size: 2.3vw;
+            }
+         }
+    
+         .BannerDescripcion{ 
+            padding-top: 2%;
+            flex-wrap: wrap;
+
+            .DescripcionIndividual{
+                width: 40%;
+                margin: 4%;
+                border-radius: 2.5vw;
+                box-shadow: -0.7vw 1vw 1vw 0.7vw  rgba(0, 0, 0, 0.4);
+    
+                img{
+                    width: 45%;
+                }
+    
+                h1{
+                    padding: 4%;
+					font-size: 2.6vw;
+                }
+    
+                h2{
+                    width: 90%;
+				    font-size: 2vw;
+                }
+            }
+         }
+    }
+}

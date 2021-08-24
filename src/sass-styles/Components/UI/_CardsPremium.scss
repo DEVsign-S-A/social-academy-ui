@@ -1,0 +1,564 @@
+.SeccionPrecios {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 10% 0;
+    font-family: $Poppins;
+    font-weight: 700;
+
+    .PreciosTexto {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        h2 {
+            position: relative;
+            text-align: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: $AzulTitulo;
+            font-size: 3.2vw;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+    }
+
+    .CardsPremium{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 5%;
+
+        .CardsPremiumIndividuales{
+            width: 42%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 8px 8px 8px rgba(147, 149, 255, 0.3);
+            transition: .5s;
+            border-radius: 2vw;
+
+            
+
+            .IndividualesSuperior{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .IndividualesLinea{
+                    width: 20%;
+                    padding-top: 8%;
+                    border-bottom: $SAazul solid 0.3vw;
+                }
+
+                .IndividualesTitulo{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                    z-index: 1;
+
+                    h1{
+                        text-align: center;
+                        font-family: $Montserrat;
+                        text-transform: uppercase;
+                        font-size: 2vw;
+                        line-height: 2.5vw;
+                        font-weight: 900;
+                        color: $SAazul;
+                    }
+                }
+
+                .CardSemicirculo{
+                    position: absolute;
+                    z-index: 0;
+                    width: 9vw;
+                    margin-top: 0.4vw;
+                    margin-left: 8vw;
+                }
+            }
+
+            .IndividualesTextoPrecio{
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                width: 13.5vw;
+                height: 13.5vw;
+                border-radius: 100%;
+                background-color: $SAazul;
+                color: white; 
+                box-shadow: 1px 2px 3px  rgba(39, 46, 56, 0.3);
+
+                .TextoPrecio1, .TextoPrecio2, .TextoPrecio3{
+                    margin: 0.1vw;
+                }
+
+                .TextoPrecio1{
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    font-size: 2.2vw;
+                }
+
+                .TextoPrecio2{
+                    height: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 5vw;
+                }
+
+                .TextoPrecio3{
+                    height: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    font-size: 1.3vw;
+                }
+            }
+
+            .IndividualesDescripcion{
+                width: 100%;
+                padding: 0.5vw 1.8vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .IndividualesPaquete{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 0.3vw;
+
+                    i{
+                        font-size: 1.3vw;
+                        color: $SAazul;
+                    }
+
+                    h4{
+                        font-size: 1vw;
+                        color: $GrisOscuro;
+                        text-align: justify;
+                        padding-left: 1vw;
+                    }
+                }
+            }
+
+            .IndividualesInferior{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                
+
+                .InferiorImagen{
+                    width: 35%;
+                }
+
+                .InferiorBoton{
+                    width: 55%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .BotonPremium{
+                        border: 3px solid $SArosa;
+                        background-color: transparent;		
+                        color: $SAazul;
+                        transition: all .3s ease;
+                        text-transform: uppercase;
+                        font-size: 1.2vw;
+                        padding: 0.7vw 2vw;
+                        border-radius: 2vw;
+                        box-shadow: 1px 1px 2px 1px rgba(39, 46, 56, 0.3);
+
+                        &:hover{
+                            background-color: $SAazul;
+                            border: 3px solid transparent;
+                            color: white;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .SeccionPrecios{
+        .CardsPremium{    
+            .CardsPremiumIndividuales{
+                width: 43%;
+
+                .IndividualesSuperior{
+    
+                    .IndividualesLinea{
+                        border-bottom: $SAazul solid 0.4vw;
+                    }
+    
+                    .IndividualesTitulo{
+                        h1{
+                            font-size: 2.5vw;
+		                    line-height: 2.8vw;
+                        }
+                    }
+
+                    .CardSemicirculo{
+                        width: 9vw;
+                        margin-top: 0.1vw;
+                        margin-left: 8.5vw;
+                    }
+                }
+    
+                .IndividualesTextoPrecio{
+                    width: 15vw;
+		            height: 15vw;
+    
+                    .TextoPrecio1{
+                        font-size: 2.5vw;
+                    }
+    
+                    .TextoPrecio2{
+                        font-size: 6vw;
+                    }
+    
+                    .TextoPrecio3{
+                        font-size: 1.8vw;
+                    }
+                }
+    
+                .IndividualesDescripcion{
+                    padding: 0.5vw 2.5vw;
+    
+                    .IndividualesPaquete{
+                        i{
+                            font-size: 1.5vw;
+                        }
+    
+                        h4{
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+    
+                .IndividualesInferior{
+                    margin: -0.8vw;
+                    
+                    .InferiorImagen{
+                        width: 35%;
+                    }
+    
+                    .InferiorBoton{
+    
+                        .BotonPremium{
+                            font-size: 1.5vw;
+    
+                        }
+                    }
+                }  
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .SeccionPrecios {
+        flex-direction: column;
+		justify-content: center;
+		padding-top: 10%;
+		padding-bottom: 10%;
+    
+        .PreciosTexto {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            h2 {
+                font-size: 5vw;
+                padding-top: 4%;
+                padding-bottom: 4%;
+            }
+        }
+    
+        .CardsPremium{    
+            width: 100%;
+            padding-top: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            .CardsPremiumIndividuales{
+                width: 44%;
+
+                .IndividualesSuperior{
+    
+                    .IndividualesLinea{
+                        border-bottom: $SAazul solid 0.5vw;
+                    }
+    
+                    .IndividualesTitulo{
+                        h1{
+                            font-size: 3vw;
+		                    line-height: 3.2vw;
+                        }
+                    }
+
+                    .CardSemicirculo{
+                        width: 12vw;
+                        margin-top: -0.1vw;
+                        margin-left: 15.5vw;
+                    }
+                }
+    
+                .IndividualesTextoPrecio{
+                    width: 18vw;
+		            height: 18vw;
+    
+                    .TextoPrecio1{
+                        font-size: 2.8vw;
+                    }
+    
+                    .TextoPrecio2{
+                        font-size: 6.5vw;
+                    }
+    
+                    .TextoPrecio3{
+                        font-size: 2vw;
+                    }
+                }
+    
+                .IndividualesDescripcion{
+                    padding: 0.5vw 2.5vw;
+    
+                    .IndividualesPaquete{
+                        padding: 3%;
+
+                        i{
+                            font-size: 2.5vw;
+                        }
+    
+                        h4{
+                            padding-left: 1.5vw;
+                            font-size: 2vw;
+                        }
+                    }
+                }
+    
+                .IndividualesInferior{
+                    margin: 0vw;
+                    
+                    .InferiorImagen{
+                        width: 40%;
+                    }
+    
+                    .InferiorBoton{
+    
+                        .BotonPremium{
+                            font-size: 1.8vw;
+    
+                        }
+                    }
+                }  
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .SeccionPrecios {
+    
+        .PreciosTexto {
+    
+            h2 {
+                font-size: 5.5vw;
+                padding-top: 4%;
+                padding-bottom: 4%;
+            }
+
+            .BotonUnete{
+                font-size: 2.6vw;
+                margin: 1.5vw 0 0;
+            }
+        }
+    
+        .CardsPremium{    
+
+            .CardsPremiumIndividuales{
+                width: 45%;
+		        box-shadow: 0px 5px 5px 5px rgba(147, 149, 255, 0.3);
+
+                .IndividualesSuperior{
+    
+                    .IndividualesLinea{
+                        border-bottom: $SAazul solid 0.6vw;
+                    }
+    
+                    .IndividualesTitulo{
+                        h1{
+                            font-size: 3.7vw;
+		                    line-height: 4vw;
+                        }
+                    }
+
+                    .CardSemicirculo{
+                        width: 13vw;
+                        margin-top: -0.3vw;
+                        margin-left: 15.5vw;
+                        transition: .5s;
+                    }
+                }
+    
+                .IndividualesTextoPrecio{
+                    width: 25vw;
+		            height: 25vw;
+    
+                    .TextoPrecio1{
+                        font-size: 3.5vw;
+                    }
+    
+                    .TextoPrecio2{
+                        font-size: 8.5vw;
+                    }
+    
+                    .TextoPrecio3{
+                        font-size: 3vw;
+                    }
+                }
+    
+                .IndividualesDescripcion{
+                    padding: 3vw 3vw;
+    
+                    .IndividualesPaquete{
+
+                        i{
+                            font-size: 2.4vw;
+                        }
+    
+                        h4{
+                            font-size: 1.8vw;
+                        }
+                    }
+                }
+    
+                .IndividualesInferior{
+                    
+                    .InferiorBoton{
+    
+                        .BotonPremium{
+                            font-size: 2.5vw;
+                            border-radius: 3vw;
+                        }
+                    }
+                }  
+                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .SeccionPrecios {
+    
+        .PreciosTexto {
+            margin-top: 10%;
+
+            .BotonUnete{
+                font-size: 3.2vw;
+                padding: 1vw 5vw;
+                border-radius: 3.5vw;
+            }
+        }
+    
+        .CardsPremium{    
+
+            .CardsPremiumIndividuales{
+
+                .IndividualesSuperior{
+    
+                    .IndividualesLinea{
+                        border-bottom: $SAazul solid 0.7vw;
+                    }
+    
+                    .IndividualesTitulo{
+                        h1{
+                            font-size: 4.2vw;
+		                    line-height: 4.4vw;
+                        }
+                    }
+
+                    .CardSemicirculo{
+                        width: 13vw;
+                        margin-top: -0.8vw;
+                        margin-left: 15.5vw;
+                    }
+                }
+    
+                .IndividualesTextoPrecio{
+                    width: 28vw;
+		            height: 28vw;
+    
+                    .TextoPrecio1{
+                        font-size: 4.1vw;
+                    }
+    
+                    .TextoPrecio2{
+                        font-size: 9.5vw;
+                    }
+    
+                    .TextoPrecio3{
+                        font-size: 4.2vw;
+                    }
+                }
+    
+                .IndividualesDescripcion{
+    
+                    .IndividualesPaquete{
+
+                        i{
+                            font-size: 2.8vw;
+                        }
+    
+                        h4{
+                            font-size: 2.1vw;
+                        }
+                    }
+                }
+    
+                .IndividualesInferior{
+                    
+                    .InferiorBoton{
+    
+                        .BotonPremium{
+                            font-size: 2.8vw;
+                        }
+                    }
+                }  
+                
+            }
+        }
+    }
+}
