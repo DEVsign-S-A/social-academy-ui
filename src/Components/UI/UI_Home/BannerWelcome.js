@@ -4,10 +4,10 @@ import { CardDescripcion } from './HomeComponents/CardDescripcion';
 
 export const BannerWelcome = () => {
     const infoDescripcion = [
-        {id: 1, path: `./assets/HomeScreen/descripcionWelcome/obtenerPasantias.png`, titulo: "Obtén pasantías", subtitulo: "Encuentra las ofertas de pasantías publicadas en Social Academy"},
-        {id: 2, path: `./assets/HomeScreen/descripcionWelcome/forosAcademicos.png`, titulo: "Foros Académicos", subtitulo: "Aprende consultando a la comunidad y comparte tus conocimientos"},
-        {id: 3, path: `./assets/HomeScreen/descripcionWelcome/accedeRecursos.png`, titulo: "Accede a Recursos", subtitulo: "Encuentra un repositorio de recursos compartidos por los usuarios"},
-        {id: 4, path: `./assets/HomeScreen/descripcionWelcome/paraEmpresas.png`, titulo: "Para empresas", subtitulo: "Encuentra estudiantes para puestos de pasantias en tu empresa"}
+        {path: `./assets/HomeScreen/descripcionWelcome/obtenerPasantias.png`, titulo: "Obtén pasantías", subtitulo: "Encuentra las ofertas de pasantías publicadas en Social Academy"},
+        {path: `./assets/HomeScreen/descripcionWelcome/forosAcademicos.png`, titulo: "Foros Académicos", subtitulo: "Aprende consultando a la comunidad y comparte tus conocimientos"},
+        {path: `./assets/HomeScreen/descripcionWelcome/accedeRecursos.png`, titulo: "Accede a Recursos", subtitulo: "Encuentra un repositorio de recursos compartidos por los usuarios"},
+        {path: `./assets/HomeScreen/descripcionWelcome/paraEmpresas.png`, titulo: "Para empresas", subtitulo: "Encuentra estudiantes para puestos de pasantias en tu empresa"}
     ];
     return (
         <div className = "BannerWelcome flex-column">
@@ -25,8 +25,8 @@ export const BannerWelcome = () => {
 
             <div className = "BannerDescripcion">
                 {
-                    infoDescripcion.map(card =>(
-                        <CardDescripcion key = {card.id} path = {card.path} titulo = {card.titulo} subtitulo = {card.subtitulo} />
+                    infoDescripcion.map((card, index) =>(
+                        <CardDescripcion key = {index} path = {card.path} titulo = {card.titulo} subtitulo = {card.subtitulo} />
                     ))
                 }
             </div>
