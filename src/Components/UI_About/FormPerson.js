@@ -50,7 +50,6 @@ export const FormPerson = () => {
             className="bg-gray-200 w-full resize-none h-28 px-5 py-2 outline-none font-Poppins font-medium text-gray-700"
             required={true}
             placeholder="Hablanos acerca de algún proyecto, necesidad, molestia o mejora en relación a la plataforma"
-
           ></textarea>
         </div>
 
@@ -58,7 +57,7 @@ export const FormPerson = () => {
           <input
             value="Enviar"
             type="submit"
-            className="py-2 px-5 bg-BlueSocial text-white rounded-xl cursor-pointer font-Poppins font-medium"
+            className="outline-none py-2 px-5 bg-BlueSocial text-white rounded-xl cursor-pointer font-Poppins font-medium"
           />
         </div>
       </form>

@@ -8,7 +8,6 @@ import MEFCCA from "../../assets/UI-About/MEFCCA.png";
 import LogoCNU from "../../assets/UI-About/LogoCNU.png";
 import INATEC from "../../assets/UI-About/INATEC.png";
 
-
 export const FormContact = () => {
   const [radioBtn, setRadioBtn] = useState(1);
 
@@ -16,8 +15,8 @@ export const FormContact = () => {
     setRadioBtn(e.target.value);
   };
   return (
-    <div className="mt-20 -mb-14">
-      <section className="content-image2">
+    <div className="mt-20 -mb-14 select-none transition-all duration-500 ease-linear">
+      <section className="content-image2 transition-all duration-500 ease-linear">
         <div className="flex justify-between root">
           {radioBtn === "1" ? <FormPerson /> : <FormCompany />}
 
@@ -35,31 +34,26 @@ export const FormContact = () => {
            */}
           <div className="root flex">
             <div className="flex mx-5 items-center justify-center">
-              <p
-                className='text-gray-500 mx-2 font-medium text-lg'
-              >Persona</p>
+              <p className="text-gray-500 mx-2 font-medium text-lg">Persona</p>
               <input
                 id="radio1"
                 type="radio"
                 value="1"
                 checked={radioBtn === "1" ? true : false}
                 onChange={handleCheck}
-                className='cursor-pointer'
-
+                className="cursor-pointer outline-none"
               />
             </div>
 
             <div className="flex mx-5 items-center justify-center">
-              <p
-                className='text-gray-500 mx-2 font-medium text-lg'
-              >Empresa</p>
+              <p className="text-gray-500 mx-2 font-medium text-lg">Empresa</p>
               <input
                 id="radio1"
                 type="radio"
                 value="2"
                 checked={radioBtn === "2" ? true : false}
                 onChange={handleCheck}
-                className='cursor-pointer'
+                className="cursor-pointer outline-none"
               />
             </div>
           </div>

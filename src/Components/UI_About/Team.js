@@ -34,10 +34,10 @@ export const Team = () => {
       id: 4,
       nombre: 'Maria',
       cargo: 'CMO - Chief Marketing Officer',
-      image:'../../assets/UI-About/pexels-fauxels-3182759.jpg',
+      image:"https://res.cloudinary.com/devsing/image/upload/v1630191622/IMG_20210828_165939_asn0ef.jpg",
       description: ""
-
     },
+
     
   ];
 
