@@ -21,7 +21,7 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
         }`}
       >
         <div>
-          <div className="card__face face__card-front flex px-5 justify-around mb-16">
+          <div className="bg-WhiteSocial card__face face__card-front flex px-5 justify-around mb-16">
             <div>
               <p className="font-Montserrat font-bold text-gray-600 mt-5 ">
                 {nombre}
@@ -48,7 +48,7 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
             </div>
           </div>
 
-          <div className="card__face face__card-back shadow-2xl rounded-xl pb-16">
+          <div className="bg-WhiteSocial card__face face__card-back shadow-2xl rounded-xl pb-16">
             <div className="card__body mx-5 mt-5">
               <p className="text-base text-gray-600 font-Poppins">
                 {description}
