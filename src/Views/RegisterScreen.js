@@ -2,8 +2,6 @@ import React from "react";
 import "../Components/UI_Login/login.css";
 
 const RegisterScreen = ({props}) => {
-	/*********************************-------------------------------------------- */
-			
 	
 	return (
 		<>
@@ -53,6 +51,10 @@ const RegisterScreen = ({props}) => {
 						
 					/>
 				</div>
+        <div className="input-field">
+            <i className="fas fa-calendar"></i>
+            <input type="date" placeholder="Fecha de Nacimiento" />
+          </div>
 				<input
 					type="submit"
 					className="btnSing"

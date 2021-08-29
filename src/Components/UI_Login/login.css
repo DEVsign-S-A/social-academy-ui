@@ -2,7 +2,7 @@
 .containerSing {
   position: relative;
   width: 100%;
-  background-color: #39246A;
+  background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -50,7 +50,7 @@
 
 .title {
   font-size: 2.2rem;
-  color: #1ed8c6;
+  color: #444;;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -58,10 +58,9 @@
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: transparent;
-  border: 2px solid #1ed8c6;
+  background-color: #f0f0f0;
   margin: 10px 0;
-  height: 55px;
+  height: 60px;
   border-radius: 55px;
   display: grid;
   grid-template-columns: 15% 85%;
@@ -72,7 +71,7 @@
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #1dad9f;
+  color: #24345F;
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -84,7 +83,8 @@
   line-height: 1;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #1ed8c6;
+  color: #24345F;
+  height: 55px;
 }
 
 .input-field input::placeholder {
@@ -110,29 +110,29 @@
   justify-content: center;
   align-items: center;
   margin: 0 0.45rem;
-  color: #eee;
+  color: #333;
   border-radius: 50%;
-  border: 1px solid #eee;
+  border: 1px solid #333;
   text-decoration: none;
   font-size: 1.1rem;
   transition: 0.3s;
 }
 
 .social-icon:hover {
-  color: #1ed8c6;
-  border-color: #1ed8c6;
+  color: #0F7CBF;
+  border-color: #0F7CBF;
 }
-
 .btnSing {
   width: 150px;
-  background-color: #16c2b1;
-  border: none;
+  background-color: #DB255D;
+  border-color: transparent;
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: #fff;
+  color: #eee;
   text-transform: uppercase;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 800;
   margin: 10px 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -141,8 +141,8 @@
 
 .btnSing:hover {
   background-color: transparent;
-  border: 3px solid #1ed8c6;
-  color: #1ed8c6;
+  border: 3px solid #DB255D;
+  color: #24345F;
   transition: all 0.3s ease;
   font-weight: 900;
 }
@@ -164,7 +164,7 @@
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #1ED8C6 0%, rgb(18, 107, 98) 100%);
+  background-image: linear-gradient(-45deg, #24345F 0%, rgb(24, 53, 131) 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -205,12 +205,6 @@
   transition-delay: 0.6s;
 }
 
-.panel h3 {
-  font-weight: 600;
-  line-height: 1;
-  font-size: 1.5rem;
-}
-
 .panel p {
   font-size: 0.95rem;
   padding: 0.7rem 0;
@@ -227,8 +221,8 @@
   font-size: 0.8rem;
 }
 .btnSing.transparent:hover{
-  border-color: #39246A;
-  color: #39246A;
+  border-color: #fff;
+  color: #fff;
 }
 
 .right-panel .image,
@@ -327,9 +321,7 @@
     transition-delay: 0.8s;
   }
 
-  .panel h3 {
-    font-size: 1.2rem;
-  }
+
 
   .panel p {
     font-size: 0.7rem;

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../Components/UI_Login/login.css";
 import RegisterScreen from "./RegisterScreen";
+import image from '../assets/UI_Login/03.svg'
+import image2 from '../assets/UI_Login/07.svg'
 
 const LoginScreen = () => {
   const [toggle, setToggle] = useState(true);
@@ -46,8 +48,9 @@ const LoginScreen = () => {
         <div className="panels-containerSing">
           <div className="panel left-panel">
             <div className="content">
-              <h3 className="font-Montserrat">¿Eres Nuevo(a)?</h3>
-              <p className="font-Poppins font-medium">
+            <h3 className="font-Montserrat text-second font-extrabold text-3xl">
+            ¿Eres Nuevo(a)?</h3>
+              <p className="font-Poppins font-medium ">
                 ¡QUE ESPERAS! <br />
                 Para formar parte de la comunidad de aprendizaje mas grande de
                 Nicaragua dando y recibiendo Feedback
@@ -60,11 +63,12 @@ const LoginScreen = () => {
                 Registrate
               </button>
             </div>
-            <img src={`./assets/love01.svg`} className="image" alt="" />
+            <img src={image2} className="image" alt="" />
           </div>
           <div className="panel right-panel">
             <div className="content">
-              <h3 className="font-Montserrat">¿Ya tienes Cuenta?</h3>
+              <h3 className="font-Montserrat text-second font-extrabold text-3xl">
+              ¿Ya tienes Cuenta?</h3>
               <p className='font-Poppins font-medium'>
                 Inicia Sesion ya, para empezar a comunicarte con muchos Jovenes
                 que desean aprender y enseñar al igual que tu.
@@ -77,7 +81,7 @@ const LoginScreen = () => {
                 Inicia
               </button>
             </div>
-            <img src={`./assets/love02.svg`} className="image" alt="" />
+            <img src={image} className="image" alt="" />
           </div>
         </div>
       </div>
