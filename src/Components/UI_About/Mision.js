@@ -1,5 +1,4 @@
 import React from "react";
-import team from "../../assets/UI-About/team.jpg";
 
 export const Mision = () => {
   return (
@@ -27,7 +26,7 @@ export const Mision = () => {
           <br />
           <br />
           <img
-            src={team}
+            src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442085/Social%20Academy%20Image/team_tgkqak.jpg`}
             alt="team"
             loading="lazy"
             className="rounded-2xl shadow-2xl imgMision"

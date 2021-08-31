@@ -31,8 +31,8 @@ export const Navbar = () => {
                 src={`./assets/ICONS/HOME.svg`}
                 alt="icon-user"
               />
-              <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
-                <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+              <div className='absolute z-50 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                 Inicio
               </div>
             </div>
@@ -46,8 +46,8 @@ export const Navbar = () => {
                   src={`./assets/ICONS/FOROS.svg`}
                   alt="icon-user"
                 />
-              <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
-                <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+              <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl z-50  shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 z-50"></div>
                 Foros
               </div>
               </div>
@@ -62,8 +62,8 @@ export const Navbar = () => {
                   src={`./assets/ICONS/CURSOS.svg`}
                   alt="icon-user"
                 />
-                <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
-                  <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+                <div className='absolute z-50 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   About
                 </div>               
               </div>
@@ -78,8 +78,8 @@ export const Navbar = () => {
                   src={`./assets/ICONS/LOGIN.svg`}
                   alt="icon-user"
                 />
-               <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
-                  <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+               <div className='absolute z-50 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   Login
                 </div>               
               </div>
@@ -95,8 +95,8 @@ export const Navbar = () => {
                   alt="icon-user"
                 />
                 
-                <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-2 text-xs px-4 py-2 pointer-events-none tooltip'>
-                  <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
+                <div className='absolute z-50 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-2 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   Pasantias
                 </div>
               </div>
@@ -111,8 +111,8 @@ export const Navbar = () => {
                   src={`./assets/ICONS/videos.svg`}
                   alt="icon-user"
                 />
-               <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-3 text-xs px-4 py-2 pointer-events-none tooltip'>
-                  <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
+               <div className='absolute z-50 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-3 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
                   Cursos
                 </div>
               </div>
@@ -126,8 +126,8 @@ export const Navbar = () => {
                   src={`./assets/ICONS/APRENDE.svg`}
                   alt="icon-user"
                 />
-               <div className='absolute transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-3 text-xs px-4 py-2 pointer-events-none tooltip'>
-                  <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
+               <div className='absolute z-50 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 -ml-3 text-xs px-4 py-2 pointer-events-none tooltip'>
+                  <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
                   Recursos
                 </div>
               </div>

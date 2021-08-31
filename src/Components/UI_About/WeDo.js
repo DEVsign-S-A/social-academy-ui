@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../../assets/UI-About/pexels-fauxels-3182759.jpg";
 export const WeDo = () => {
   return (
     <>
@@ -11,7 +10,7 @@ export const WeDo = () => {
       <div className="flex justify-between">
         <div className="ml-8">
           <img
-            src={Image}
+            src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442079/Social%20Academy%20Image/pexels-fauxels-3182759_lrnteg.jpg`}
             alt="We Do"
             width="1800px"
             className="rounded-3xl shadow-xl ring-2 ring-gray-200"

@@ -12,7 +12,6 @@ import InternshipsScreen from '../Views/InternshipsScreen';
 import LoginScreen from '../Views/LoginScreen';
 import PageNoFound from '../Views/PageNoFound';
 import ProfileScreen from '../Views/ProfileScreen';
-import RegisterScreen from '../Views/RegisterScreen';
 import ResourcesScreen from '../Views/ResourcesScreen';
 
 export const AppRouter = () => {
@@ -30,10 +29,8 @@ export const AppRouter = () => {
                     <Route exact path='/Recursos' component={ResourcesScreen}/>
                     <Route exact path='/About' component={AboutScreen}/>
                     <Route exact path='/Login' component={LoginScreen}/>
-                    <Route exact path='/Register' component={RegisterScreen}/>
                     <Route exact path='/PageNoFound' component={PageNoFound}/>
                     <Route exact path='/Profile/:userId' component={ProfileScreen}/>
-
                 </Switch>
 
                 <Footer/>

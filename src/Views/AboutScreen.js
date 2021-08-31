@@ -10,8 +10,6 @@ import { citas } from "../data/data";
 import { Team } from "../Components/UI_About/Team";
 import { FormContact } from "../Components/UI_About/FormContact";
 
-import jaques from "../assets/UI-About/jaques.jpg";
-import benjamin from "../assets/UI-About/6115.jpg";
 const AboutScreen = () => {
 
   const { cita, autor } = citas[0];
@@ -26,9 +24,9 @@ const AboutScreen = () => {
       <Mision />
       <AboutCards />
       <Vision />
-      <Cita cita={cita} autor={autor} image={jaques} />
+      <Cita cita={cita} autor={autor} image={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/jaques_fddwsc.jpg`} />
       <WeDo />
-      <Cita cita={cita2} autor={autor2} image={benjamin} />
+      <Cita cita={cita2} autor={autor2} image={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/6115_o8v8y1.jpg`} />
       <Team />
       <FormContact/>
     </>
