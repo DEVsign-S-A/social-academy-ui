@@ -1,6 +1,4 @@
 import React from "react";
-import banner from "../../assets/UI-About/MARCO.jpg";
-
 import "./style.css";
 
 export const Banner = () => {
@@ -29,7 +27,7 @@ export const Banner = () => {
                 </div>
 
                 <div className="">
-                    <img src={banner}
+                    <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442078/Social%20Academy%20Image/MARCO_d6wxoh.jpg`}
                         alt="banner Social"
                         id="ImageBanner"
                         loading='lazy'

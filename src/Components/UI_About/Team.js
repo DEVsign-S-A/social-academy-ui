@@ -10,14 +10,14 @@ export const Team = () => {
       id: 1,
       nombre: 'Jeisson Ñurinda',
       cargo: 'Co-Founder & CEO',
-      image: 'https://res.cloudinary.com/devsing/image/upload/v1629260402/72113139_zaw6km.jpg',
+      image: 'https://res.cloudinary.com/socialacademy/image/upload/v1630442056/Social%20Academy%20Image/72113139_zaw6km_psdabl.jpg',
       description: ""
     },
     {
       id: 2,
       nombre: 'Kevin García',
       cargo: 'Co-Founder & CTO',
-      image: 'https://res.cloudinary.com/devsing/image/upload/v1629260403/IMG_20210410_113432_zt0jxq.jpg',
+      image: 'https://res.cloudinary.com/socialacademy/image/upload/v1630442057/Social%20Academy%20Image/IMG_20210410_113432_zt0jxq_ocshxh.jpg',
       description: "Un simple desarrollador, con aspiraciones y sueños que lo superan.",
       cita: `Things happen, but we don't really know why.
         If it's supposed to be like this. 
@@ -25,16 +25,16 @@ export const Team = () => {
     },
     {
       id: 3,
-      nombre: 'Genesis',
+      nombre: 'Genesis Garay',
       cargo: 'CIO - Chief Innovation Officer',
-      image: 'https://res.cloudinary.com/devsing/image/upload/v1629260402/51d51b7b-c792-4831-b8e2-e7ec4dcbaf5a_tiz8wl.jpg',
+      image: 'https://res.cloudinary.com/socialacademy/image/upload/v1630442056/Social%20Academy%20Image/51d51b7b-c792-4831-b8e2-e7ec4dcbaf5a_tiz8wl_uzowm5.jpg',
       description: ""
     },
     {
       id: 4,
-      nombre: 'Maria',
+      nombre: 'Maria Acuña',
       cargo: 'CMO - Chief Marketing Officer',
-      image:"https://res.cloudinary.com/devsing/image/upload/v1630191622/IMG_20210828_165939_asn0ef.jpg",
+      image:"https://res.cloudinary.com/socialacademy/image/upload/v1630442057/Social%20Academy%20Image/IMG_20210828_165939_asn0ef_sgzs73.jpg",
       description: ""
     },
 

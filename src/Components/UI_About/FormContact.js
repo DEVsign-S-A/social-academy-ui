@@ -3,11 +3,6 @@ import { FormPerson } from "./FormPerson";
 import { FormCompany } from "./FormCompany";
 import "./style.css";
 
-import CENTNACIN from "../../assets/UI-About/CENTNACIN.png";
-import MEFCCA from "../../assets/UI-About/MEFCCA.png";
-import LogoCNU from "../../assets/UI-About/LogoCNU.png";
-import INATEC from "../../assets/UI-About/INATEC.png";
-
 export const FormContact = () => {
   const [radioBtn, setRadioBtn] = useState(1);
 
@@ -21,10 +16,10 @@ export const FormContact = () => {
           {radioBtn === "1" ? <FormPerson /> : <FormCompany />}
 
           <div className="grid grid-cols-2 grid-rows-2 gap-5 mx-8 items-center justify-center">
-            <img src={CENTNACIN} alt="CENTNACIN" className="w-28" />
-            <img src={MEFCCA} alt="MEFCCA" className="w-28" />
-            <img src={LogoCNU} alt="LogoCNU" className="w-36" />
-            <img src={INATEC} alt="INATEC" className="w-28" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/CENTNACIN_mnhdht.png`} alt="CENTNACIN" className="w-28" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/MEFCCA_bfo9yq.png`} alt="MEFCCA" className="w-28" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442079/Social%20Academy%20Image/LogoCNU_kxmlwo.png`} alt="LogoCNU" className="w-36" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/INATEC_ncynrc.png`} alt="INATEC" className="w-28" />
           </div>
         </div>
 
