@@ -17,10 +17,10 @@
 
 .signin-signup {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translate(-50%, -50%);
   left: 75%;
-  width: 50%;
+  width: 55%;
   transition: 1s 0.7s ease-in-out;
   display: grid;
   grid-template-columns: 1fr;
@@ -377,12 +377,15 @@
   #form {
     padding: 0 1.5rem;
   }
-
   .image {
     display: none;
   }
   .panel .content {
     padding: 0.5rem 1rem;
+  }
+  .containerSing{
+    min-height: 120vh;
+    overflow: hidden;
   }
   .containerSing {
     padding: 1.5rem;

@@ -3,6 +3,8 @@ import "../Components/UI_Login/login.css";
 import RegisterScreen from "./RegisterScreen";
 import image from '../assets/UI_Login/03.svg'
 import image2 from '../assets/UI_Login/07.svg'
+import { SocialIcons } from "../Components/UI_Login/SocialIcons";
+import { PSocial } from "../Components/Tailwind/LoginTW";
 
 const LoginScreen = () => {
   const [toggle, setToggle] = useState(true);
@@ -39,6 +41,10 @@ const LoginScreen = () => {
                 />
               </div>
               <input type="submit" value="Inicia" className="btnSing solid" />
+              <PSocial
+                $SocialIconsText
+              >O Inicia Sesion Con alguna de estas plataformas</PSocial>
+              <SocialIcons/>
             </form>
 
             <RegisterScreen />
