@@ -16,12 +16,12 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
     <>
       <div
         onClick={() => setCard(!card)}
-        className={`bg-WhiteSocial rounded-3xl shadow-2xl card__inner pb-40 ${
+        className={`bg-WhiteSocial rounded-3xl text-sm md:text-base shadow-2xl card__inner pb-40 ${
           card && "card__inner is-flipped "
         }`}
       >
         <div>
-          <div className="bg-WhiteSocial card__face face__card-front flex px-5 justify-around mb-16">
+          <div className="bg-WhiteSocial card__face face__card-front flex px-5 justify-around">
             <div>
               <p className="font-Montserrat font-bold text-gray-600 mt-5 ">
                 {nombre}
@@ -30,11 +30,14 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
               <p className="font-Poppins font-medium text-gray-600">{cargo}</p>
               <div className="flex-row mt-5 text-gray-400 text-lg">
                 {socialMedia.map((media) => (
-                  <SocialItems
+                  <div className="md:block hidden">
+                    <SocialItems
                     key={media.id}
                     path={media.path}
                     enlace={media.enlace}
                   />
+                  </div>
+                  
                 ))}
               </div>
             </div>
@@ -48,7 +51,7 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
             </div>
           </div>
 
-          <div className="bg-WhiteSocial card__face face__card-back shadow-2xl rounded-xl pb-16">
+          <div className="bg-WhiteSocial card__face face__card-back shadow-2xl rounded-xl">
             <div className="card__body mx-5 mt-5">
               <p className="text-base text-gray-600 font-Poppins">
                 {description}
@@ -57,6 +60,7 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
             </div>
           </div>
         </div>
+        <br/>
       </div>
     </>
   );

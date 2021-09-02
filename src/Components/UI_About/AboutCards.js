@@ -4,14 +4,13 @@ import Evaluation from "../../assets/UI-About/Evaluation.svg";
 import Diploma from "../../assets/UI-About/Diploma.svg";
 import Rating from "../../assets/UI-About/Rating.svg";
 import "./style.css";
-export const Cita = ({cita, autor, image}) => {
 
-  
+export const Cita = ({cita, autor, image}) => {
 
   return (
     <>
-      <div className="mt-24 flex flex-col justify-center items-center mx-10 mb-16">
-        <div className="p-5 mx-28 bg-gray-50 ring-2 ring-gray-100 shadow-lg rounded-xl my-3 font-Poppins">
+      <div className="mt-24 flex flex-col justify-center items-center mx-10 mb-16  sm:mb-5 sm:text-sm xs:mx-3 xs:mb-5">
+        <div className="p-5 mx-28 bg-gray-50 ring-2 ring-gray-100 shadow-lg sm:mx-3 rounded-xl my-3 font-Poppins sm:w-10/12 xs:w-10/12 xs:text-sm">
           <p className="font-normal text-lg text-gray-500 text-center mt-4">
             <span className="font-extrabold text-xl">"</span>
             {cita}
@@ -77,7 +76,8 @@ export const AboutCards = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-center items-center font-Poppins mx-10 select-none">
+      <div className="font-Poppins mx-10 select-none">
+      <div className="md:flex md:flex-row justify-center items-center xs:hidden mx-3">
         <div className={`${ divModal ? 'BeforeConatiner' : 'BeforeConatinerBlank'}`}>
           <div className={`${ divModal ? 'BeforeRoundedConatiner' : 'BeforeRoundedConatinerBlank'}`}>
               1
@@ -148,6 +148,7 @@ export const AboutCards = () => {
             </p>
           </div>
           
+        </div>
         </div>
       </div>
       <br />
