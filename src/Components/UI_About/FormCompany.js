@@ -2,7 +2,7 @@ import React from "react";
 
 export const FormCompany = () => {
     return (
-            <div className="bg-WhiteSocial shadow-2xl rounded-3xl mx-8 my-5 w-2/3">
+            <div className="bg-WhiteSocial shadow-2xl rounded-3xl lg:mx-8 lg:my-5 lg:w-2/3 w-11/12 text-sm">
               <form className="grid grid-rows-7 grid-cols-3 gap-4 mx-8 my-6 items-center justify-center">
                   <label className="text-gray-600 font-Montserrat font-medium">
                     Nombre de la empresa o negocio:

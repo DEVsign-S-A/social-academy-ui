@@ -1,5 +1,5 @@
 #ImageBanner {
-    width: 40vw;
+    width: 70vw;
     animation: float 3s linear infinite;
 }
 
@@ -18,7 +18,7 @@
 
 .content-image{
      background-image: url(../../assets/UI-About/00.svg);
-    background-size: contain; 
+    background-size: cover; 
 }
 
 .content-image2{
@@ -60,6 +60,15 @@
     width: 1800px;
 }
 
+
+@media (min-width: 450px){
+    .LogoImg {
+        width: 400px;
+    }
+    #ImageBanner {
+        width: 40vw;
+    }
+}
 /***Azul**/
 .BeforeConatiner{
     @apply bg-BlueSocial w-60 h-72 flex flex-col justify-center items-center rounded-xl transition-all duration-500 ease-in

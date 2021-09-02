@@ -8,8 +8,8 @@ export const Vision = () => {
         <div className="section-title"></div>
       </div>
 
-      <div className="flex justify-between">
-        <div className="mx-10 text-gray-500 text-xl font-Poppins mt-8">
+      <div className="flex justify-between m-5 flex-col lg:flex-row">
+        <div className="mx-10 text-gray-500 lg:text-xl font-Poppins mt-8 text-sm">
           <p className="letterLine">
             Ser una plataforma referente en Latinoamérica en el ámbito de la
             retroalimentación educativa de los estudiantes tanto universitarios, 
@@ -19,11 +19,13 @@ export const Vision = () => {
             cerficicados por la plataforma) y convertirnos en al plataforma online más prestigiosa.
           </p>
         </div>
-        <div className='mr-8'>
+        <div className='lg:mr-8 mt-2 mx-2'>
+        <br/>
+        <br/>
             <img
                 src={Team}
                 alt='Team Working'
-                width='1800px'
+                width='2800px'
                 className="rounded-3xl shadow-2xl ring-2 ring-gray-200"
                 loading='lazy'
             />

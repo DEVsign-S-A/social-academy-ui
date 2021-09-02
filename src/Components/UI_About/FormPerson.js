@@ -2,7 +2,7 @@ import React from "react";
 
 export const FormPerson = () => {
   return (
-    <div className="bg-WhiteSocial shadow-2xl rounded-3xl mx-8 my-5 w-2/3">
+    <div className="bg-WhiteSocial shadow-2xl rounded-3xl lg:mx-8 lg:my-5 lg:w-2/3 w-11/12 text-sm">
       <form className="grid grid-cols-3 gap-4 mx-8 my-6">
         <div className="grid grid-cols-1 gap-4">
           <label className="text-gray-600 font-Montserrat font-medium">

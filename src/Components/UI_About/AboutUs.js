@@ -4,20 +4,20 @@ import "./style.css";
 export const AboutUs = () => {
   return (
     <>
-      <br />
-      <br />
+    
       <div className="text-center font-bold text-xl text-gray-800 my-5 font-Montserrat">
-        <h2>Quienes Somos</h2>
+        <h2>¿Quienes Somos?</h2>
         <div className="section-title"></div>
       </div>
-      <div className="flex justify-between">
+
+      <div className="flex items-center flex-col lg:flex-row lg:justify-between ">
       <div>
-      <div className='mx-10 bg-gray-50 border-2 border-gray-200 flex items-center rounded-full shadow-2xl -mt-28'>
-          <img src={Logo} alt="Logo Social Academy" className='LogoImg py-16 px-6'/>
+      <div className='w-56 mt-3 mx-3 lg:mx-10 bg-gray-50 border-2 border-gray-200 lg:flex lg:items-center rounded-full shadow-2xl lg:-mt-28 '>
+          <img src={Logo} alt="Logo Social Academy" className='LogoImg py-16 px-6 sm:py-14 sm:px-4 xs:py-14 xs:px-4'/>
       </div>
       </div>
 
-        <div className="mx-10 text-gray-500 text-xl font-Poppins">
+        <div className="font-Poppins mx-8 mt-3 text-sm text-gray-500 lg:mx-10 lg:text-xl ">
           <p className='letterLine'>
           Social Academy es una plataforma social de retroalimentación
           estudiantil elaborada bajo el lema “Estudiantes ayudando a

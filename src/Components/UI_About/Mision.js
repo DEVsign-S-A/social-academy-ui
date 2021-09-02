@@ -8,9 +8,9 @@ export const Mision = () => {
         <div className="section-title"></div>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex flex-col lg:flex-row lg:justify-between">
         {" "}
-        <div className="mt-16 mx-10 text-gray-500 text-xl font-Poppins">
+        <div className="text-sm mx-8 lg:mt-16 lg:mx-10 text-gray-500 lg:text-xl font-Poppins">
           <p className="letterLine">
             Social academy esta compremetida en brindar a los estudiantes un
             repositorio de información que necesitan para su formación

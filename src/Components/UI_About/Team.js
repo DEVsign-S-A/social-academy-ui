@@ -47,8 +47,8 @@ export const Team = () => {
         <h2>Nuestro Equipo Creativo</h2>
         <div className="section-title"></div>
       </div>
-      <div className="flex justify-between">
-        <div className="mx-10 text-gray-500 text-xl font-Poppins mt-8 w-1/3">
+      <div className="flex items-center justify-around flex-col lg:flex-row">
+        <div className="lg:mx-10 text-gray-500 lg:text-xl font-Poppins lg:mt-8 lg:w-1/3 mx-5 mt-1 text-sm w-10/12">
           <p className="letterLine">
             <strong>Social Academy</strong> es una plataforma educativa con
             herramientas de colaboración y comucación estudiantil desarrollada
@@ -59,7 +59,7 @@ export const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 w-2/3 mt-8 mx-5 select-none">
+        <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-4 lg:w-2/3 lg:mt-8 mx-5 select-none grid-cols-1 grid-rows-1 w-10/12">
           
         {
           MembersTeam.map((member) => (

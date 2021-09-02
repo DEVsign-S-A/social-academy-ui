@@ -12,9 +12,9 @@ export const FormContact = () => {
   return (
     <div className="mt-20 -mb-14 select-none transition-all duration-500 ease-linear">
       <section className="content-image2 transition-all duration-500 ease-linear">
-        <div className="flex justify-between root">
+        <div className="flex items-center justify-between root flex-col lg:flex-row">
           {radioBtn === "1" ? <FormPerson /> : <FormCompany />}
-
+        <br/>
           <div className="grid grid-cols-2 grid-rows-2 gap-5 mx-8 items-center justify-center">
             <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/CENTNACIN_mnhdht.png`} alt="CENTNACIN" className="w-28" />
             <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/MEFCCA_bfo9yq.png`} alt="MEFCCA" className="w-28" />
