@@ -5,11 +5,11 @@ import { Footer } from '../Components/UI/Footer/Footer';
 import { Navbar } from '../Components/UI/Navbar';
 //import { NavbarAuth } from '../Components/UI/NavbarAuth';
 import AboutScreen from '../Views/AboutScreen';
+import LoginFinal from '../Views/Login';
 import CoursesScreen from '../Views/CoursesScreen';
 import ForumScreen from '../Views/ForumScreen';
 import HomeScreen from '../Views/HomeScreen';
 import InternshipsScreen from '../Views/InternshipsScreen';
-import {LoginView} from '../Components/UI_Login/LoginView';
 import PageNoFound from '../Views/PageNoFound';
 import ProfileScreen from '../Views/ProfileScreen';
 import ResourcesScreen from '../Views/ResourcesScreen';
@@ -28,7 +28,7 @@ export const AppRouter = () => {
                     <Route exact path='/Cursos' component={CoursesScreen}/>
                     <Route exact path='/Recursos' component={ResourcesScreen}/>
                     <Route exact path='/About' component={AboutScreen}/>
-                    <Route exact path='/Login' component={LoginView}/>
+                    <Route exact path='/Login' component={LoginFinal}/>
                     <Route exact path='/PageNoFound' component={PageNoFound}/>
                     <Route exact path='/Profile/:userId' component={ProfileScreen}/>
                 </Switch>

@@ -16,10 +16,10 @@ export const FormContact = () => {
           {radioBtn === "1" ? <FormPerson /> : <FormCompany />}
         <br/>
           <div className="grid grid-cols-2 grid-rows-2 gap-5 mx-8 items-center justify-center">
-            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/CENTNACIN_mnhdht.png`} alt="CENTNACIN" className="w-28" />
-            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/MEFCCA_bfo9yq.png`} alt="MEFCCA" className="w-28" />
-            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442079/Social%20Academy%20Image/LogoCNU_kxmlwo.png`} alt="LogoCNU" className="w-36" />
-            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/INATEC_ncynrc.png`} alt="INATEC" className="w-28" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/Aliados/CENTNACIN_mnhdht.png`} alt="CENTNACIN" className="w-28" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/Aliados/MEFCCA_bfo9yq.png`} alt="MEFCCA" className="w-28" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442079/Social%20Academy%20Image/Aliados/LogoCNU_kxmlwo.png`} alt="LogoCNU" className="w-36" />
+            <img src={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/Aliados/INATEC_ncynrc.png`} alt="INATEC" className="w-28" />
           </div>
         </div>
 

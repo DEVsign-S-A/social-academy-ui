@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 *,
 *::before,
 *::after {
@@ -11,11 +13,12 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-.main {
+main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #ff8c6b;
+  background-color: #fff;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,9 +29,9 @@ input {
   width: 100%;
   max-width: 1020px;
   height: 640px;
-  background-color: #fff;
+  background-color: #fafafa;
   border-radius: 3.3rem;
-  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.27);
 }
 
 .inner-box {
@@ -208,7 +211,7 @@ main.sign-up-mode .carousel {
   width: 55%;
   left: 45%;
   top: 0;
-  background-color: #ffe0d2;
+  background-color: #9CBCD9;
   border-radius: 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
