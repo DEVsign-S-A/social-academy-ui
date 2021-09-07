@@ -14,7 +14,7 @@ export const BannerEmpresas = () => {
                     </Link>
                 </div>
             </div>
-            <img src ={`./assets/HomeScreen/indexPasantes.png`} alt = "Banner Empresas"/>
+            <img src ={`https://res.cloudinary.com/socialacademy/image/upload/v1630603813/Social%20Academy%20Image/HomeScreen/indexPasantes_jpk3es.png`} alt = "Banner Empresas"/>
         </div>
     )
 }

@@ -4,17 +4,17 @@ import { FooterSocialItem } from './FooterSocialItem';
 
 export const Footer = () => {
     const socialMedia = [
-        {id: 1, path: 'fab fa-facebook-f', enlace: 'https://www.facebook.com/'},
-        {id: 2, path: 'fab fa-twitter', enlace: 'https://www.twitter.com/'},
-        {id: 3, path: 'fab fa-instagram', enlace: 'https://www.instagram.com/'},
-        {id: 4, path: 'fab fa-youtube', enlace: 'https://www.youtube.com/'}
+        {path: 'fab fa-facebook-f', enlace: 'https://www.facebook.com/Social-Academy-100105982404254'},
+        {path: 'fab fa-twitter', enlace: 'https://twitter.com/SocialAcademyNi'},
+        {path: 'fab fa-instagram', enlace: 'https://www.instagram.com/_socialacademy/'},
+        {path: 'fab fa-youtube', enlace: 'https://www.youtube.com/channel/UC97UE9cK8nNr0HzJ2MOz5Rw'}
     ];
 
     const enlaces = [
-        {id: 1, titulo: 'Inicio', link: '/Inicio'},
-        {id: 2, titulo: 'Foros', link: '/Foros'},
-        {id: 3, titulo: 'About', link: '/About'},
-        {id: 4, titulo: 'Login', link: '/Login'}
+        {titulo: 'Inicio', link: '/Inicio'},
+        {titulo: 'Foros', link: '/Foros'},
+        {titulo: 'About', link: '/About'},
+        {titulo: 'Login', link: '/Login'}
     ];
     return (
         <footer>
@@ -25,9 +25,9 @@ export const Footer = () => {
 
             <div className = "Enlaces flex-row">
                 {
-                    enlaces.map(enlace => (
+                    enlaces.map((enlace, index) => (
                         <FooterEnlaces
-                        key = {enlace.id}
+                        key = {index}
                         titulo = {enlace.titulo}
                         link = {enlace.link} />
                     ))
@@ -36,9 +36,9 @@ export const Footer = () => {
 
             <div className = "SocialBar flex-row">
                 {
-                    socialMedia.map(media =>(
+                    socialMedia.map((media, index) =>(
                         <FooterSocialItem
-                        key = {media.id}
+                        key = {index}
                         path = {media.path}
                         enlace = {media.enlace}/>
                     ))
