@@ -12,7 +12,7 @@ export const CardPremium = ({titulo, precio, descripcion = []}) => {
                         Premium<br/>{titulo}
                     </h1>
                 </div>
-                <img className = "CardSemicirculo" src = {`./assets/HomeScreen/Cards/ArcoCardPremium.png`} alt = "Arco Rosa" />
+                <img className = "CardSemicirculo" src = {`https://res.cloudinary.com/socialacademy/image/upload/v1630603834/Social%20Academy%20Image/HomeScreen/ArcoCardPremium_n8aujz.png`} alt = "Arco Rosa" />
             </div>
             <div className = "IndividualesTextoPrecio">
                     <div className = "TextoPrecio1">
@@ -43,7 +43,7 @@ export const CardPremium = ({titulo, precio, descripcion = []}) => {
             </div>
             <div className = "IndividualesInferior">
                 <div className = "InferiorImagen">
-                    <img src = {`./assets/HomeScreen/Cards/SemicirculoCardPremium.png`} alt = "Semicirculo Rosa" />
+                    <img src = {`https://res.cloudinary.com/socialacademy/image/upload/v1630603833/Social%20Academy%20Image/HomeScreen/SemicirculoCardPremium_yc8bre.png`} alt = "Semicirculo Rosa" />
                 </div>
                 <div className = "InferiorBoton">
                     <Link to = "/Login"
