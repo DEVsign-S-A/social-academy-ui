@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import './style.css';
+import im01 from '../../assets/UI_Login/image1.png';
+import im02 from '../../assets/UI_Login/image2.png';
+import im03 from '../../assets/UI_Login/image3.png';
 
 export const LoginView = () => {
 
@@ -7,13 +10,16 @@ export const LoginView = () => {
   
   return (
     <>
-      <main
+      <div
+        id='main'
       className={`${singform ? 'sign-in-form' : 'sign-up-mode'}`}
       >
       <div className="box">
         <div className="inner-box">
           <div className="forms-wrap">
-            <form action="index.html" autocomplete="off" className="sign-in-form">
+            <form action="index.html" autocomplete="off" className="sign-in-form"
+              id='form'
+            >
               <div className="logo">
                 <img src="./img/logo.png" alt="easyclass" />
                 <h4>easyclass</h4>
@@ -22,9 +28,9 @@ export const LoginView = () => {
               <div className="heading">
                 <h2>Welcome Back</h2>
                 <h6>Not registred yet?</h6>
-                <a href="#" className="toggle"
+                <p className="toggle"
                   onClick={() => setSingform(!singform)}
-                >Sign up</a>
+                >Sign up</p>
               </div>
 
               <div className="actual-form">
@@ -35,8 +41,8 @@ export const LoginView = () => {
                     className="input-field"
                     autocomplete="off"
                     required
+                    placeholder="Email"
                   />
-                  <label>Name</label>
                 </div>
 
                 <div className="input-wrap">
@@ -46,21 +52,23 @@ export const LoginView = () => {
                     className="input-field"
                     autocomplete="off"
                     required
+                    placeholder="Contraseña"
                   />
-                  <label>Password</label>
                 </div>
 
                 <input type="submit" value="Sign In" className="sign-btn" />
 
                 <p className="text">
                   Forgotten your password or you login datails?
-                  <a href="#"
-                  >Get help</a> signing in
+                  <p
+                  >Get help</p> signing in
                 </p>
               </div>
             </form>
 
-            <form action="index.html" autocomplete="off" className="sign-up-form">
+            <form action="index.html" 
+              id='form'
+            autocomplete="off" className="sign-up-form">
               <div className="logo">
                 <img src="./img/logo.png" alt="easyclass" />
                 <h4>easyclass</h4>
@@ -69,9 +77,9 @@ export const LoginView = () => {
               <div className="heading">
                 <h2>Get Started</h2>
                 <h6>Already have an account?</h6>
-                <a href="#" className="toggle"
+                <p className="toggle"
                       onClick={() => setSingform(!singform)}
-                >Sign in</a>
+                >Sign in</p>
               </div>
 
               <div className="actual-form">
@@ -82,8 +90,8 @@ export const LoginView = () => {
                     className="input-field"
                     autocomplete="off"
                     required
+                    placeholder='Nombre'
                   />
-                  <label>Name</label>
                 </div>
 
                 <div className="input-wrap">
@@ -92,8 +100,8 @@ export const LoginView = () => {
                     className="input-field"
                     autocomplete="off"
                     required
+                    placeholder="Email"
                   />
-                  <label>Email</label>
                 </div>
 
                 <div className="input-wrap">
@@ -103,16 +111,26 @@ export const LoginView = () => {
                     className="input-field"
                     autocomplete="off"
                     required
+                    placeholder='Contraseña'
                   />
-                  <label>Password</label>
+                </div>
+                <div className="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    className="input-field"
+                    autocomplete="off"
+                    required
+                    placeholder='Repita su contraseña'
+                  />
                 </div>
 
                 <input type="submit" value="Sign Up" className="sign-btn" />
 
                 <p className="text">
                   By signing up, I agree to the
-                  <a href="#">Terms of Services</a> and
-                  <a href="#">Privacy Policy</a>
+                  <p>Terms of Services</p> and
+                  <p>Privacy Policy</p>
                 </p>
               </div>
             </form>
@@ -120,9 +138,9 @@ export const LoginView = () => {
 
           <div className="carousel">
             <div className="images-wrapper">
-              <img src="./img/image1.png" className="image img-1 show" alt="" />
-              <img src="./img/image2.png" className="image img-2" alt="" />
-              <img src="./img/image3.png" className="image img-3" alt="" />
+              <img src={im01} className="image img-1 show" alt="" />
+              <img src={im02} className="image img-2" alt="" />
+              <img src={im03} className="image img-3" alt="" />
             </div>
 
             <div className="text-slider">
@@ -143,7 +161,7 @@ export const LoginView = () => {
           </div>
         </div>
       </div>
-    </main>
+    </div>
     </>
   );
 };

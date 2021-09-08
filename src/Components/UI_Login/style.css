@@ -1,27 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body,
-input {
-  font-family: "Poppins", sans-serif;
-}
-
-main {
+#main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
   background-color: #fff;
-  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Poppins';
 }
 
 .box {
@@ -55,7 +41,7 @@ main {
   transition: 0.8s ease-in-out;
 }
 
-form {
+#form {
   max-width: 260px;
   width: 100%;
   margin: 0 auto;
@@ -68,7 +54,7 @@ form {
   transition: opacity 0.02s 0.4s;
 }
 
-form.sign-up-form {
+#form.sign-up-form {
   opacity: 0;
   pointer-events: none;
 }
@@ -109,6 +95,7 @@ form.sign-up-form {
   font-size: 0.75rem;
   font-weight: 500;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .toggle:hover {
@@ -135,24 +122,8 @@ form.sign-up-form {
   transition: 0.4s;
 }
 
-label {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.95rem;
-  color: #bbb;
-  pointer-events: none;
-  transition: 0.4s;
-}
-
 .input-field.active {
   border-bottom-color: #151111;
-}
-
-.input-field.active + label {
-  font-size: 0.75rem;
-  top: -2px;
 }
 
 .sign-btn {
@@ -178,30 +149,31 @@ label {
   font-size: 0.7rem;
 }
 
-.text a {
+.text p {
   color: #bbb;
   transition: 0.3s;
+  cursor: pointer;
 }
 
-.text a:hover {
+.text p:hover {
   color: #8371fd;
 }
 
-main.sign-up-mode form.sign-in-form {
+#main.sign-up-mode #form.sign-in-form {
   opacity: 0;
   pointer-events: none;
 }
 
-main.sign-up-mode form.sign-up-form {
+#main.sign-up-mode #form.sign-up-form {
   opacity: 1;
   pointer-events: all;
 }
 
-main.sign-up-mode .forms-wrap {
+#main.sign-up-mode .forms-wrap {
   left: 55%;
 }
 
-main.sign-up-mode .carousel {
+#main.sign-up-mode .carousel {
   left: 0%;
 }
 
@@ -322,7 +294,7 @@ main.sign-up-mode .carousel {
     height: auto;
   }
 
-  form {
+  #form {
     max-width: revert;
     padding: 1.5rem 2.5rem 2rem;
     transition: transform 0.8s ease-in-out, opacity 0.45s linear;
@@ -332,15 +304,15 @@ main.sign-up-mode .carousel {
     margin: 2rem 0;
   }
 
-  form.sign-up-form {
+  #form.sign-up-form {
     transform: translateX(100%);
   }
 
-  main.sign-up-mode form.sign-in-form {
+  #main.sign-up-mode #form.sign-in-form {
     transform: translateX(-100%);
   }
 
-  main.sign-up-mode form.sign-up-form {
+  #main.sign-up-mode #form.sign-up-form {
     transform: translateX(0%);
   }
 
@@ -362,7 +334,7 @@ main.sign-up-mode .carousel {
 }
 
 @media (max-width: 530px) {
-  main {
+  #main {
     padding: 1rem;
   }
 
@@ -387,7 +359,7 @@ main.sign-up-mode .carousel {
     font-size: 1.2rem;
   }
 
-  form {
+  #form {
     padding: 1rem 2rem 1.5rem;
   }
 }
