@@ -3,11 +3,36 @@ import './style.css';
 import im01 from '../../assets/UI_Login/image1.png';
 import im02 from '../../assets/UI_Login/image2.png';
 import im03 from '../../assets/UI_Login/image3.png';
+import { SocialIcons } from "./SocialIcons";
+import { SocialIconsRegister } from "./SocialIconsRegister";
 
 export const LoginView = () => {
 
   const [singform, setSingform] = useState(true);
   
+  const bullets = document.querySelectorAll(".bullets span");
+  const images = document.querySelectorAll(".image");
+
+
+  function moveSlider() {
+    let index = this.dataset.value || "1";
+  
+    let currentImage = document.querySelector(`.img-${index}`);
+    images.forEach((img) => img.classList.remove("show"));
+    currentImage.classList.add("show");
+  
+    const textSlider = document.querySelector(".text-group");
+    textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
+  
+    bullets.forEach((bull) => bull.classList.remove("active"));
+    this.classList.add("active");
+  }
+  
+  bullets.forEach((bullet) => {
+    bullet.addEventListener("click", moveSlider);
+  });
+  
+
   return (
     <>
       <div
@@ -20,17 +45,18 @@ export const LoginView = () => {
             <form action="index.html" autocomplete="off" className="sign-in-form"
               id='form'
             >
-              <div className="logo">
-                <img src="./img/logo.png" alt="easyclass" />
-                <h4>easyclass</h4>
+              <div className="">
+                <img src={`./assets/Logos/sociallog.svg`} alt="sociallog" 
+                  className='w-10/12'
+                />
               </div>
 
               <div className="heading">
-                <h2>Welcome Back</h2>
-                <h6>Not registred yet?</h6>
+                <h2 className='text-second'>Bienvenido</h2>
+                <h6>¿Todavía no estas registrado?</h6>
                 <p className="toggle"
                   onClick={() => setSingform(!singform)}
-                >Sign up</p>
+                >Registrate</p>
               </div>
 
               <div className="actual-form">
@@ -56,12 +82,16 @@ export const LoginView = () => {
                   />
                 </div>
 
-                <input type="submit" value="Sign In" className="sign-btn" />
+                <input type="submit" value="Inicia" className="sign-btn" />
+                <p
+                className="text"
+              >O Inicia Sesión Con alguna de estas plataformas</p>
+                <SocialIcons/>
 
                 <p className="text">
-                  Forgotten your password or you login datails?
+                  ¿Olvidaste tu contraseña?
                   <p
-                  >Get help</p> signing in
+                  >Consigue ayuda</p> iniciando sesión
                 </p>
               </div>
             </form>
@@ -69,17 +99,19 @@ export const LoginView = () => {
             <form action="index.html" 
               id='form'
             autocomplete="off" className="sign-up-form">
-              <div className="logo">
-                <img src="./img/logo.png" alt="easyclass" />
-                <h4>easyclass</h4>
+              <div className="">
+                <img src={`./assets/Logos/sociallog.svg`} alt="sociallog" 
+                  className='w-10/12'
+                />
               </div>
 
+
               <div className="heading">
-                <h2>Get Started</h2>
-                <h6>Already have an account?</h6>
+                <h2>Empezemos</h2>
+                <h6>¿Ya tienes una cuenta?</h6>
                 <p className="toggle"
                       onClick={() => setSingform(!singform)}
-                >Sign in</p>
+                >Inicia Sesión</p>
               </div>
 
               <div className="actual-form">
@@ -125,13 +157,14 @@ export const LoginView = () => {
                   />
                 </div>
 
-                <input type="submit" value="Sign Up" className="sign-btn" />
+                <input type="submit" value="Resgistrate" className="sign-btn" />
 
-                <p className="text">
-                  By signing up, I agree to the
-                  <p>Terms of Services</p> and
-                  <p>Privacy Policy</p>
+                <p className='text'>
+                O Registrate Con alguna de estas plataformas
                 </p>
+
+                <SocialIconsRegister/>
+
               </div>
             </form>
           </div>
@@ -153,7 +186,9 @@ export const LoginView = () => {
               </div>
 
               <div className="bullets">
-                <span className="active" data-value="1"></span>
+                <span className="active" data-value="1"
+                
+                ></span>
                 <span data-value="2"></span>
                 <span data-value="3"></span>
               </div>

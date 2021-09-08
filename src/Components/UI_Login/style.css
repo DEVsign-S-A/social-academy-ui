@@ -99,7 +99,7 @@
 }
 
 .toggle:hover {
-  color: #8371fd;
+  color: #DB255D;
 }
 
 .input-wrap {
@@ -135,13 +135,14 @@
   border: none;
   cursor: pointer;
   border-radius: 0.8rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   transition: 0.3s;
+  font-weight: 500;
 }
 
 .sign-btn:hover {
-  background-color: #8371fd;
+  background-color: #DB255D;
 }
 
 .text {
