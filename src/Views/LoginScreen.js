@@ -1,93 +1,145 @@
-import React, { useState } from "react";
-import "../Components/UI_Login/login.css";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "../Components/UI_Login/style.css";
+import im01 from "../assets/UI_Login/image1.png";
+import im02 from "../assets/UI_Login/image2.png";
+import im03 from "../assets/UI_Login/image3.png";
+import { SocialIconsRegister } from "../Components/UI_Login/SocialIconsRegister";
 import RegisterScreen from "./RegisterScreen";
-import image from '../assets/UI_Login/03.svg'
-import image2 from '../assets/UI_Login/07.svg'
-import { SocialIcons } from "../Components/UI_Login/SocialIcons";
-import { PSocial } from "../Components/Tailwind/LoginTW";
+import { setToggleForm } from "../Redux/Actions/uiActions";
 
 const LoginScreen = () => {
-  const [toggle, setToggle] = useState(true);
 
-  const toggleClass = () => {
-    setToggle(!toggle);
-  };
+  
+/**
+ * aqui esta una parte que me vale verga si esta en vaniallaJS
+ * no pienso quitarme la vina haciendo algo inutil como quitar
+ * y agregar clases...
+ */
+  const bullets = document.querySelectorAll(".bullets span");
+  const images = document.querySelectorAll(".image");
+
+  function moveSlider() {
+    let index = this.dataset.value || "1";
+
+    let currentImage = document.querySelector(`.img-${index}`);
+    images.forEach((img) => img.classList.remove("show"));
+    currentImage.classList.add("show");
+
+    const textSlider = document.querySelector(".text-group");
+    textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
+
+    bullets.forEach((bull) => bull.classList.remove("active"));
+    this.classList.add("active");
+  }
+
+  bullets.forEach((bullet) => {
+    bullet.addEventListener("click", moveSlider);
+  });
+  
+  //...aqui termina
+
+  const {toggleForm} = useSelector(state => state.ui);
+
+  const dispatch = useDispatch();
+
+  const handleToggleForm = () => {
+    dispatch(setToggleForm(!toggleForm));
+  }
 
   return (
     <>
-      <div className={toggle ? "containerSing" : "containerSing sign-up-mode"}>
-        <div className="forms-containerSing ">
-          <div className="signin-signup">
-            <form id="form" action="#" className="sign-in-form">
-              <h2 className="title font-Montserrat">Inicia Sesión</h2>
-              <div className="input-field font-Poppins">
-                <i className="fas fa-user"></i>
-                <input
-                  type="email"
-                  placeholder="Correo Electronico"
-                  id="email"
-                  name="email"
-                  className="font-Poppins font-medium"
-                />
-              </div>
-              <div className="input-field">
-                <i className="fas fa-lock"></i>
-                <input
-                  type="password"
-                  placeholder="Contraseña"
-                  id="password"
-                  name="password"
-                  className="font-Poppins font-medium"
-                />
-              </div>
-              <input type="submit" value="Inicia" className="btnSing solid" />
-              <PSocial
-                $SocialIconsText
-              >O Inicia Sesion Con alguna de estas plataformas</PSocial>
-              <SocialIcons/>
-            </form>
-
-            <RegisterScreen />
-          </div>
-        </div>
-
-        <div className="panels-containerSing">
-          <div className="panel left-panel">
-            <div className="content">
-            <h3 className="font-Montserrat text-second font-extrabold text-3xl">
-            ¿Eres Nuevo(a)?</h3>
-              <p className="font-Poppins font-medium ">
-                ¡QUE ESPERAS! <br />
-                Para formar parte de la comunidad de aprendizaje mas grande de
-                Nicaragua dando y recibiendo Feedback
-              </p>
-              <button
-                className="btnSing transparent"
-                id="sign-up-btn"
-                onClick={toggleClass}
+      <div
+        id="main"
+        className={`${toggleForm ? "sign-in-form" : "sign-up-mode"}`}
+      >
+        <div className="box">
+          <div className="inner-box">
+            <div className="forms-wrap">
+              <form
+                action="index.html"
+                autocomplete="off"
+                className="sign-in-form"
+                id="form"
               >
-                Registrate
-              </button>
+                <div className="">
+                  <img
+                    src={`./assets/Logos/sociallog.svg`}
+                    alt="sociallog"
+                    className="w-10/12"
+                  />
+                </div>
+
+                <div className="heading">
+                  <h2 className="text-second">Bienvenido</h2>
+                  <h6>¿Todavía no estas registrado?</h6>
+                  <p className="toggle" onClick={handleToggleForm}>
+                    Registrate
+                  </p>
+                </div>
+
+                <div className="actual-form">
+                  <div className="input-wrap">
+                    <input
+                      type="text"
+                      minlength="4"
+                      className="input-field"
+                      autocomplete="off"
+                      required
+                      placeholder="Email"
+                    />
+                  </div>
+
+                  <div className="input-wrap">
+                    <input
+                      type="password"
+                      minlength="4"
+                      className="input-field"
+                      autocomplete="off"
+                      required
+                      placeholder="Contraseña"
+                    />
+                  </div>
+
+                  <input type="submit" value="Inicia" className="sign-btn" />
+                  <p className="text">
+                    O Inicia Sesión Con alguna de estas plataformas
+                  </p>
+                  <SocialIconsRegister />
+
+                  <p className="text">
+                    ¿Olvidaste tu contraseña?
+                    <p>Consigue ayuda</p> iniciando sesión
+                  </p>
+                </div>
+              </form>
+
+              <RegisterScreen />
             </div>
-            <img src={image2} className="image" alt="" />
-          </div>
-          <div className="panel right-panel">
-            <div className="content">
-              <h3 className="font-Montserrat text-second font-extrabold text-3xl">
-              ¿Ya tienes Cuenta?</h3>
-              <p className='font-Poppins font-medium'>
-                Inicia Sesion ya, para empezar a comunicarte con muchos Jovenes
-                que desean aprender y enseñar al igual que tu.
-              </p>
-              <button
-                className="btnSing transparent"
-                id="sign-in-btn"
-                onClick={toggleClass}
-              >
-                Inicia
-              </button>
+
+            <div className="carousel">
+              <div className="images-wrapper">
+                <img src={im01} className="image img-1 show" alt="" />
+                <img src={im02} className="image img-2" alt="" />
+                <img src={im03} className="image img-3" alt="" />
+              </div>
+
+              <div className="text-slider">
+                <div className="text-wrap">
+                  <div className="text-group">
+                    <h2>Crea tus propios cursos</h2>
+                    <h2>Resuelve tus dudas puntuales</h2>
+                    <h2>Busca posibles pasantias</h2>
+                  </div>
+                </div>
+
+                <div className="bullets">
+                  <span className="active" data-value="1"></span>
+                  <span data-value="2"></span>
+                  <span data-value="3"></span>
+                </div>
+              </div>
             </div>
-            <img src={image} className="image" alt="" />
           </div>
         </div>
       </div>

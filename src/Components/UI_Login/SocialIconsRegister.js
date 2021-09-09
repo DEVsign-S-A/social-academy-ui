@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BtnSocialIcon } from "../Tailwind/LoginTW";
 
@@ -6,7 +7,7 @@ export const SocialIconsRegister = () => {
     //TODO: Crear el Dispatch
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center my-2">
       <BtnSocialIcon $Red>
         <i className="fab fa-google"></i>
       </BtnSocialIcon>
@@ -25,3 +26,7 @@ export const SocialIconsRegister = () => {
     </div>
   );
 };
+
+
+
+

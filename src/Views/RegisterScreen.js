@@ -1,62 +1,96 @@
 import React from "react";
-import "../Components/UI_Login/login.css";
+import "../Components/UI_Login/style.css";
 import { SocialIconsRegister } from "../Components/UI_Login/SocialIconsRegister";
-import { PSocial } from "../Components/Tailwind/LoginTW";
+import { useDispatch, useSelector } from "react-redux";
+import { setToggleForm } from "../Redux/Actions/uiActions";
 
 const RegisterScreen = ({ props }) => {
+
+  const {toggleForm} = useSelector(state => state.ui);
+
+  const dispatch = useDispatch();
+
+  const handleToggleForm = () => {
+    dispatch(setToggleForm(!toggleForm));
+  }
+
+
   return (
     <>
-      <form id="form" action="#" className="sign-up-form">
-        <h2 className="title font-Montserrat">Registrate</h2>
-        <div className="input-field">
-          <i className="fas fa-user"></i>
-          <input
-            type="text"
-            placeholder="Nombre de Usuario"
-            id="nombreAccount"
-            name="nombre"
-            className="font-Poppins font-medium"
+      <form
+        action="index.html"
+        id="form"
+        autocomplete="off"
+        className="sign-up-form"
+      >
+        <div className="">
+          <img
+            src={`./assets/Logos/sociallog.svg`}
+            alt="sociallog"
+            className="w-10/12"
           />
         </div>
-        <div className="input-field">
-          <i className="fas fa-envelope"></i>
-          <input
-            type="email"
-            placeholder="Email"
-            id="emailAccount"
-            name="email"
-            className="font-Poppins font-medium"
-          />
+
+        <div className="heading">
+          <h2>Empezemos</h2>
+          <h6>¿Ya tienes una cuenta?</h6>
+          <p
+            className="toggle"
+            onClick={handleToggleForm}
+          >
+            Inicia Sesión
+          </p>
         </div>
-        <div className="input-field">
-          <i className="fas fa-lock"></i>
-          <input
-            type="password"
-            placeholder="Contraseña"
-            id="passwordAccount"
-            name="password"
-            className="font-Poppins font-medium"
-          />
+
+        <div className="actual-form">
+          <div className="input-wrap">
+            <input
+              type="text"
+              minlength="4"
+              className="input-field"
+              autocomplete="off"
+              required
+              placeholder="Nombre"
+            />
+          </div>
+
+          <div className="input-wrap">
+            <input
+              type="email"
+              className="input-field"
+              autocomplete="off"
+              required
+              placeholder="Email"
+            />
+          </div>
+
+          <div className="input-wrap">
+            <input
+              type="password"
+              minlength="4"
+              className="input-field"
+              autocomplete="off"
+              required
+              placeholder="Contraseña"
+            />
+          </div>
+          <div className="input-wrap">
+            <input
+              type="password"
+              minlength="4"
+              className="input-field"
+              autocomplete="off"
+              required
+              placeholder="Repita su contraseña"
+            />
+          </div>
+
+          <input type="submit" value="Resgistrate" className="sign-btn" />
+
+          <p className="text">O Registrate Con alguna de estas plataformas</p>
+
+          <SocialIconsRegister />
         </div>
-        <div className="input-field">
-          <i className="fas fa-lock"></i>
-          <input
-            type="password"
-            placeholder="Repita la Contraseña"
-            id="confirm"
-            name="confirm"
-            className="font-Poppins font-medium"
-          />
-        </div>
-        <div className="input-field">
-          <i className="fas fa-calendar"></i>
-          <input type="date" placeholder="Fecha de Nacimiento" />
-        </div>
-        <input type="submit" className="btnSing" value="Registrar" />
-        <PSocial $SocialIconsText>
-          O Registrate Con alguna de estas plataformas
-        </PSocial>
-        <SocialIconsRegister />
       </form>
     </>
   );
