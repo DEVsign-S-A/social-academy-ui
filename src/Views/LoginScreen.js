@@ -5,6 +5,7 @@ import im01 from "../assets/UI_Login/image1.png";
 import im02 from "../assets/UI_Login/image2.png";
 import im03 from "../assets/UI_Login/image3.png";
 import { SocialIconsRegister } from "../Components/UI_Login/SocialIconsRegister";
+import { Footer } from "../Components/UI_Footer/Footer";
 import RegisterScreen from "./RegisterScreen";
 import { setToggleForm } from "../Redux/Actions/uiActions";
 
@@ -143,6 +144,7 @@ const LoginScreen = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

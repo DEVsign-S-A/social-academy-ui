@@ -76,10 +76,19 @@ export const Sidebar = () => {
   //openSidebar={openSidebar}
   //${ && "open"}
   return (
+    <>
     <div className={`sidebar ${showSidebar && "open"} `}>
       <br />
       <div className={`flex ${showSidebar && "m-2"} `}>
-        <img src={`./assets/Logos/sociallog.svg`} alt="sociallog" />
+        <p className={`text-primary font-Poppins text-xs font-medium mr-2 ${showSidebar && "text-primary font-Poppins text-lg font-semibold"} `}>
+          Categorias
+        </p>
+      <img
+        src={X}
+        alt='x'
+        onClick={handleClose}
+        className='cursor-pointer'
+      />
 
         {showSidebar && (
           <img
@@ -107,5 +116,6 @@ export const Sidebar = () => {
         ))}
       </ul>
     </div>
+    </>
   );
 };

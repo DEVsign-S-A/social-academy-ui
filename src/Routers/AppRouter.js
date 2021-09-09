@@ -2,9 +2,9 @@ import React from 'react';
 //, Redirect
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { Navbar } from '../Components/UI/Navbar';
-import { Footer } from '../Components/UI_Footer/Footer';
 //import { NavbarAuth } from '../Components/UI/NavbarAuth';
 import AboutScreen from '../Views/AboutScreen';
+import {NewQuestion} from '../Components/UI_Forum/NewQuestion';
 import LoginScreen from '../Views/LoginScreen';
 import RegisterScreen from '../Views/RegisterScreen';
 import CoursesScreen from '../Views/CoursesScreen';
@@ -30,12 +30,12 @@ export const AppRouter = () => {
                     <Route exact path='/Recursos' component={ResourcesScreen}/>
                     <Route exact path='/About' component={AboutScreen}/>
                     <Route exact path='/Login' component={LoginScreen}/>
+                    <Route exact path='/New_Question' component={NewQuestion}/>
                     <Route exact path='/Register' component={RegisterScreen}/>
                     <Route exact path='/PageNoFound' component={PageNoFound}/>
                     <Route exact path='/Profile/:userId' component={ProfileScreen}/>
                 </Switch>
 
-                <Footer/>
             </div>
        </Router>
     )
