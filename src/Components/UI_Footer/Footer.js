@@ -17,7 +17,7 @@ export const Footer = () => {
         {titulo: 'Login', link: '/Login'}
     ];
     return (
-        <footer>
+        <footer className='z-50 bottom-0 relative'>
             <img
             className = "footer__Logo"
             src = {`./assets/Logos/LogoLetrasBlancas.png`}

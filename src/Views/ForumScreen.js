@@ -1,9 +1,10 @@
 import React from 'react';
+import { Sidebar } from '../Components/UI_Forum/Sidebar';
 
 const ForumScreen = () => {
   return (
     <>
-      <h2>Forum Screen</h2>
+      <Sidebar/>
     </>
   );
 };

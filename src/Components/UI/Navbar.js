@@ -6,7 +6,7 @@ import '../Styles/NavModalTooltip.css'
 export const Navbar = () => {
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap bg-primary overflow-hidden shadow-xl transition-all ease-in-out duration-700">
+      <nav className="fixed w-full top-0 z-50 select-none flex items-center justify-between flex-wrap bg-primary overflow-hidden shadow-xl transition-all ease-in-out duration-700">
         <div className="flex text-white font-bold text-2xl m-5">
           <img
             className="w-9/12 mx-0"
