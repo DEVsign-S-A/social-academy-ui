@@ -34,7 +34,7 @@ export const NewQuestion = () => {
       <br />
 
       <div className="flex justify-between">
-        <h1 className="text-gray-700 font-Montserrat font-semibold text-2xl ml-3">
+        <h1 className="text-gray-700 font-Poppins font-semibold text-2xl ml-3">
           Formula un Pregunta
         </h1>
 
@@ -54,7 +54,7 @@ export const NewQuestion = () => {
             <p className="text-gray-600 font-Poppins font-medium text-lg p-5">
               Título
             </p>
-            <p className="text-gray-400 font-Poppins ml-6 pb-2">
+            <p className="text-gray-400 font-Poppins font-light ml-6 pb-2">
               Se específico e imagina que estás haciendo la pregunta a otra
               persona
             </p>
@@ -68,7 +68,7 @@ export const NewQuestion = () => {
             <p className="text-gray-600 font-Poppins font-medium text-lg p-5">
               Etiquetas
             </p>
-            <p className="text-gray-400 font-Poppins ml-6 pb-2">
+            <p className="text-gray-400 font-Poppins font-light ml-6 pb-2">
               Añade la categoria a la cual corresponde tu pregunta
             </p>
             <input
@@ -83,7 +83,7 @@ export const NewQuestion = () => {
               Cuerpo
             </p>
             <div className="flex justify-between">
-              <p className="text-gray-400 font-Poppins ml-6 pb-2">
+              <p className="text-gray-400 font-Poppins font-light ml-6 pb-2">
                 Incluye toda la información que alguien necesita para responder
                 tu pregunta
               </p>

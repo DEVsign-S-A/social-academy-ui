@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import x from "../../assets/UI_Forum/X.svg";
-import right from "../../assets/UI_Forum/Align-Left.svg";
+import right from "../../assets/UI_Forum/Menu.svg";
 import "./style.css";
 import { setSidebar } from "../../Redux/Actions/uiActions";
 import { SideBatItems } from "./SideBatItems";
