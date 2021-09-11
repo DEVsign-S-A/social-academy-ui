@@ -30,7 +30,7 @@ export const Button = tw.button`
 
 
     ${props => props.$primarylighicon && 
-        'py-2.5 px-6 text-white bg-BlueSocial inline-flex items-center rounded'
+        'py-2.5 px-6 text-white bg-BlueSocial inline-flex items-center rounded outline-none'
     };
 
     ${props => props.$bordericon && 
@@ -38,11 +38,11 @@ export const Button = tw.button`
     };
 
     ${props => props.$borderlighicon && 
-        'py-2 px-6 text-white bg-BlueSocial border-blue-500 border-b-4 inline-flex items-center rounded-lg font-Poppins font-semibold'
+        'py-2 px-6 text-white bg-BlueSocial border-blue-500 border-b-4 inline-flex items-center rounded-lg font-Poppins font-semibold outline-none'
     };  
 
     ${props => props.$border_lighi_con_grid && 
-        'py-2 px-6 text-white bg-BlueSocial border-blue-500 border-b-4 inline-flex items-center mx-5 my-8 rounded-lg font-Poppins font-medium'
+        'py-2 px-6 text-white bg-BlueSocial border-blue-500 border-b-4 inline-flex items-center mx-5 my-8 rounded-lg font-Poppins font-medium outline-none'
     };  
     
 

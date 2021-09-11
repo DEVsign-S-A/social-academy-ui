@@ -3,11 +3,10 @@ import { Grid } from "../Tailwind/Grid";
 import label from "../../assets/UI_Forum/Pantone.svg";
 import Like from "../../assets/UI_Forum/Like.svg";
 import Chat from "../../assets/UI_Forum/Chat.svg";
-
+import {Answers} from './Answers';
+import { PostAnsewrs } from "./postAnsewrs";
 export const Questions = ({
-  Name,
-  IdPerson,
-  ProfilePhoto,
+  user,
   Title,
   Category,
   Body,
@@ -23,9 +22,9 @@ export const Questions = ({
         <Grid $grid_primary_container>
           <div className="flex m-5 p-5 justify-between">
             <div className="flex ">
-              <img src={ProfilePhoto} alt={Name} />
+              <img src={user.ProfilePhoto} alt={user.Name} />
               <div className="mx-4">
-                <p className="font-Poppins text-gray-600 font-medium">{Name}</p>
+                <p className="font-Poppins text-gray-600 font-medium">{user.Name}</p>
                 <p className="font-Poppins text-gray-400 text-sm">{Date}</p>
               </div>
             </div>
@@ -45,7 +44,7 @@ export const Questions = ({
           </p>
           <div>
             {imageQuestion && (
-              <img src={imageQuestion} alt={IdPerson} className="w-1/2 m-8" />
+              <img src={imageQuestion} alt={user.IdPerson} className="w-1/2 m-8" />
             )}
           </div>
           <br />
@@ -73,6 +72,17 @@ export const Questions = ({
               </p>
             </div>
           </div>
+          <PostAnsewrs/>
+          {
+            QuantityAnswers.map(
+              (answers) => (
+                <Answers
+                  key={answers.IdAnswer}
+                  {...answers}
+                />
+              )
+            )
+          }
         </Grid>
       </div>
     </>

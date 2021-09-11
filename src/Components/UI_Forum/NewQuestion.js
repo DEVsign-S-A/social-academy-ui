@@ -39,7 +39,7 @@ export const NewQuestion = () => {
         </h1>
 
         <button
-          className="p-3 my-3 bg-second text-white mx-5 rounded-xl shadow-lg font-Poppins font-medium cursor-pointer"
+          className="outline-none p-3 my-3 bg-second text-white mx-5 rounded-xl shadow-lg font-Poppins font-medium cursor-pointer"
           onClick={handleBack}
         >
           Regresar
