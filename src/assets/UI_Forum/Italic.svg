@@ -1,0 +1,11 @@
+<svg id="Italic" xmlns="http://www.w3.org/2000/svg" width="10.509" height="16.001" viewBox="0 0 10.509 16.001">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3b3b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Italic-2" data-name="Italic" class="cls-1" d="M13.024,2h1.486a1,1,0,0,1,0,2h-.816l-4.5,12h.745a1,1,0,0,1,0,2H6a1,1,0,0,1,0-2H7.057l4.5-12h-.745a1,1,0,0,1,0-2h2.211Z" transform="translate(-5 -2)"/>
+</svg>

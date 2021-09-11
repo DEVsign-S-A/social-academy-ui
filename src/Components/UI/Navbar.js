@@ -6,7 +6,7 @@ import "../Styles/NavModalTooltip.css";
 export const Navbar = () => {
   return (
     <>
-      <nav className="fixed w-full top-0 z-40 select-none flex items-center justify-between flex-wrap bg-primary overflow-hidden shadow-xl transition-all ease-in-out duration-700">
+      <nav className="fixed w-full top-0 z-20 select-none flex items-center justify-between flex-wrap bg-primary overflow-hidden shadow-xl transition-all ease-in-out duration-700">
         <div className="flex text-white font-bold text-2xl m-5">
           <img
             className="w-9/12 mx-0"
@@ -25,14 +25,14 @@ export const Navbar = () => {
 
         <div className="hidden md:flex transition-all ease-in-out duration-700">
           <Link to="/Inicio">
-            <div className="iconI cursor-pointer flex items-center p-2">
+            <div className="iconI cursor-pointer flex items-center p-2 relavite">
               <img
                 className="w-7 mx-5"
                 src={`./assets/ICONS/HOME.svg`}
                 alt="icon-user"
               />
-              <div className="absolute z-100 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip">
-                <div className="bg-white z-50 pointer-events-none absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45"></div>
+              <div className="absolute z-50 transition-all duration-500 ease-in-out bg-white rounded-xl shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip">
+                <div className="bg-white absolute z-50 pointer-events-none  h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45"></div>
                 Inicio
               </div>
             </div>

@@ -1,0 +1,11 @@
+<svg id="Underline" xmlns="http://www.w3.org/2000/svg" width="11.352" height="16" viewBox="0 0 11.352 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3b3b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Underline-2" data-name="Underline" class="cls-1" d="M6,3A1,1,0,0,0,4,3V8.444a5.667,5.667,0,1,0,11.333,0V3a1,1,0,0,0-2,0V8.444A3.667,3.667,0,1,1,6,8.444ZM5,16a1,1,0,0,0,0,2h9.352a1,1,0,0,0,0-2Z" transform="translate(-4 -2)"/>
+</svg>

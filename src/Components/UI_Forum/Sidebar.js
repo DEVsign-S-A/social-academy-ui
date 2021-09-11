@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import X from "../../assets/UI_Forum/X.svg";
+import x from "../../assets/UI_Forum/X.svg";
+import right from "../../assets/UI_Forum/Align-Left.svg";
 import "./style.css";
 import { setSidebar } from "../../Redux/Actions/uiActions";
 import { SideBatItems } from "./SideBatItems";
@@ -12,44 +13,26 @@ export const Sidebar = () => {
   const [itemsSidebar, setitemsSidebar] = useState([
     {
       id: "1",
-      name: "Teachers",
-      image: `${"./assets/Project.svg"}`,
+      name: "Diseño",
+      image: `${"./assets/sidebar/pen.svg"}`,
       hide: false,
     },
     {
       id: "2",
-      name: "Teacher Rates",
-      image: `${"./assets/Text.svg"}`,
+      name: "Economia",
+      image: `${"./assets/sidebar/diagram.svg"}`,
       hide: false,
     },
     {
       id: "3",
-      name: "Register Lessons",
-      image: `${"./assets/Project.svg"}`,
+      name: "Programación",
+      image: `${"./assets/sidebar/program.svg"}`,
       hide: false,
     },
     {
       id: "4",
-      name: "Mini chanllenges",
-      image: `${"./assets/Tasks.svg"}`,
-      hide: false,
-    },
-    {
-      id: "5",
-      name: "Adimistrative hours",
-      image: `${"./assets/Calendar.svg"}`,
-      hide: false,
-    },
-    {
-      id: "6",
-      name: "Affiliate program",
-      image: `${"./assets/Shopping.svg"}`,
-      hide: false,
-    },
-    {
-      id: "7",
-      name: "Reports",
-      image: `${"./assets/Folder.svg"}`,
+      name: "Finanzas",
+      image: `${"./assets/sidebar/finansas.svg"}`,
       hide: false,
     },
   ]);
@@ -77,45 +60,54 @@ export const Sidebar = () => {
   //${ && "open"}
   return (
     <>
-    <div className={`sidebar ${showSidebar && "open"} `}>
-      <br />
-      <div className={`flex ${showSidebar && "m-2"} `}>
-        <p className={`text-primary font-Poppins text-xs font-medium mr-2 ${showSidebar && "text-primary font-Poppins text-lg font-semibold"} `}>
-          Categorias
-        </p>
-      <img
-        src={X}
-        alt='x'
-        onClick={handleClose}
-        className='cursor-pointer'
-      />
-
-        {showSidebar && (
+      <div className={`sidebar ${showSidebar && "open"} `}>
+        <br />
+        <div className={`flex ${showSidebar && "m-2"} `}>
+        {!showSidebar && (
           <img
-            src={X}
-            alt="Close"
+            src={right}
+            alt="_"
             onClick={handleClose}
-            className={`iconClose ${
-              showSidebar &&
-              "px-4 py-0 bg-gray-200 ml-5 rounded-lg cursor-pointer"
-            } `}
+            className="ml-3 cursor-pointer"
           />
-        )}
-      </div>
+          )}
 
-      <ul className="nav-links mt-5">
-        {itemsSidebar.map((itemSidebar) => (
-          <SideBatItems
-            key={itemSidebar.id}
-            id={itemSidebar.id}
-            name={itemSidebar.name}
-            hide={itemSidebar.hide}
-            image={itemSidebar.image}
-            handleSelected={handleSelected}
-          />
-        ))}
-      </ul>
-    </div>
+          {showSidebar && (
+            <div className='flex'>
+              <p
+                className={`text-primary font-Poppins text-xs font-medium mr-2 ${
+                  showSidebar &&
+                  "text-primary font-Poppins text-2xl font-semibold"
+                } `}
+              >
+                Categorias
+              </p>
+              <img
+                src={x}
+                alt="Close"
+                onClick={handleClose}
+                className={`${
+                  showSidebar &&
+                  "px-4 py-0 bg-gray-200 ml-5 rounded-md cursor-pointer"
+                } `}
+              />
+            </div>
+          )}
+        </div>
+
+        <ul className="nav-links mt-5">
+          {itemsSidebar.map((itemSidebar) => (
+            <SideBatItems
+              key={itemSidebar.id}
+              id={itemSidebar.id}
+              name={itemSidebar.name}
+              hide={itemSidebar.hide}
+              image={itemSidebar.image}
+              handleSelected={handleSelected}
+            />
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
