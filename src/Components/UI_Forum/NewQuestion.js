@@ -16,6 +16,7 @@ import link from "../../assets/UI_Forum/Link.svg";
 import Numbered from "../../assets/UI_Forum/Numbered List.svg";
 import Smile from "../../assets/UI_Forum/Smile.svg";
 import Underline from "../../assets/UI_Forum/Underline.svg";
+import back from "../../assets/UI_Forum/Arrow-Left.svg";
 import { Footer } from "../UI_Footer/Footer";
 
 export const NewQuestion = () => {
@@ -39,9 +40,14 @@ export const NewQuestion = () => {
         </h1>
 
         <button
-          className="outline-none p-3 my-3 bg-second text-white mx-5 rounded-xl shadow-lg font-Poppins font-medium cursor-pointer"
+          className="flex outline-none p-3 my-3 bg-second text-white mx-5 rounded-xl shadow-lg font-Poppins font-medium cursor-pointer"
           onClick={handleBack}
         >
+        <img
+          src={back}
+          alt='back'
+          className="mt-2 mx-2"
+        />
           Regresar
         </button>
       </div>

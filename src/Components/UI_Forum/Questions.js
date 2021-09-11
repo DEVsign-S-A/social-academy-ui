@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "../Tailwind/Grid";
-import label from "../../assets/UI_Forum/Pantone.svg";
+import label from "../../assets/UI_Forum/Tag.svg";
 import Like from "../../assets/UI_Forum/Like.svg";
 import Chat from "../../assets/UI_Forum/Chat.svg";
 import {Answers} from './Answers';
