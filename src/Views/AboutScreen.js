@@ -9,6 +9,7 @@ import { WeDo } from "../Components/UI_About/WeDo";
 import { citas } from "../data/data";
 import { Team } from "../Components/UI_About/Team";
 import { FormContact } from "../Components/UI_About/FormContact";
+import { Footer } from "../Components/UI_Footer/Footer";
 
 const AboutScreen = () => {
 
@@ -29,6 +30,7 @@ const AboutScreen = () => {
       <Cita cita={cita2} autor={autor2} image={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/6115_o8v8y1.jpg`} />
       <Team />
       <FormContact/>
+      <Footer/>
     </>
   );
 };

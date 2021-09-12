@@ -1,0 +1,11 @@
+<svg id="Font" xmlns="http://www.w3.org/2000/svg" width="13.375" height="16" viewBox="0 0 13.375 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3b3b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Font-2" data-name="Font" class="cls-1" d="M9.688,2a1,1,0,0,1,.926.624l5.688,14a1,1,0,1,1-1.853.753l-1.7-4.189H6.628l-1.7,4.189a1,1,0,1,1-1.853-.753l5.688-14A1,1,0,0,1,9.688,2ZM7.441,11.188h4.494L9.688,5.657Z" transform="translate(-3 -2)"/>
+</svg>

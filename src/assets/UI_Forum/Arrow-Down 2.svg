@@ -1,0 +1,11 @@
+<svg id="Arrow-Down_2" data-name="Arrow-Down 2" xmlns="http://www.w3.org/2000/svg" width="11.5" height="6.811" viewBox="0 0 11.5 6.811">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3b3b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Arrow-Down_2-2" data-name="Arrow-Down 2" class="cls-1" d="M15.53,7.47a.75.75,0,0,1,0,1.061L10,14.061,4.47,8.53A.75.75,0,0,1,5.53,7.47L10,11.939l4.47-4.47A.75.75,0,0,1,15.53,7.47Z" transform="translate(-4.25 -7.25)"/>
+</svg>

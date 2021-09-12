@@ -1,0 +1,19 @@
+<svg id="Numbered_List" data-name="Numbered List" xmlns="http://www.w3.org/2000/svg" width="17.65" height="14" viewBox="0 0 17.65 14">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #3b3b3b;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Trazado_38" data-name="Trazado 38" class="cls-1" d="M5.9,4.9a.75.75,0,0,1,.75-.75H17.9a.75.75,0,0,1,0,1.5H6.652A.75.75,0,0,1,5.9,4.9Z" transform="translate(-1 -3)"/>
+  <path id="Trazado_39" data-name="Trazado 39" class="cls-1" d="M5.9,10.091a.75.75,0,0,1,.75-.75H17.9a.75.75,0,0,1,0,1.5H6.652A.75.75,0,0,1,5.9,10.091Z" transform="translate(-1 -3)"/>
+  <path id="Trazado_40" data-name="Trazado 40" class="cls-1" d="M5.9,15.283a.75.75,0,0,1,.75-.75H17.9a.75.75,0,0,1,0,1.5H6.652A.75.75,0,0,1,5.9,15.283Z" transform="translate(-1 -3)"/>
+  <path id="Trazado_41" data-name="Trazado 41" class="cls-2" d="M2.75,6.5H1.875V3.875H1V3H2.75Z" transform="translate(-1 -3)"/>
+  <path id="Trazado_42" data-name="Trazado 42" class="cls-2" d="M2.75,14.375H1V13.5H3.625V17H1v-.875H2.75v-.262l-.437-.175v-.875l.438-.175Z" transform="translate(-1 -3)"/>
+  <path id="Trazado_43" data-name="Trazado 43" class="cls-2" d="M2.75,9.125H1V8.25H3.625v.875l-1.75,1.75h1.75v.875H1v-.875Z" transform="translate(-1 -3)"/>
+</svg>
