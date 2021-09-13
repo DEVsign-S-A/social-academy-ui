@@ -1,9 +1,15 @@
 import React from 'react';
+import { SearchBar } from '../Components/UI_Forum/searchBar';
+import { Sidebar } from '../Components/UI_Forum/Sidebar';
 
 const InternshipsScreen = () => {
   return (
     <>
-      <h2>Internships Screen</h2>
+    
+    <Sidebar/>
+    
+    <SearchBar/>
+    
     </>
   );
 };
