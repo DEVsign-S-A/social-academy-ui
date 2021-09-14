@@ -179,7 +179,7 @@ export const dataIntership = [{
     },
 
     {
-        IdIntership: "526hsdja",
+        IdIntership: "526hsdjk",
         Title: "Ingeniero de Software Junior",
         Company: {
             IdCompany: "18jxvg",
@@ -263,7 +263,7 @@ export const dataIntership = [{
         ],
     },
     {
-        IdIntership: "526hsdja",
+        IdIntership: "526fdja",
         Title: "Desarrollador Web Jr.",
         Company: {
             IdCompany: "18jxvg",
