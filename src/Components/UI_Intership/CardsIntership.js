@@ -4,6 +4,8 @@ import Travel from "../../assets/UI_Intership/Travel.svg";
 import Contacts from "../../assets/UI_Intership/Contacts.svg";
 import Time from "../../assets/UI_Intership/Time.svg";
 import Dollar from "../../assets/UI_Intership/Dollar [Fill].svg";
+import show from "../../assets/UI_Intership/Show.svg";
+import send from "../../assets/UI_Intership/Send.svg";
 
 export const CardsIntership = ({
   Title,
@@ -30,34 +32,42 @@ export const CardsIntership = ({
               <p className="font-Poppins text-xs font-bold mx-2">{Title}</p>
             </div>
           </div>
-    
-          <div className="">
-            <img src={Contacts} alt="Contacts" />
-            <p className="font-Poppins text-xs text-gray-500">
+
+          <div className="grid grid-cols-8 gap-4 my-4">
+            <img src={Contacts} alt="Contacts" className="mx-2" />
+            <p className="font-Poppins text-xs text-gray-500 col-span-7">
               <strong>Descripcion: </strong>
               {Body}
             </p>
-          </div>
-          <div className="flex my-2">
-            <img src={Dollar} alt="Dollar" className='mx-2'/>
-            <p className="font-Poppins text-xs text-gray-500">
+
+            <img src={Dollar} alt="Dollar" className="mx-3" />
+            <p className="font-Poppins text-xs text-gray-500 col-span-7">
               <strong>Salario: </strong>
               {SalaryRange}
             </p>
-          </div>
-          <div className="flex my-2">
-            <img src={Time} alt="Time" className='mx-2'/>
-            <p className="font-Poppins text-xs text-gray-500">
+
+            <img src={Time} alt="Time" className="mx-2" />
+            <p className="font-Poppins text-xs text-gray-500 col-span-7">
               <strong>Jornada: </strong>
               {Workday}
             </p>
-          </div>
-          <div className="flex my-2">
-            <img src={Travel} alt="Travel" className='mx-2'/>
-            <p className="font-Poppins text-xs text-gray-500">
+
+            <img src={Travel} alt="Travel" className="mx-2" />
+            <p className="font-Poppins text-xs text-gray-500 col-span-7">
               <strong>Puesto: </strong>
               {Job}
             </p>
+          </div>
+
+          <div className="flex">
+            <button className="flex font-Poppins text-sm bg-primary text-white shadow-lg cursor-pointer px-3 py-2 rounded-lg mx-3 justify-center items-center">
+              <img src={send} alt="send" className="mx-1" />
+              <p>Aplicar</p>
+            </button>
+            <button className="flex font-Poppins text-sm bg-second text-white shadow-lg cursor-pointer px-3 py-2 rounded-lg mx-3 justify-center items-center">
+              <img src={show} alt="show" className="mx-1" />
+              <p>Ver</p>
+            </button>
           </div>
         </div>
       </div>
