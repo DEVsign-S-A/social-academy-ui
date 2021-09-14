@@ -4,7 +4,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "18jxvg",
             CompanyName: "Agencia S.A",
-            ProfilePhoto: "https://i.pinimg.com/originals/05/2e/0f/052e0f06170e1683cc2d37d1e0ba0eac.png",
+            ProfilePhoto: `${"./assets/Intership/01.jpg"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",
@@ -16,11 +16,11 @@ export const dataIntership = [{
         ],
         Workday: "6 horas, Horario Flexible",
         Body: `Como analista de marketing junior, usted apoya al equipo de marketing de ciclo de vida y correo electrónico, 
-            creando y segmentando nuevas audiencias para experimentos y programas a largo plazo. Esperamos que trabajes con 
-            Dropboxers en marketing, ingeniería de datos, ciencia de datos, planificación financiera y sistemas de TI para 
-            generar información a partir del complejo entorno de datos de Dropbox y generar impacto en Dropbox. A su vez, 
-            usted será un socio de pensamiento clave en la toma de decisiones estratégicas basadas en datos sobre marketing.`,
-        What_we_want_you_todo: ``,
+            creando y segmentando nuevas audiencias para experimentos y programas a largo plazo.`,
+        What_we_want_you_todo: ` Esperamos que trabajes con 
+        Dropboxers en marketing, ingeniería de datos, ciencia de datos, planificación financiera y sistemas de TI para 
+        generar información a partir del complejo entorno de datos de Dropbox y generar impacto en Dropbox. A su vez, 
+        usted será un socio de pensamiento clave en la toma de decisiones estratégicas basadas en datos sobre marketing.`,
 
         SalaryRange: "C$ 6500",
         TechnicalRequirements: [
@@ -89,7 +89,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "18jxvg",
             CompanyName: "Agencia S.A",
-            ProfilePhoto: "https://i.pinimg.com/originals/05/2e/0f/052e0f06170e1683cc2d37d1e0ba0eac.png",
+            ProfilePhoto: `${"./assets/Intership/02.png"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",
@@ -101,10 +101,7 @@ export const dataIntership = [{
         ],
         Workday: "6 horas, Horario Flexible",
         Body: `Como analista de marketing junior, usted apoya al equipo de marketing de ciclo de vida y correo electrónico, 
-            creando y segmentando nuevas audiencias para experimentos y programas a largo plazo. Esperamos que trabajes con 
-            Dropboxers en marketing, ingeniería de datos, ciencia de datos, planificación financiera y sistemas de TI para 
-            generar información a partir del complejo entorno de datos de Dropbox y generar impacto en Dropbox. A su vez, 
-            usted será un socio de pensamiento clave en la toma de decisiones estratégicas basadas en datos sobre marketing.`,
+            creando y segmentando nuevas audiencias para experimentos y programas a largo plazo.`,
 
         What_we_want_you_todo: `La plataforma SaaS de Feathr es un componente crítico del valor que ofrecemos a 
         nuestros clientes. Estamos buscando un Ingeniero de Software Junior que nos ayude a crecer y mantener los 
@@ -184,7 +181,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "18jxvg",
             CompanyName: "WebFX, Inc.",
-            ProfilePhoto: "https://i.pinimg.com/736x/4b/7e/50/4b7e50b99ffea526a7de98bbb3498f29--software.jpg",
+            ProfilePhoto: `${"./assets/Intership/03.jpg"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",
@@ -196,11 +193,11 @@ export const dataIntership = [{
         ],
         Workday: "6 horas, Horario Flexible",
         Body: `Como analista de marketing junior, usted apoya al equipo de marketing de ciclo de vida y correo electrónico, 
-            creando y segmentando nuevas audiencias para experimentos y programas a largo plazo. Esperamos que trabajes con 
-            Dropboxers en marketing, ingeniería de datos, ciencia de datos, planificación financiera y sistemas de TI para 
-            generar información a partir del complejo entorno de datos de Dropbox y generar impacto en Dropbox. A su vez, 
-            usted será un socio de pensamiento clave en la toma de decisiones estratégicas basadas en datos sobre marketing.`,
-        What_we_want_you_todo: "",
+            creando y segmentando nuevas audiencias para experimentos y programas a largo plazo.`,
+        What_we_want_you_todo: ` Esperamos que trabajes con 
+        Dropboxers en marketing, ingeniería de datos, ciencia de datos, planificación financiera y sistemas de TI para 
+        generar información a partir del complejo entorno de datos de Dropbox y generar impacto en Dropbox. A su vez, 
+        usted será un socio de pensamiento clave en la toma de decisiones estratégicas basadas en datos sobre marketing.`,
 
         SalaryRange: "C$ 1500",
         TechnicalRequirements: [
@@ -268,7 +265,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "18jxvg",
             CompanyName: "First Community  S.A",
-            ProfilePhoto: "https://i.pinimg.com/736x/4b/7e/50/4b7e50b99ffea526a7de98bbb3498f29--software.jpg",
+            ProfilePhoto: `${"./assets/Intership/04.png"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",
@@ -280,12 +277,12 @@ export const dataIntership = [{
         ],
         Workday: "8 horas, Horario Flexible",
         Body: `First Community es una organización en crecimiento que busca empleados que puedan desarrollar y 
-        mantener sitios web y tecnologías basadas en la web. Las habilidades requeridas son: Buenas habilidades 
+        mantener sitios web y tecnologías basadas en la web.`,
+        What_we_want_you_todo: ` Las habilidades requeridas son: Buenas habilidades 
         de entrada de datos / PC, atención excepcional a los detalles y conocimiento de los fundamentos del 
         lenguaje de programación. Esta posición requiere que el individuo aprenda otras tecnologías tales como:
         sistemas de control de versiones (GIT), HTML, CSS, JavaScript, AJAX, VueJS Framework. El conocimiento de los 
         lenguajes de back-end es útil, pero no obligatorio.`,
-        What_we_want_you_todo: "",
         SalaryRange: "C$ 4500",
         TechnicalRequirements: [
             "Exposición al desarrollo de pila completa usando React, Express (Node) y Apollo (GraphQL);",

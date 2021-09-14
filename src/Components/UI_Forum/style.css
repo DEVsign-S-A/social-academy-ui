@@ -11,6 +11,9 @@
     transition: all 0.3s ease;
     box-shadow: none;
 }
+.shadowCss{
+    box-shadow: 0 0px 30px #8b8b8b5b;
+}
 
 .sidebar.open {
     width: 270px;
