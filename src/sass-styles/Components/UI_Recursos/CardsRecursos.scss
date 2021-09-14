@@ -1,0 +1,80 @@
+.mtAvatar{
+    margin-top: 0.8vw;
+}
+
+.TituloContenedorRecursos{
+    font-family: $Poppins;
+    color: $SArosa;
+    font-size: 2.8vw;
+    font-weight: 600;
+    margin: 2% 0;
+    text-align: center;
+}
+
+.ContenedorRecursos{
+    margin: 4% 1%;
+    font-family: $Poppins;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .CardRecurso{
+        width: 20%;
+        margin: 3% 2%;
+        padding: 1.7vw;
+        box-shadow: 0vw 0.25vw 0.5vw 0.3vw  rgba(90, 62, 62, 0.3);
+    
+        .IconoRecurso{
+            border-radius: 50%;
+            width: 29%;
+            background-size: cover;
+            margin-top: -4vw;
+        }
+    
+        .ContenidoCard{
+            margin-top: 2vw;
+            font-size: 1.1vw;
+
+            .TituloRecurso{
+                font-weight: 600;
+                margin: 1vw 0;
+                font-size: 1.2vw;
+                color: $AzulTitulo;
+            }
+    
+            .DescripcionRecurso{
+                margin-bottom: 0.5vw;
+                font-size: 1.05vw;
+            }
+    
+            .AvatarRecurso{
+                width: 3.7vw;
+                height: 3.7vw;
+            }
+    
+            .ContenedorFecha{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                i{
+                    font-size: 1.3vw;
+                }
+
+                h4{
+                    font-size: 1.1vw;
+                    font-weight: 500;
+                    margin-left: 0.8vw;
+                }
+            }
+    
+            .NombreUsuario{
+                font-size: 1.2vw;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

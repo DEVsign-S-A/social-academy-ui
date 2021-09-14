@@ -1,9 +1,10 @@
 import React from 'react';
+import { CardsCursos } from '../Components/UI_Cursos/CardsCursos';
 
 const CoursesScreen = () => {
   return (
     <>
-      <h2>Courses Screen</h2>
+      <CardsCursos/>
     </>
   );
 };

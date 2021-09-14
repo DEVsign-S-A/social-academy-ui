@@ -1,9 +1,10 @@
 import React from 'react';
+import { CardsRecursos } from '../Components/UI_Recursos/CardsRecursos';
 
 const ResourcesScreen = () => {
   return (
     <>
-      <h2>Resources Screen</h2>
+      <CardsRecursos/>
     </>
   );
 };

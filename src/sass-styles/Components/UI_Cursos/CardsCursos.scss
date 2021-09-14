@@ -1,0 +1,216 @@
+.AzulSA{
+    color: $AzulTitulo;
+}
+
+.padding1{
+    padding: 1.5%;
+}
+
+.paddingXY{
+    padding: 1% 5%;
+}
+
+.TituloCursos{
+    color: $SArosa;
+    text-align: center;
+    font-size: 2.7vw;
+    font-weight: 700;
+    margin: 2% 0;
+}
+
+.ContenedorCards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: $Poppins;
+    padding: 0 4%;
+
+    .CardCurso{
+        width: 26%;
+        margin: 2%;
+        box-shadow: 0vw 0.25vw 0.5vw 0.3vw  rgba(61, 61, 61, 0.3);
+        border-bottom: 5px solid $SArosa;
+
+        .ImagenPortada{
+            height: 14vw;
+        }
+    
+        .PrecioCurso{
+            margin-top: -4vw;
+            background-color: white;
+            border-radius: 1vw;
+            padding: 2% 4%;
+            font-size: 1.1vw;
+            border-radius: 0.7vw;
+        }
+
+        .TituloCard{
+            font-weight: 600;
+            font-size: 1.3vw;
+        }
+
+        .DescripcionCard{
+            font-size: 1vw;
+        }
+
+        .AvatarUsuario{
+            width: 3.7vw;
+            height: 3.7vw;
+            margin-bottom: 2%;
+        }
+
+        .NombreUsuario{
+            font-size: 1.3vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 1015px){
+    .padding1{
+        padding: 1.5%;
+    }
+    
+    .paddingXY{
+        padding: 1% 5%;
+    }
+    
+    .TituloCursos{
+        font-size: 2.7vw;
+        margin: 2% 0;
+    }
+    
+    .ContenedorCards{
+        width: 100%;
+        padding: 0 4%;
+    
+        .CardCurso{
+            width: 28%;
+            border-bottom: 4px solid $SArosa;
+    
+            .ImagenPortada{
+                height: 15vw;
+            }
+        
+            .PrecioCurso{
+                margin-top: -4vw;
+                border-radius: 1vw;
+                padding: 2% 4%;
+                font-size: 1.2vw;
+                border-radius: 0.7vw;
+            }
+    
+            .TituloCard{
+                font-size: 1.5vw;
+            }
+    
+            .DescripcionCard{
+                margin: 3% 0;
+                font-size: 1.3vw;
+            }
+    
+            .AvatarUsuario{
+                width: 4.5vw;
+                height: 4.5vw;
+            }
+    
+            .NombreUsuario{
+                font-size: 1.5vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 840px){    
+    .TituloCursos{
+        font-size: 4vw;
+        margin: 3% 0;
+    }
+
+    .ContenedorCards{
+    
+        .CardCurso{
+            width: 37%;
+            border-bottom: 4px solid $SArosa;
+    
+            .ImagenPortada{
+                height: 19vw;
+            }
+        
+            .PrecioCurso{
+                margin-top: -5vw;
+                border-radius: 1vw;
+                padding: 2% 4%;
+                font-size: 1.6vw;
+                border-radius: 0.7vw;
+            }
+    
+            .TituloCard{
+                font-size: 1.8vw;
+                margin-top: 1%;
+            }
+    
+            .DescripcionCard{
+                margin: 3% 0;
+                font-size: 1.6vw;
+            }
+    
+            .AvatarUsuario{
+                width: 6vw;
+                height: 6vw;
+            }
+    
+            .NombreUsuario{
+                font-size: 1.9vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 610px){    
+    .TituloCursos{
+        font-size: 5.5vw;
+        margin: 3% 0;
+    }
+
+    .ContenedorCards{
+    
+        .CardCurso{
+            width: 65%;
+            border-bottom: 5px solid $SArosa;
+            margin: 4%;
+    
+            .ImagenPortada{
+                height: 28vw;
+            }
+        
+            .PrecioCurso{
+                margin-top: -7vw;
+                border-radius: 1vw;
+                padding: 2% 4%;
+                font-size: 2.3vw;
+                border-radius: 0.7vw;
+            }
+    
+            .TituloCard{
+                font-size: 2.8vw;
+                margin-top: 1%;
+            }
+    
+            .DescripcionCard{
+                margin: 1% 0;
+                font-size: 2.4vw;
+            }
+    
+            .AvatarUsuario{
+                width: 8.5vw;
+                height: 8.5vw;
+            }
+    
+            .NombreUsuario{
+                font-size: 2.7vw;
+            }
+        }
+    }
+}
