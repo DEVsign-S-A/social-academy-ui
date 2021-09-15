@@ -1,0 +1,11 @@
+<svg id="Check" xmlns="http://www.w3.org/2000/svg" width="16" height="12.281" viewBox="0 0 16 12.281">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3b3b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Check-2" data-name="Check" class="cls-1" d="M17.729,5.581a.926.926,0,0,0-1.309-1.309L6.647,14.044,3.581,10.979a.926.926,0,0,0-1.309,1.309l3.674,3.675c.015.016.029.031.044.046a.928.928,0,0,0,1.312,0,.529.529,0,0,0,.044-.047Z" transform="translate(-2 -4)"/>
+</svg>

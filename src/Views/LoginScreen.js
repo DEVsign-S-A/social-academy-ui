@@ -13,8 +13,8 @@ const LoginScreen = () => {
 
   
 /**
- * aqui esta una parte que me vale verga si esta en vaniallaJS
- * no pienso quitarme la vina haciendo algo inutil como quitar
+ * Aqui esta una parte que me vale verga si esta en vaniallaJS
+ * no pienso quitarme la vida haciendo algo inútil como quitar
  * y agregar clases...
  */
   const bullets = document.querySelectorAll(".bullets span");
@@ -50,6 +50,9 @@ const LoginScreen = () => {
 
   return (
     <>
+    <br/>
+    <br/>
+    <br/>
       <div
         id="main"
         className={`${toggleForm ? "sign-in-form" : "sign-up-mode"}`}

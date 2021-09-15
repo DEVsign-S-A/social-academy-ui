@@ -14,6 +14,7 @@ import InternshipsScreen from '../Views/InternshipsScreen';
 import PageNoFound from '../Views/PageNoFound';
 import ProfileScreen from '../Views/ProfileScreen';
 import ResourcesScreen from '../Views/ResourcesScreen';
+import {FullIntership} from '../Components/UI_Intership/FullIntership';
 
 export const AppRouter = () => {
     return (
@@ -26,6 +27,7 @@ export const AppRouter = () => {
                     <Route exact path='/Inicio' component={HomeScreen}/>
                     <Route exact path='/Foros' component={ForumScreen}/>
                     <Route exact path='/Pasantias' component={InternshipsScreen}/>
+                    <Route exact path='/Pasantia/:IdIntership' component={FullIntership}/>
                     <Route exact path='/Cursos' component={CoursesScreen}/>
                     <Route exact path='/Recursos' component={ResourcesScreen}/>
                     <Route exact path='/About' component={AboutScreen}/>
