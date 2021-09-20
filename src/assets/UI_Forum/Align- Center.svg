@@ -1,0 +1,11 @@
+<svg id="Align-_Center" data-name="Align- Center" xmlns="http://www.w3.org/2000/svg" width="16" height="11.167" viewBox="0 0 16 11.167">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3b3b;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Align-_Center-2" data-name="Align- Center" class="cls-1" d="M2.75,4.42a.75.75,0,0,0,0,1.5h14.5a.75.75,0,0,0,0-1.5ZM5.167,7.642a.75.75,0,0,0,0,1.5h9.667a.75.75,0,0,0,0-1.5ZM2,11.614a.75.75,0,0,1,.75-.75h14.5a.75.75,0,0,1,0,1.5H2.75A.75.75,0,0,1,2,11.614Zm3.167,2.472a.75.75,0,1,0,0,1.5h9.667a.75.75,0,0,0,0-1.5Z" transform="translate(-2 -4.42)"/>
+</svg>

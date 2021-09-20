@@ -1,0 +1,78 @@
+.IndexAliados{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+    h1{
+        font-family: $Poppins;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 3.5vw;
+        color: $AzulTitulo;
+    }
+
+    .ContenedorAliados{
+        margin: 5% 0;
+		padding: 0% 8%;
+		display: flex;
+        flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+
+        .AliadosIndividuales{
+            width: 22%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .IndexAliados{    
+        h1{
+            font-size: 5vw;
+        }
+    
+        .ContenedorAliados{
+            margin-top: 5%;
+            margin-bottom: 10%;
+            padding: 0% 6%;
+            width: 100%;
+    
+            .AliadosIndividuales{
+                width: 25%;
+
+                img{
+                    width: 80%;
+                }
+            }
+           
+        }
+    }
+}
+
+@media only screen and (max-width: 550px){
+    .IndexAliados{    
+        h1{
+            font-size: 7vw;
+        }
+    
+        .ContenedorAliados{
+    
+            .AliadosIndividuales{
+                width: 30%;
+
+                img{
+                    width: 85%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<svg id="Send" xmlns="http://www.w3.org/2000/svg" width="16.003" height="16.003" viewBox="0 0 16.003 16.003">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Send-2" data-name="Send" class="cls-1" d="M17.784,2.22a.751.751,0,0,1,.172.794L12.885,17.5a.75.75,0,0,1-1.393.057L8.708,11.3,2.445,8.512A.75.75,0,0,1,2.5,7.118L16.99,2.048a.751.751,0,0,1,.794.172ZM14.4,4.544,4.783,7.909,9.11,9.832Zm-4.228,6.349L15.46,5.6,12.094,15.22Z" transform="translate(-2 -2)"/>
+</svg>
