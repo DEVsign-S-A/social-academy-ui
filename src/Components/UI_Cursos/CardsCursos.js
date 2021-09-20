@@ -1,16 +1,19 @@
 import React from 'react';
+import { dataCourses } from '../../data/dataCourses';
 import { CardCurso } from './CursosComponents/CardCurso';
 
 export const CardsCursos = () => {
-    const cardsArray = [1,2,3,4,5];
+    
     return (
-        <div>
+        <div className = "CardsCursos">
             <h1 className = "TituloCursos" >Nuestros Cursos</h1>
             
             <div className= "ContenedorCards">
                 {
-                    cardsArray.map(card =>(
-                        <CardCurso key = {card} />
+                    dataCourses.map(course =>(
+                        <CardCurso 
+                            key = {course.id}
+                            {...course} />
                     ))
                 }
             </div>
