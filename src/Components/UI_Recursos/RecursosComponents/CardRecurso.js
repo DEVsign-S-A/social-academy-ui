@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const CardRecurso = ({titulo, descripcion, nombreUsuario, imagenPerfil, idUsuario, fecha, tipo}) => {
+export const CardRecurso = ({
+    titulo, 
+    descripcion, 
+    user,
+    fecha, 
+    tipo}) => {
     let iconoRecurso = "";
     switch (tipo) {
         case 'documento':
@@ -35,7 +40,7 @@ export const CardRecurso = ({titulo, descripcion, nombreUsuario, imagenPerfil, i
                         <Link to = "/Login">
                                 <div className = "user-logo">
                                     <img className = "AvatarRecurso object-cover rounded-full shadow" 
-                                    src= {imagenPerfil}
+                                    src= {user.imagenPerfil}
                                     alt="avatar"/>
                                 </div>
                         </Link>
@@ -46,7 +51,7 @@ export const CardRecurso = ({titulo, descripcion, nombreUsuario, imagenPerfil, i
                             </div>
                             <Link to = "/Login"
                                 className = "text-gray-500 NombreUsuario">
-                                {nombreUsuario}
+                                {user.nombreUsuario}
                             </Link>                   
                         </div>
                     </div>
