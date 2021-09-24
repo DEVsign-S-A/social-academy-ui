@@ -1,14 +1,20 @@
 import React from 'react'
-import { dataUser } from '../../data/dataUser'
+import { NothingToShow } from './UserProfileComponents/NothingToShow';
 import { UserLabel } from './UserProfileComponents/UserLabel';
 
-export const AboutUser = () => {
-    const {descripcion, habilidades, idiomas} = dataUser;
+export const AboutUser = ({descripcion, habilidades, idiomas}) => {
+    //const {descripcion, habilidades, idiomas} = dataUser[0];
     return (
         <div className = "flex flex-col justify-center AboutUser">
             <div className = "Bio ContenedoresPerfil">
                 <h1 className = "TitulosPerfil"> Bio</h1>
-                <h3>{descripcion}</h3>
+                {
+                    (descripcion)?(
+                        <h3>{descripcion}</h3>
+                    ):(
+                        <NothingToShow dato = {"decripcion"} />
+                    )
+                }
             </div>
 
             <div className = "ContenedorHabilidades ContenedoresPerfil">
@@ -17,9 +23,12 @@ export const AboutUser = () => {
                 </h1>
                 <div className = "flex flex-row flex-wrap Abilities">
                     {
-                        habilidades.map((habilidad, index) =>(
-                            <UserLabel key = {index} dato = {habilidad} />
-                        ))
+                        (habilidades && Array.isArray(habilidades) && (habilidades.length > 0) ) ? (
+                            habilidades.map((habilidad, index) =>(
+                                <UserLabel key = {index} dato = {habilidad} />
+                            ))) : (
+                                <NothingToShow dato = {"experiencia laboral"} />
+                            )
                     }
                 </div>
             </div>
@@ -28,9 +37,12 @@ export const AboutUser = () => {
                 <h1 className = "TitulosPerfil">Idiomas</h1>
                 <div className = "flex flex-row flex-wrap Languages">
                 {
-                    idiomas.map((idioma, index) =>(
-                        <UserLabel key = {index} dato = {idioma} />
-                    ))
+                    (idiomas && Array.isArray(idiomas) && (idiomas.length > 0) ) ? (
+                        idiomas.map((idioma, index) =>(
+                            <UserLabel key = {index} dato = {idioma} />
+                        ))) : (
+                            <NothingToShow dato = {"idiomas"} />
+                        )
                 }
                 </div>
             </div>

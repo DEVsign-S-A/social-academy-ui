@@ -1,12 +1,19 @@
 import React from 'react';
 import moment from 'moment';
-import { dataUser } from '../../data/dataUser';
 import { RedSocial } from './UserProfileComponents/RedSocial';
 
 
 
-export const UserInfo = () => {
-    const {nombreUsuario, fotoPerfil, fechaNacimiento, carrera, direccion, telefono, correo, socialMedia, curriculumLink} = dataUser;
+export const UserInfo = ({nombreUsuario, 
+    fotoPerfil, 
+    fechaNacimiento, 
+    carrera, 
+    direccion, 
+    telefono, 
+    correo, 
+    socialMedia, 
+    curriculumLink}) => {
+    //const {nombreUsuario, fotoPerfil, fechaNacimiento, carrera, direccion, telefono, correo, socialMedia, curriculumLink} = dataUser[0];
     
     const annos = moment().diff(fechaNacimiento, 'years', false);
 

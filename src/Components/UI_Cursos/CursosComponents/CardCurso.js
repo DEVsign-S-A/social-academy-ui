@@ -22,7 +22,7 @@ export const CardCurso = ({
 
                             <div className = "right-2 py-2 px-4 PrecioCurso">
                                 <span className = "font-semibold PrecioCurso azulSA">
-                                    {precio}
+                                    $ {precio}
                                 </span>
                             </div>
                     </div>
