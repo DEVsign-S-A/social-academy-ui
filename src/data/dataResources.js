@@ -1,9 +1,9 @@
 export const dataResources = [
     {
-        id: 'ri1',
+        resourceId: 'ri1',
         user: {
-            uid: '1',
-            nombreUsuario: 'Arthur Brooklyn',
+            userId: 'uid1',
+            nombreUsuario: 'Lilliam Anderson',
             imagenPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         titulo: 'El gran libro de Programacion Android',
@@ -13,9 +13,9 @@ export const dataResources = [
         areaEstudio: 'programacion'
     },
     {
-        id: 'ri2',
+        resourceId: 'ri2',
         user: {
-            uid: '1',
+            userId: 'uid2',
             nombreUsuario: 'Arthur Brooklyn',
             imagenPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
         },
@@ -26,10 +26,10 @@ export const dataResources = [
         areaEstudio: 'marketing'
     },
     {
-        id: 'ri3',
+        resourceId: 'ri3',
         user: {
-            uid: '1',
-            nombreUsuario: 'Arthur Brooklyn',
+            userId: 'uid3',
+            nombreUsuario: 'James Williams',
             imagenPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         titulo: 'El gran libro de Programacion Android',
@@ -39,10 +39,10 @@ export const dataResources = [
         areaEstudio: 'programacion'
     },
     {
-        id: 'ri4',
+        resourceId: 'ri4',
         user: {
-            uid: '1',
-            nombreUsuario: 'Arthur Brooklyn',
+            userId: 'uid1',
+            nombreUsuario: 'Lilliam Anderson',
             imagenPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         titulo: 'Creación de marcas e identidad corporativa',
@@ -52,9 +52,9 @@ export const dataResources = [
         areaEstudio: 'diseño'
     },
     {
-        id: 'ri5',
+        resourceId: 'ri5',
         user: {
-            uid: '1',
+            userId: 'uid2',
             nombreUsuario: 'Arthur Brooklyn',
             imagenPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },

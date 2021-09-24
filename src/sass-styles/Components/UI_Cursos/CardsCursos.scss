@@ -11,7 +11,7 @@
 }
 
 .CardsCursos{
-    margin-left: 5vw;
+    margin-left: 75px;
     margin-top: 4vw;
 }
 
@@ -30,7 +30,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     font-family: $Poppins;
-    padding: 0 4%;
+    padding: 0 1%;
 
     .CardCurso{
         width: 28%;
@@ -88,10 +88,10 @@
     
     .ContenedorCards{
         width: 100%;
-        padding: 0 4%;
+        padding: 0 0;
     
         .CardCurso{
-            width: 28%;
+            width: 29%;
             border-bottom: 4px solid $SArosa;
     
             .ImagenPortada{
@@ -127,7 +127,7 @@
     }
 }
 
-@media only screen and (max-width: 840px){    
+@media only screen and (max-width: 860px){    
     .TituloCursos{
         font-size: 4vw;
         margin: 3% 0;
@@ -136,7 +136,7 @@
     .ContenedorCards{
     
         .CardCurso{
-            width: 37%;
+            width: 43%;
             border-bottom: 4px solid $SArosa;
     
             .ImagenPortada{
@@ -147,18 +147,18 @@
                 margin-top: -5vw;
                 border-radius: 1vw;
                 padding: 2% 4%;
-                font-size: 1.6vw;
+                font-size: 1.7vw;
                 border-radius: 0.7vw;
             }
     
             .TituloCard{
-                font-size: 1.8vw;
+                font-size: 1.9vw;
                 margin-top: 1%;
             }
     
             .DescripcionCard{
                 margin: 3% 0;
-                font-size: 1.6vw;
+                font-size: 1.7vw;
             }
     
             .AvatarUsuario{
@@ -167,13 +167,19 @@
             }
     
             .NombreUsuario{
-                font-size: 1.9vw;
+                font-size: 2vw;
             }
         }
     }
 }
 
-@media only screen and (max-width: 610px){    
+@media only screen and (max-width: 718px){
+    .CardsCursos{
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 580px){    
     .TituloCursos{
         font-size: 5.5vw;
         margin: 3% 0;

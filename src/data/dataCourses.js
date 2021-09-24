@@ -1,9 +1,9 @@
 export const dataCourses = [
     {
-        id: 'c1',
+        courseId: 'c1',
         user: {
-            id: 'ui1',
-            nombre: 'Marlon Aguilar',
+            userId: 'uid1',
+            nombre: 'Lilliam Anderson',
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '15.00',
@@ -23,9 +23,9 @@ export const dataCourses = [
         ]
     },
     {
-        id: 'c2',
+        courseId: 'c2',
         user: {
-            id: 'ui2',
+            userId: 'uid2',
             nombre: 'Arthur Brooklyn',
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
@@ -46,10 +46,10 @@ export const dataCourses = [
         ] 
     },
     {
-        id: 'c3',
+        courseId: 'c3',
         user: {
-            id: 'ui3',
-            nombre: 'John Doe',
+            userId: 'uid1',
+            nombre: 'Lilliam Anderson',
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '20.00',
@@ -69,10 +69,10 @@ export const dataCourses = [
         ]
     },
     {
-        id: 'c4',
+        courseId: 'c4',
         user: {
-            id: 'ui1',
-            nombre: 'Marlon Aguilar',
+            userId: 'uid3',
+            nombre: 'James Williams',
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '13.00',
@@ -92,10 +92,10 @@ export const dataCourses = [
         ]
     },
     {
-        id: 'c5',
+        courseId: 'c5',
         user: {
-            id: 'ui4',
-            nombre: 'James Dean',
+            userId: 'uid2',
+            nombre: 'Arthur Brooklyn',
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '25.00',
@@ -115,10 +115,10 @@ export const dataCourses = [
         ]
     },
     {
-        id: 'c6',
+        courseId: 'c6',
         user: {
-            id: 'ui1',
-            nombre: 'Mariano Garcia',
+            userId: 'uid3',
+            nombre: 'James Williams',
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '18.00',

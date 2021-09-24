@@ -37,7 +37,7 @@ export const CardRecurso = ({
                     <div className="border-t-2 "></div>
 
                     <div className="flex items-center justify-between mtAvatar">
-                        <Link to = "/Login">
+                        <Link to = {`/Profile/${user.userId}`} >
                                 <div className = "user-logo">
                                     <img className = "AvatarRecurso object-cover rounded-full shadow" 
                                     src= {user.imagenPerfil}
@@ -49,7 +49,7 @@ export const CardRecurso = ({
                                 <i className="far fa-calendar-minus"></i>
                                 <h4>{fecha}</h4>
                             </div>
-                            <Link to = "/Login"
+                            <Link to = {`/Profile/${user.userId}`}
                                 className = "text-gray-500 NombreUsuario">
                                 {user.nombreUsuario}
                             </Link>                   

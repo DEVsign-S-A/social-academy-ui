@@ -1,6 +1,6 @@
 export const dataUser = [
     {
-        uid: 'uid1',
+        userId: 'uid1',
         nombreUsuario: 'Lilliam Anderson',
         fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
         correo: 'lillyAnder28@gmail.com',
@@ -24,7 +24,7 @@ export const dataUser = [
         curriculumLink: 'https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/CurriculumDePrueba.pdf?alt=media&token=d67474d0-3f74-4c39-b3dd-899135e8c88f' 
     },
     {
-        uid: 'uid2',
+        userId: 'uid2',
         nombreUsuario: 'Arthur Brooklyn',
         fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
         correo: 'arthurBrookly28@gmail.com',
@@ -48,7 +48,7 @@ export const dataUser = [
         curriculumLink: 'https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/CurriculumDePrueba.pdf?alt=media&token=d67474d0-3f74-4c39-b3dd-899135e8c88f' 
     },
     {
-        uid: 'uid3',
+        userId: 'uid3',
         nombreUsuario: 'James Williams',
         fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
         correo: 'jamesWilly28@gmail.com',
@@ -72,7 +72,7 @@ export const dataUser = [
         curriculumLink: 'https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/CurriculumDePrueba.pdf?alt=media&token=d67474d0-3f74-4c39-b3dd-899135e8c88f' 
     },
     {
-        uid: 'uid4',
+        userId: 'uid4',
         nombreUsuario: 'Irene Diaz',
         fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
         correo: 'irenedia28@gmail.com',
@@ -96,7 +96,7 @@ export const dataUser = [
         curriculumLink: 'https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/CurriculumDePrueba.pdf?alt=media&token=d67474d0-3f74-4c39-b3dd-899135e8c88f' 
     },
     {
-        uid: 'uid5',
+        userId: 'uid5',
         nombreUsuario: 'Aaron Perez',
         fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
         correo: 'aaronPerez28@gmail.com',
