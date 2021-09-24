@@ -22,7 +22,7 @@ export const CardCurso = ({
 
                             <div className = "right-2 py-2 px-4 PrecioCurso">
                                 <span className = "font-semibold PrecioCurso azulSA">
-                                    {precio}
+                                    $ {precio}
                                 </span>
                             </div>
                     </div>
@@ -35,7 +35,7 @@ export const CardCurso = ({
                             {descripcion}
                             </p>
                             <div className = "user flex items-center -ml-3 mt-2 ">
-                                <Link to = "/Login">
+                                <Link to = {`/Profile/${user.userId}`} >
                                     <div className = "user-logo">
                                         <img className = "AvatarUsuario object-cover rounded-full mx-4  shadow" 
                                         src={user.fotoPerfil} 
@@ -43,7 +43,7 @@ export const CardCurso = ({
                                     </div>
                                 </Link>
                                 
-                                <Link to = "/Login"
+                                <Link to = {`/Profile/${user.userId}`}
                                         className = "text-gray-500 NombreUsuario">
                                         {user.nombre}
                                 </Link>

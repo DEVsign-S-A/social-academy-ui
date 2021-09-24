@@ -15,13 +15,14 @@ import PageNoFound from '../Views/PageNoFound';
 import ProfileScreen from '../Views/ProfileScreen';
 import ResourcesScreen from '../Views/ResourcesScreen';
 import {FullIntership} from '../Components/UI_Intership/FullIntership';
+import { NewCourse } from '../Components/UI_Cursos/NewCourse';
+import { NewResource } from '../Components/UI_Recursos/NewResource';
 
 export const AppRouter = () => {
     return (
        <Router>
             <div>
                 <Navbar/>
-
                 <Switch>
                     {/* {<Route exact path='/' component={DashBoardRoutes}/>} */}
                     <Route exact path='/Inicio' component={HomeScreen}/>
@@ -33,6 +34,8 @@ export const AppRouter = () => {
                     <Route exact path='/About' component={AboutScreen}/>
                     <Route exact path='/Login' component={LoginScreen}/>
                     <Route exact path='/New_Question' component={NewQuestion}/>
+                    <Route exact path = '/New_Course' component= {NewCourse} />
+                    <Route exact path = "/New_Resource" component = {NewResource} />
                     <Route exact path='/Register' component={RegisterScreen}/>
                     <Route exact path='/PageNoFound' component={PageNoFound}/>
                     <Route exact path='/Profile/:userId' component={ProfileScreen}/>

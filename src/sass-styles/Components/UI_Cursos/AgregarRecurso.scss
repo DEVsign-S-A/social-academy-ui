@@ -1,0 +1,45 @@
+.NewResource{
+    margin-top: 120px;
+}
+
+.TituloAgregarCurso{
+    width: 90%;
+}
+
+.FormularioANR{
+    width: 80%;
+}
+
+.ContenedorPrecio, .ContenedorFoto{
+    width: 45%;
+}
+
+.ContenedoresSelect{
+    width: 50%;
+
+    select{
+        width: 90%;
+        margin-left: 4%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .FormularioANR{
+        width: 90%;
+    }
+
+    .ContenedoresSelect{
+        width: 80%;
+    
+        select{
+            width: 75%;
+            margin-left: 4%;
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .ContenedorPrecio, .ContenedorFoto{
+        width: 80%;
+    }
+}
