@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from 'redux-thunk';
 import { uiReducer } from "./Reducers/uiReducer";
+import { forumReducer } from "./Reducers/forumReducer";
 // importar los reducers
 
 const composeEnhancers =
@@ -9,7 +10,8 @@ const composeEnhancers =
 	compose;
 
 const reducers = combineReducers({
-	ui: uiReducer
+	ui: uiReducer,
+	forum: forumReducer
 });
 
 export const store = createStore(

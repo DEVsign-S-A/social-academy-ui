@@ -17,6 +17,7 @@ import ResourcesScreen from '../Views/ResourcesScreen';
 import {FullIntership} from '../Components/UI_Intership/FullIntership';
 import { NewCourse } from '../Components/UI_Cursos/NewCourse';
 import { NewResource } from '../Components/UI_Recursos/NewResource';
+import EnterpriseScreen from '../Views/EnterpriseScreen';
 
 export const AppRouter = () => {
     return (
@@ -24,7 +25,8 @@ export const AppRouter = () => {
             <div>
                 <Navbar/>
                 <Switch>
-                    {/* {<Route exact path='/' component={DashBoardRoutes}/>} */}
+                    {/*
+                     {<Route exact path='/' component={DashBoardRoutes}/>} */}
                     <Route exact path='/Inicio' component={HomeScreen}/>
                     <Route exact path='/Foros' component={ForumScreen}/>
                     <Route exact path='/Pasantias' component={InternshipsScreen}/>
@@ -39,6 +41,7 @@ export const AppRouter = () => {
                     <Route exact path='/Register' component={RegisterScreen}/>
                     <Route exact path='/PageNoFound' component={PageNoFound}/>
                     <Route exact path='/Profile/:userId' component={ProfileScreen}/>
+                    <Route exact path='/MyPime/:pymeId' component={EnterpriseScreen}/>
                 </Switch>
 
             </div>

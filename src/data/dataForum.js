@@ -63,7 +63,7 @@ export const dataForum = [
     ],
   },
   {
-    IdQuestion: "18",
+    IdQuestion: "19",
     user: {
       Name: "Jane Wilson",
       IdPerson: "185jsx",

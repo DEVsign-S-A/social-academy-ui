@@ -3,10 +3,13 @@ import { Grid } from "../Tailwind/Grid";
 import label from "../../assets/UI_Forum/Tag.svg";
 import Like from "../../assets/UI_Forum/Like.svg";
 import Chat from "../../assets/UI_Forum/Chat.svg";
-import {Answers} from './Answers';
+import { Answers } from "./Answers";
 import { PostAnsewrs } from "./postAnsewrs";
+import { useDispatch } from "react-redux";
+import { toogleQuestion } from "../../Redux/Actions/forumActions";
 export const Questions = ({
   user,
+  IdQuestion,
   Title,
   Category,
   Body,
@@ -16,15 +19,22 @@ export const Questions = ({
   LikedQuestion,
   QuantityAnswers,
 }) => {
+  const dispatch = useDispatch()
+  const handleViewAnswer = () => {
+    dispatch(toogleQuestion(IdQuestion));
+  };
+
   return (
     <>
-      <div className="w-11/12 ml-12">
+      <div className="w-11/12 ml-12 select-none">
         <Grid $grid_primary_container>
           <div className="flex m-5 p-5 justify-between">
             <div className="flex ">
               <img src={user.ProfilePhoto} alt={user.Name} />
               <div className="mx-4">
-                <p className="font-Poppins text-gray-600 font-medium">{user.Name}</p>
+                <p className="font-Poppins text-gray-600 font-medium">
+                  {user.Name}
+                </p>
                 <p className="font-Poppins text-gray-400 text-sm">{Date}</p>
               </div>
             </div>
@@ -44,7 +54,11 @@ export const Questions = ({
           </p>
           <div>
             {imageQuestion && (
-              <img src={imageQuestion} alt={user.IdPerson} className="w-1/2 m-8" />
+              <img
+                src={imageQuestion}
+                alt={user.IdPerson}
+                className="w-1/2 m-8"
+              />
             )}
           </div>
           <br />
@@ -67,22 +81,18 @@ export const Questions = ({
                 {QuantityAnswers.length}
               </p>
 
-              <p className="mx-8 font-Poppins text-BlueSocial text-sm font-medium cursor-pointer">
+              <p
+                onClick={handleViewAnswer}
+                className="mx-8 font-Poppins text-BlueSocial text-sm font-medium cursor-pointer"
+              >
                 Ver Respuestas
               </p>
             </div>
           </div>
-          <PostAnsewrs/>
-          {
-            QuantityAnswers.map(
-              (answers) => (
-                <Answers
-                  key={answers.IdAnswer}
-                  {...answers}
-                />
-              )
-            )
-          }
+          <PostAnsewrs />
+          {QuantityAnswers.map((answers) => (
+            <Answers key={answers.IdAnswer} {...answers} IdQuestion={IdQuestion}/>
+          ))}
         </Grid>
       </div>
     </>

@@ -23,6 +23,7 @@ export const CardsIntership = ({
         <div className="m-3">
           {/*Header*/}
           <div className="grid grid-cols-4 gap-4 my-2">
+          <Link to = {`/MyPime/${Company.IdCompany}`} >
             <div className="rounded-full w-16 col-span-1">
               <img
                 src={Company.ProfilePhoto}
@@ -30,6 +31,7 @@ export const CardsIntership = ({
                 className="rounded-full ring-1 ring-gray-400"
               />
             </div>
+            </Link>
             <div className="flex justify-center items-center col-span-3">
               <p className="font-Poppins text-xs font-bold mx-2">{Title}</p>
             </div>

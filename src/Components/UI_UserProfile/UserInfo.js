@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+// import moment from 'moment';
 import { RedSocial } from './UserProfileComponents/RedSocial';
 
 
@@ -15,7 +15,7 @@ export const UserInfo = ({nombreUsuario,
     curriculumLink}) => {
     //const {nombreUsuario, fotoPerfil, fechaNacimiento, carrera, direccion, telefono, correo, socialMedia, curriculumLink} = dataUser[0];
     
-    const annos = moment().diff(fechaNacimiento, 'years', false);
+    // const annos = moment().diff(fechaNacimiento, 'years', false);
 
     const redesSociales = [
         
@@ -36,7 +36,7 @@ export const UserInfo = ({nombreUsuario,
                 <h3>{carrera}</h3>
     
                 <div className = "UserInformation">
-                    <h4><b>Edad:</b> {annos} años </h4>
+                    {/* <h4><b>Edad:</b> {annos} años </h4> */}
                     <h4><b>Ciudad:</b> {direccion.ciudad}, {direccion.departamento}, {direccion.pais} </h4>
                     <h4><b>Telefono:</b> {telefono}</h4>
                     <h4><b>Correo:</b> {correo}</h4>
