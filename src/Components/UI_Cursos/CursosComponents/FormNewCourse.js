@@ -1,6 +1,7 @@
 import React from 'react';
 import { areaEstudio } from '../../../data/dataSelect';
 import { SelectComponent } from '../../UI_Recursos/RecursosComponents/SelectComponent';
+import { PruebaInput } from './PruebaInput';
 
 export const FormNewCourse = () => {
     return (
@@ -127,6 +128,8 @@ export const FormNewCourse = () => {
                             required={true}
                             ></textarea>
                         </div>
+
+                        <PruebaInput/>
                     
                     <input
                         type="submit"
@@ -134,6 +137,8 @@ export const FormNewCourse = () => {
                         value="Publicar"
                     />
                 </form>
+
+                
             </div>
     )
 }
