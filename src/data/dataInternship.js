@@ -1,8 +1,8 @@
 export const dataIntership = [{
-        IdIntership: "526hsdja",
+        IdIntership: "52698ja",
         Title: "Se busca auxiliar en Marketing Digital (trabajo remoto no disponible)",
         Company: {
-            IdCompany: "18jxvg",
+            IdCompany: "18jvg",
             CompanyName: "Agencia S.A",
             ProfilePhoto: `${"./assets/Intership/01.jpg"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
@@ -84,10 +84,10 @@ export const dataIntership = [{
     },
 
     {
-        IdIntership: "526hsdja",
+        IdIntership: "526658dja",
         Title: "Se busca auxiliar en Marketing Digital (trabajo remoto no disponible)",
         Company: {
-            IdCompany: "18jxvg",
+            IdCompany: "186g",
             CompanyName: "Agencia S.A",
             ProfilePhoto: `${"./assets/Intership/02.png"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
@@ -176,10 +176,10 @@ export const dataIntership = [{
     },
 
     {
-        IdIntership: "526hsdjk",
+        IdIntership: "65d6a4sd56",
         Title: "Ingeniero de Software Junior",
         Company: {
-            IdCompany: "18jxvg",
+            IdCompany: "18j89",
             CompanyName: "WebFX, Inc.",
             ProfilePhoto: `${"./assets/Intership/03.jpg"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
@@ -260,10 +260,10 @@ export const dataIntership = [{
         ],
     },
     {
-        IdIntership: "526fdja",
+        IdIntership: "4d564adsa4",
         Title: "Desarrollador Web Jr.",
         Company: {
-            IdCompany: "18jxvg",
+            IdCompany: "18jdsf",
             CompanyName: "First Community  S.A",
             ProfilePhoto: `${"./assets/Intership/04.png"}`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
