@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 
-export const PruebaInput = () => {
+export const AddLink = () => {
   const [inputFields, setInputFields] = useState([
     { id: uuidv4(), tituloClase: '', enlaceClase: '' },
   ]);
@@ -18,7 +18,7 @@ export const PruebaInput = () => {
         i[event.target.name] = event.target.value
       }
       return i;
-    })
+    });
     
     setInputFields(newInputFields);
   }

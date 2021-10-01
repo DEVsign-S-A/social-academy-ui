@@ -1,7 +1,7 @@
 import React from 'react';
 import { areaEstudio } from '../../../data/dataSelect';
 import { SelectComponent } from '../../UI_Recursos/RecursosComponents/SelectComponent';
-import { PruebaInput } from './PruebaInput';
+import { AddLink } from './AddLink';
 
 export const FormNewCourse = () => {
     return (
@@ -129,7 +129,7 @@ export const FormNewCourse = () => {
                             ></textarea>
                         </div>
 
-                        <PruebaInput/>
+                        <AddLink/>
                     
                     <input
                         type="submit"

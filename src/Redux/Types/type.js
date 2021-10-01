@@ -3,5 +3,8 @@ export const types = {
   toggleSidebar: "[UI] Toggle SideBar",
   toggleForm: "[UI] Toggle Form Auth",
 
-  changeSelectType: "[DOC] Change Type"
+  changeSelectType: "[DOC] Change Type",
+
+  authLogin: "[AUTH] Login",
+  authLogout: "[AUTH] Logout"
 };
