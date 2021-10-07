@@ -3,6 +3,10 @@ export const types = {
   toggleSidebar: "[UI] Toggle SideBar",
   toggleForm: "[UI] Toggle Form Auth",
 
+  changeSelectType: "[DOC] Change Type",
+
+  authLogin: "[AUTH] Login",
+  authLogout: "[AUTH] Logout",
 
   loadQuestions: "[FORUM] Load Questions & Answers",
   activeQuestion: "[FORUM] Active Question",
