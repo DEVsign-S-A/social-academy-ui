@@ -6,5 +6,9 @@ export const types = {
   changeSelectType: "[DOC] Change Type",
 
   authLogin: "[AUTH] Login",
-  authLogout: "[AUTH] Logout"
+  authLogout: "[AUTH] Logout",
+
+  loadQuestions: "[FORUM] Load Questions & Answers",
+  activeQuestion: "[FORUM] Active Question",
+  createQuestion: "[FORUM] Create Question"                   
 };
