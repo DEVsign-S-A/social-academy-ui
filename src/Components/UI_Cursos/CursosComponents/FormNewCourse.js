@@ -46,11 +46,11 @@ export const FormNewCourse = () => {
                                     Elige una foto representativa del curso
                                 </p>
                             </div>
-                            <label class="cursor-pointer my-2 py-2">
-                                <span class="focus:outline-none font-Poppins text-white text-sm py-2 px-4 ml-4 mt-4 rounded-2xl bg-blue-800 hover:bg-blue-800 hover:shadow-md ">
+                            <label className="cursor-pointer my-2 py-2">
+                                <span className="focus:outline-none font-Poppins text-white text-sm py-2 px-4 ml-4 mt-4 rounded-2xl bg-blue-800 hover:bg-blue-800 hover:shadow-md ">
                                     Subir Imagen
                                 </span>
-                                <input type="file" class="hidden" required = {true} />
+                                <input type="file" className="hidden" required = {true} />
                             </label>
                         </div>
                     </div>

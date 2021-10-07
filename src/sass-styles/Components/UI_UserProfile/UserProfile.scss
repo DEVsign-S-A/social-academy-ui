@@ -306,6 +306,11 @@
         padding: 0 2%;
         flex-wrap: wrap;
     }
+
+    .MyProfileScreen{
+        padding: 0 2%;
+        flex-wrap: wrap;
+    }
     
     .ContenedoresPerfil{
         padding: 4% 2%;
@@ -464,6 +469,12 @@
 @media only screen and (max-width: 520px){
     .ProfileScreen{
         margin-top: 30%;
+        margin-bottom: 15%;
+        padding: 0 4%;
+        flex-wrap: wrap;
+    }
+
+    .MyProfileScreen{
         margin-bottom: 15%;
         padding: 0 4%;
         flex-wrap: wrap;

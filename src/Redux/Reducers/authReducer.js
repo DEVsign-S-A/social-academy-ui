@@ -7,18 +7,14 @@ const initialState = {
         correo: 'jeiglz@gmail.com',
         fechaNacimiento: '1998-12-13',
         carrera: 'Ingenieria en Sistemas de Informacion',
-        direccion: {
-            ciudad: 'Jinotepe', 
-            departamento: 'Carazo', 
-            pais: 'Nicaragua'
-        },
+        ciudad: 'Jinotepe', 
+        departamento: 'Carazo', 
+        pais: 'Nicaragua',
         telefono: '712345678',
-        socialMedia: {
-            linkedin: 'https://www.linkedin.com',
-            facebook: 'https://www.facebook.com',
-            instagram: 'https://www.instagram.com',
-            twitter: 'https://www.twitter.com'
-        },
+        linkedin: 'https://www.linkedin.com',
+        facebook: 'https://www.facebook.com',
+        instagram: 'https://www.instagram.com',
+        twitter: 'https://www.twitter.com',
         descripcion: 'Ingeniero de Software, Co - Fundador y CEO de SkillGravity. He estado dirigiendo una compañia de 10 personas por 5 años. Cuento con experiencia en desarrollo móvil con React Native, Ionic y Flutter. Orgulloso de haber iniciado un Start Up con pocos recursos, dirigiendola hasta lanzar una web y app móvil revolucionaria.',
         habilidades: ['Proactivo', 'Perseverante', 'Trabajo en equipo', 'Liderazgo'],
         idiomas: ['Español', "Inglés"],

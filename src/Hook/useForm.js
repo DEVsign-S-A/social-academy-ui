@@ -8,7 +8,17 @@ export const useForm = ( initialState = {} ) => {
     const reset = () => {
         setValues( initialState );
     }
-
+    const resetInput = (input) =>{
+        if(input ==='date'){
+            setValues({
+                ...values, inputExperiencia: '', fechaInicio: '', fechaFinal: ''})
+        }else{
+            setValues({
+                ...values,
+                [input]: ''
+            });
+        }
+    }
 
     const handleInputChange = ({ target }) => {
         setValues({
@@ -17,15 +27,5 @@ export const useForm = ( initialState = {} ) => {
         });
     }
 
-    const handleInputObject = ({target}) =>{
-        setValues({
-            ...values,
-            direccion:{
-                [ target.name ]: target.value
-            }
-        });
-    }
-
-    return [ values, handleInputChange, handleInputObject, reset ];
-
+    return [ values, handleInputChange, reset, resetInput ];
 }
