@@ -30,7 +30,7 @@ export const dataCourses = [
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '12.00',
-        imagenPortada: 'https://picsum.photos/640/400/?random',
+        imagenPortada: 'https://picsum.photos/640/400/?random1',
         titulo: 'Estudios Financieros',
         descripcion: 'Aprende las habilidades necesarias para diseñar una nueva red. Consigue implementar dicho proyecto de red utilizando el modelo TCP/IP. Desarrolla y expande tus conocimientos sobre ciberseguridad para una red segura.',
         areaEstudio: 'finanzas',
@@ -53,7 +53,7 @@ export const dataCourses = [
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '20.00',
-        imagenPortada: 'https://picsum.photos/640/400/?random',
+        imagenPortada: 'https://picsum.photos/640/400/?random2',
         titulo: 'React JS, primeros pasos',
         descripcion: 'Aprende las habilidades necesarias para diseñar una nueva red. Consigue implementar dicho proyecto de red utilizando el modelo TCP/IP. Desarrolla y expande tus conocimientos sobre ciberseguridad para una red segura.',
         areaEstudio: 'programacion',
@@ -76,7 +76,7 @@ export const dataCourses = [
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '13.00',
-        imagenPortada: 'https://picsum.photos/640/400/?random',
+        imagenPortada: 'https://picsum.photos/640/400/?random3',
         titulo: 'Marketing digital',
         descripcion: 'Aprende las habilidades necesarias para diseñar una nueva red. Consigue implementar dicho proyecto de red utilizando el modelo TCP/IP. Desarrolla y expande tus conocimientos sobre ciberseguridad para una red segura.',
         areaEstudio: 'marketing',
@@ -99,7 +99,7 @@ export const dataCourses = [
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '25.00',
-        imagenPortada: 'https://picsum.photos/640/400/?random',
+        imagenPortada: 'https://picsum.photos/640/400/?random4',
         titulo: 'Adobe XD desde 0',
         descripcion: 'Aprende las habilidades necesarias para diseñar una nueva red. Consigue implementar dicho proyecto de red utilizando el modelo TCP/IP. Desarrolla y expande tus conocimientos sobre ciberseguridad para una red segura.',
         areaEstudio: 'diseño',
@@ -122,7 +122,7 @@ export const dataCourses = [
             fotoPerfil: 'https://images.unsplash.com/photo-1607789382281-1152591ec0da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80'
         },
         precio: '18.00',
-        imagenPortada: 'https://picsum.photos/640/400/?random',
+        imagenPortada: 'https://picsum.photos/640/400/?random5',
         titulo: 'Node.js primeros pasos',
         descripcion: 'Aprende las habilidades necesarias para diseñar una nueva red. Consigue implementar dicho proyecto de red utilizando el modelo TCP/IP. Desarrolla y expande tus conocimientos sobre ciberseguridad para una red segura.',
         areaEstudio: 'programacion',

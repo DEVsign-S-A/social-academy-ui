@@ -1,8 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { areaEstudio, tipoArchivo } from '../../../data/dataSelect';
+import { CustomInputFile } from './CustomInputFile';
+import { InputLink } from './InputLink';
 import { SelectComponent } from './SelectComponent';
+import { SelectType } from './SelectType';
 
 export const FormNewResource = () => {
+
+    const {tipoDoc} = useSelector(state => state.doc )
+
     return (
             <div className = "flex justify-center" >
                 <form className = "rounded-lg bg-gray-50 mt-10 mx-6 pb-8 shadow-xl ring-1 ring-gray-200 FormularioANR"
@@ -54,28 +61,24 @@ export const FormNewResource = () => {
                             Selecciona el tipo de archivo del recurso
                             </p>
 
-                            <SelectComponent valor = {tipoArchivo} />
+                            <SelectType valor = {tipoArchivo} />
                         </div>
                     </div>
 
-                    <div className = "my-4 py-2 flex flex-column items-center" >
-                        <div className="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
-                            <div className="flex justify-center">
-                                 <div className="md:w-10/12 w-8/12">
-                                    <div className=" cursor-pointer relative border-dotted md:h-36 h-28 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center">
-                                        <div className="absolute">
-                                            <div className="flex flex-col items-center"> 
-                                                <i className="fa fa-folder-open fa-4x text-blue-700"></i> 
-                                                <span className="block text-gray-400 font-normal">Subir Archivo</span> 
-                                            </div>
-                                        </div> 
-                                        <input type="file" className="pointer h-full w-full opacity-0" accept = ".pdf" name="recursoCompartiodo" required = {true} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    {
+                        (()=>{
+                            switch (tipoDoc) {
+                                case 'Documento':
+                                   return (<CustomInputFile archivoPermitido = {".pdf"} />);
+                                case 'Video':
+                                    return(<InputLink/>);
+                                case 'Recurso':
+                                    return (<CustomInputFile archivoPermitido = {".zip, .rar, .7zip"} />);
+                            }
+                        })
+                        ()
+                    }
+  
                     <input
                         type="submit"
                         className="py-3 px-3 rounded-lg text-center bg-BlueSocial shadow-xl m-5 cursor-pointer font-Poppins font-medium text-white"

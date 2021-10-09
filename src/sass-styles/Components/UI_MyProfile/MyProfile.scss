@@ -1,0 +1,458 @@
+.MyProfileScreen{
+    width: 100%;
+    margin-top: 2%;
+    padding: 0 2%;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: $Poppins;
+}
+
+.bgSAazul{
+    background-color: $AzulTitulo;
+}
+
+.bgSArosa{
+    background-color: $SArosa;
+}
+
+.justifyCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.MyInformation{
+    margin: 4% 0;
+
+    .InputMyInformation{
+        width: 70%;
+        margin-left: 2%;
+        padding-left: 4%;
+        font-size: 1.1vw;
+    }
+}
+
+.MyName{
+    width: 100%;
+    align-items: center;
+
+    .InputMyName{
+        margin-top: 2%;
+        padding-left: 5%;
+        width: 85%;
+        height: 3vw;
+        font-size: 1.2vw;
+    }
+}
+
+.Departamento{
+    .InputDepartamento{
+        width: 50%;
+        margin-left: 2%;
+        padding-left: 4%;
+        font-size: 1.1vw;
+    }
+}
+
+.MySocialMedia{
+    width: 100%;
+    justify-content: space-between;
+
+    .MySocialNetwork{
+        margin: 2% 0;
+        width: 100%;
+        justify-content: space-between;
+                    
+        .IndividualNetwork{
+            width: 2.5vw;
+            height: 2.5vw;
+            border-radius: 50%;
+            margin-right: 6%;
+    
+            i{
+                font-size: 1.1vw;
+            }
+        }
+
+        .InputRedSocial{
+            width: 80%;
+            padding-left: 5%;
+            font-size: 1.1vw;
+            font-size: 600;
+        }
+    }
+}
+
+.TextDescripcion{
+    width: 100%;
+    font-size: 1.1vw;
+    padding: 4% 2%;
+    height: 12vw;
+}
+
+.AddLabel{
+    width: 100%;
+
+    .InputLabels{
+        width: 70%;
+        padding-left: 5%;
+        height: 2.5vw;
+        font-size: 1.1vw;
+    }
+
+    .AddLabelButton{
+        background-color: $SArosa;
+        padding: 1.5% 3%;
+        font-size: 1.2vw;
+    }
+}
+
+.ButtonLabel{
+    font-size: 0.8vw;
+    width: 1.7vw;
+    height: 1.7vw;
+}
+
+.ButtonList{
+    border: 2px solid $AzulTitulo;
+    color: $AzulTitulo;
+    font-size: 1.1vw;
+    width: 1.9vw;
+    height: 1.9vw;
+    margin: 1% 0;
+}
+.FechaExperiencia{
+    width: 100%;
+    font-size: 1.2vw;
+    font-family: $Poppins;
+    font-weight: 600;
+}
+
+.FechaNacimiento{
+    font-size: 1.2vw;
+    font-family: $Poppins;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1010px){
+    .MyInformation{
+        margin: 4% 0;
+    
+        .InputMyInformation{
+            width: 70%;
+            margin-left: 1%;
+            padding-left: 4%;
+            font-size: 1.3vw;
+        }
+    }
+    
+    .MyName{
+        width: 100%;
+    
+        .InputMyName{
+            width: 85%;
+            height: 3vw;
+            font-size: 1.5vw;
+        }
+    }
+    
+    .Departamento{
+        .InputDepartamento{
+            width: 50%;
+            font-size: 1.4vw;
+        }
+    }
+    
+    .MySocialMedia{
+        width: 100%;
+    
+        .MySocialNetwork{
+            width: 100%;
+                        
+            .IndividualNetwork{
+                width: 2.9vw;
+                height: 2.9vw;
+                margin-right: 4%;
+        
+                i{
+                    font-size: 1.4vw;
+                }
+            }
+    
+            .InputRedSocial{
+                width: 80%;
+                font-size: 1.4vw;
+            }
+        }
+    }
+    
+    .TextDescripcion{
+        width: 100%;
+        font-size: 1.5vw;
+        height: 16vw;
+    }
+    
+    .AddLabel{
+        width: 100%;
+    
+        .InputLabels{
+            width: 70%;
+            height: 2.7vw;
+            font-size: 1.3vw;
+        }
+    
+        .AddLabelButton{
+            font-size: 1.3vw;
+        }
+    }
+    
+    .ButtonLabel{
+        font-size: 1vw;
+        width: 2vw;
+        height: 2vw;
+    }
+    
+    .ButtonList{
+        border: 2px solid $AzulTitulo;
+        font-size: 1.3vw;
+        width: 2.3vw;
+        height: 2.3vw;
+    }
+
+    .InputFecha{
+        width: 45%;
+
+        .inputFechaExp{
+            width: 100%;
+        }
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        margin-left: -1px;
+    }
+
+    .FechaExperiencia{
+        width: 100%;
+        font-size: 1.4vw;
+    }
+    
+    .FechaNacimiento{
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    .MyInformation{
+    
+        .InputMyInformation{
+            width: 70%;
+            margin-left: 1%;
+            padding-left: 4%;
+            font-size: 2.4vw;
+        }
+    }
+    
+    .MyName{
+        width: 100%;
+    
+        .InputMyName{
+            width: 85%;
+            height: 3.6vw;
+            font-size: 2.4vw;
+        }
+    }
+    
+    .Departamento{
+        .InputDepartamento{
+            width: 50%;
+            font-size: 2.4vw;
+        }
+    }
+    
+    .MySocialMedia{
+        width: 100%;
+    
+        .MySocialNetwork{
+            width: 100%;
+                        
+            .IndividualNetwork{
+                width: 4.8vw;
+                height: 4.8vw;
+                margin-right: 4%;
+        
+                i{
+                    font-size: 2.5vw;
+                }
+            }
+    
+            .InputRedSocial{
+                width: 80%;
+                font-size: 2.4vw;
+            }
+        }
+    }
+    
+    .TextDescripcion{
+        width: 100%;
+        font-size: 2.2vw;
+        height: 20vw;
+    }
+    
+    .AddLabel{
+        width: 100%;
+    
+        .InputLabels{
+            width: 60%;
+            height: 3.8vw;
+            font-size: 2.2vw;
+        }
+    
+        .AddLabelButton{
+            font-size: 2.2vw;
+        }
+    }
+    
+    .ButtonLabel{
+        font-size: 1.7vw;
+        width: 3.4vw;
+        height: 3.4vw;
+    }
+    
+    .ButtonList{
+        border: 2px solid $AzulTitulo;
+        font-size: 2vw;
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .InputFecha{
+        width: 45%;
+
+        .inputFechaExp{
+            width: 100%;
+        }
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        margin-left: -1px;
+    }
+
+    .FechaExperiencia{
+        width: 100%;
+        font-size: 2vw;
+    }
+    
+    .FechaNacimiento{
+        font-size: 2.3vw;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .MyInformation{
+    
+        .InputMyInformation{
+            width: 70%;
+            font-size: 3.5vw;
+        }
+    }
+    
+    .MyName{
+        width: 100%;
+    
+        .InputMyName{
+            width: 85%;
+            height: 6vw;
+            font-size: 3.6vw;
+        }
+    }
+    
+    .Departamento{
+        .InputDepartamento{
+            width: 50%;
+            font-size: 3.4vw;
+        }
+    }
+    
+    .MySocialMedia{
+        width: 100%;
+    
+        .MySocialNetwork{
+            width: 100%;
+                        
+            .IndividualNetwork{
+                width: 4.8vw;
+                height: 4.8vw;
+                margin-right: 4%;
+        
+                i{
+                    font-size: 2.5vw;
+                }
+            }
+    
+            .InputRedSocial{
+                width: 80%;
+                height: 6vw;
+                font-size: 3.4vw;
+            }
+        }
+    }
+    
+    .TextDescripcion{
+        width: 100%;
+        font-size: 3.2vw;
+        height: 50vw;
+    }
+    
+    .AddLabel{
+        width: 100%;
+    
+        .InputLabels{
+            width: 60%;
+            height: 6vw;
+            font-size: 3.3vw;
+        }
+    
+        .AddLabelButton{
+            padding: 2.5% 5%;
+            font-size: 3.2vw;
+        }
+    }
+    
+    .ButtonLabel{
+        font-size: 2.7vw;
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .ButtonList{
+        border: 2px solid $AzulTitulo;
+        font-size: 2.9vw;
+        width: 5.8vw;
+        height: 5.8vw;
+    }
+
+    .InputFecha{
+        width: 50%;
+
+        .inputFechaExp{
+            width: 100%;
+        }
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        margin-left: -1px;
+    }
+
+    .FechaExperiencia{
+        width: 100%;
+        font-size: 3vw;
+    }
+    
+    .FechaNacimiento{
+        font-size: 3.3vw;
+    }
+
+    .ProfileScreen{
+        align-items: center;
+    }
+}

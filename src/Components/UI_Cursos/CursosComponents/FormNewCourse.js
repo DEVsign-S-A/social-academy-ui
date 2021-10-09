@@ -1,6 +1,7 @@
 import React from 'react';
 import { areaEstudio } from '../../../data/dataSelect';
 import { SelectComponent } from '../../UI_Recursos/RecursosComponents/SelectComponent';
+import { AddLink } from './AddLink';
 
 export const FormNewCourse = () => {
     return (
@@ -45,11 +46,11 @@ export const FormNewCourse = () => {
                                     Elige una foto representativa del curso
                                 </p>
                             </div>
-                            <label class="cursor-pointer my-2 py-2">
-                                <span class="focus:outline-none font-Poppins text-white text-sm py-2 px-4 ml-4 mt-4 rounded-2xl bg-blue-800 hover:bg-blue-800 hover:shadow-md ">
+                            <label className="cursor-pointer my-2 py-2">
+                                <span className="focus:outline-none font-Poppins text-white text-sm py-2 px-4 ml-4 mt-4 rounded-2xl bg-blue-800 hover:bg-blue-800 hover:shadow-md ">
                                     Subir Imagen
                                 </span>
-                                <input type="file" class="hidden" required = {true} />
+                                <input type="file" className="hidden" required = {true} />
                             </label>
                         </div>
                     </div>
@@ -127,6 +128,8 @@ export const FormNewCourse = () => {
                             required={true}
                             ></textarea>
                         </div>
+
+                        <AddLink/>
                     
                     <input
                         type="submit"
@@ -134,6 +137,8 @@ export const FormNewCourse = () => {
                         value="Publicar"
                     />
                 </form>
+
+                
             </div>
     )
 }
