@@ -20,8 +20,14 @@ import { MyProfileScreen } from "../Views/MyProfileScreen";
 import EnterpriseScreen from "../Views/EnterpriseScreen";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
+import { useSelector } from "react-redux";
 
 export const AppRouter = () => {
+
+
+	const {uid} = useSelector(state => state.auth);
+
+	console.log(uid);
 
 	return (
 		<Router>
@@ -34,76 +40,91 @@ export const AppRouter = () => {
 						exact
 						path="/"
 						component={HomeScreen}
+						isAuth={!!uid}
 					/>
 					<PublicRoute
 						exact
 						path="/Foros"
 						component={ForumScreen}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/Pasantias"
 						component={InternshipsScreen}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/Pasantia/:IdIntership"
 						component={FullIntership}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/Cursos"
 						component={CoursesScreen}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/Recursos"
 						component={ResourcesScreen}
+						isAuth={!!uid}
 					/>
 					<PublicRoute
 						exact
 						path="/About"
 						component={AboutScreen}
+						isAuth={!!uid}
 					/>
 					<PublicRoute
 						exact
 						path="/Login"
 						component={LoginScreen}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/New_Question"
 						component={NewQuestion}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/New_Course"
 						component={NewCourse}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/New_Resource"
 						component={NewResource}
+						isAuth={!!uid}
 					/>
 					<PublicRoute
 						exact
 						path="/PageNoFound"
 						component={PageNoFound}
+						isAuth={!!uid}
 					/>
 					<PrivateRoute
 						exact
 						path="/Profile/:userId"
 						component={ProfileScreen}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/MyProfile/:userId"
 						component={MyProfileScreen}
+						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<PrivateRoute
 						exact
 						path="/MyPime/:pymeId"
 						component={EnterpriseScreen}
+						isAuth={!!uid}
 					/>
 					<Redirect to="/error404" />
 				</Switch>

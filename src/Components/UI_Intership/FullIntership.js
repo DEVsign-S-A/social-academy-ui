@@ -13,6 +13,7 @@ import Smartphone from "../../assets/UI_Intership/Smartphone.svg";
 import pin from "../../assets/UI_Intership/Pin.svg";
 import buil from "../../assets/UI_Intership/buil.svg";
 import { Footer } from "../UI_Footer/Footer";
+import Swal from "sweetalert2";
 
 export const FullIntership = () => {
   const { IdIntership } = useParams();
@@ -27,6 +28,13 @@ export const FullIntership = () => {
   const handleBack = () => {
     history.push("/Pasantias");
   };
+
+  const handleInterShip = () =>{
+    Swal.fire("Pasantía", 'Has Aplicado con éxito', "success");
+    // setTimeout(() => {
+    //   history.push("/Pasantias");
+    // }, 600);
+  }
 
   const {
     Title,
@@ -49,11 +57,11 @@ export const FullIntership = () => {
       <div>
         <Grid $grid_primary_container>
           <div className="grid grid-cols-4 gap-3 my-2">
-            <div className="mx-3 my-2 flex flex-col border-r-2 border-gray-300">
+            <div className="mx-3 my-2 flex items-center flex-col border-r-2 border-gray-300">
               <img
                 src={Company.ProfilePhoto}
                 alt={Company.CompanyName}
-                className="rounded-full w-96 ring-1 ring-gray-300"
+                className="rounded-full w-36 ring-1 ring-gray-300"
               />
 
               <Div $littelContainer>
@@ -152,7 +160,9 @@ export const FullIntership = () => {
                 </div>
               </div>
             </div>
-            <button className="flex font-Poppins text-sm bg-BlueSocial text-white font-medium shadow-lg cursor-pointer px-3 py-3 rounded-lg mx-3 justify-center items-center">
+            <button 
+            onClick={handleInterShip}
+            className="flex font-Poppins text-sm bg-BlueSocial text-white font-medium shadow-lg cursor-pointer px-3 py-3 rounded-lg mx-3 justify-center items-center">
               <img src={send} alt="send" className="mx-1" />
               <p>Aplicar</p>
             </button>

@@ -4,7 +4,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "18jvg",
             CompanyName: "Agencia S.A",
-            ProfilePhoto: `${"./assets/Intership/01.jpg"}`,
+            ProfilePhoto: 'https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/01.jpg?alt=media&token=17f5ff3f-b15c-4a4d-98ce-9e9f4404ae50',
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",
@@ -89,7 +89,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "186g",
             CompanyName: "Agencia S.A",
-            ProfilePhoto: `${"./assets/Intership/02.png"}`,
+            ProfilePhoto: `https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/02.png?alt=media&token=5609c495-81a8-45fa-9a94-5ae3f9580562`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",
@@ -181,7 +181,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "18j89",
             CompanyName: "WebFX, Inc.",
-            ProfilePhoto: `${"./assets/Intership/03.jpg"}`,
+            ProfilePhoto: `https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/03.jpg?alt=media&token=e46c9b31-7518-49e5-97a5-c89e71390188`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",
@@ -265,7 +265,7 @@ export const dataIntership = [{
         Company: {
             IdCompany: "18jdsf",
             CompanyName: "First Community  S.A",
-            ProfilePhoto: `${"./assets/Intership/04.png"}`,
+            ProfilePhoto: `https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/04.png?alt=media&token=6281ed8c-56b5-4af8-954c-36394dc21b81`,
             Direction: "Semáforos Enel central 6c al sur Mano derecha contiguo Concentrix",
         },
         Job: "Axuliar en Marketing",

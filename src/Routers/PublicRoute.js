@@ -15,7 +15,7 @@ export const PublicRoute = ({
             component={ (props) => (
                 ( !isAuth )
                     ? ( <Component { ...props } /> )
-                    : ( <Redirect to="/" /> )
+                    : ( <Redirect to="/MyProfile/:userId" /> )
             )}
         
         />
