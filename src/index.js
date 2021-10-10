@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './sass-styles/styles.scss'
 import { SocialAcademyApp } from './SocialAcademyApp';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+//import * as serviceWorker from './service-worker'
 
 ReactDOM.render(
   <React.StrictMode>

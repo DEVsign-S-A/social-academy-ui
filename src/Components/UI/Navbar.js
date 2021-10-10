@@ -1,12 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 
 import "../Styles/NavModalTooltip.css";
 
 export const Navbar = () => {
 
-  const {uid} = useSelector(state => state.auth)
 
   return (
     <>
