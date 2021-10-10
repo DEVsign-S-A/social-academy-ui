@@ -29,8 +29,7 @@ export const Navbar = () => {
 
         <div className='flex justify-between'>
         <div className="hidden md:flex transition-all ease-in-out duration-700">
-        {
-          !uid && (
+       
           <Link to="/">
             <div className="iconI cursor-pointer flex items-center p-2 relavite">
               <img
@@ -43,14 +42,13 @@ export const Navbar = () => {
                 Inicio
               </div>
             </div>
-          </Link>)
-        }
+          </Link>
+        
 
         </div>
 
           <NavLink exact to="/About">
-            {
-              !uid && (
+            
               <div className="iconA cursor-pointer flex items-center font-md p-2 mt-2">
                 <img
                   className="w-7 mx-5"
@@ -61,13 +59,11 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   About
                 </div>
-              </div>)
-            }
+              </div>
           </NavLink>
 
           <NavLink exact to="/Login">
-            {
-              !uid && (
+          
               <div className="iconL cursor-pointer flex items-center font-md p-2 mt-1">
                 <img
                   className="w-8 mx-5"
@@ -78,8 +74,7 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   Login
                 </div>
-              </div>)
-            }
+              </div>
           </NavLink>
 
           <NavLink exact to="/Foros">
@@ -101,8 +96,7 @@ export const Navbar = () => {
         </NavLink>
 
           <NavLink exact to="/Pasantias">
-            {
-              uid && (
+            
               <div className="iconP cursor-pointer flex items-center font-md p-1 mt-2">
                 <img
                   className="w-6 mx-5"
@@ -114,13 +108,11 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   Pasantias
                 </div>
-              </div>)
-            }
+              </div>
           </NavLink>
 
           <NavLink exact to="/Cursos">
-            {
-              uid && (
+           
               <div className="iconR cursor-pointer flex items-center font-md p-2 mt-2">
                 <img
                   className="w-8 mx-5"
@@ -131,12 +123,10 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
                   Cursos
                 </div>
-              </div>)
-            }
+              </div>
           </NavLink>
           <NavLink exact to="/Recursos">
-            {
-              uid && (
+           
               <div className="iconR cursor-pointer flex items-center">
                 <img
                   className="w-8 mx-5"
@@ -147,8 +137,7 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
                   Recursos
                 </div>
-              </div>)
-            }
+              </div>
           </NavLink>
           </div>
       </nav>

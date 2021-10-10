@@ -15,14 +15,8 @@ export const startLoginWhitGoogle = () => {
 		firebase
 			.auth()
 			.signInWithPopup(googleAuthProvider)
-			.then((user) => {
-				dispatch(
-					login(
-						user.user.uid,
-						user.user.displayName,
-						user.additionalUserInfo.profile
-					)
-				);
+			.then(({ user }) => {
+				dispatch(login(user.uid, user.displayName));
 			})
 			.catch((e) => {
 				Swal.fire("Error", e.message, "error");
@@ -30,7 +24,6 @@ export const startLoginWhitGoogle = () => {
 			});
 	};
 };
-
 
 export const startLoginWhitGithub = () => {
 	return (dispatch) => {

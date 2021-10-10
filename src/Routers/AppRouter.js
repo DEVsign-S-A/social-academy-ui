@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { firebase } from "../firebase/firebase-config";
+import React from "react";
 //, Redirect
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import { Navbar } from "../Components/UI/Navbar";
 //import { NavbarAuth } from '../Components/UI/NavbarAuth';
 import AboutScreen from "../Views/AboutScreen";
@@ -21,17 +20,8 @@ import { MyProfileScreen } from "../Views/MyProfileScreen";
 import EnterpriseScreen from "../Views/EnterpriseScreen";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
-import { useDispatch } from "react-redux";
-import { login } from "../Redux/Actions/authActions";
 
 export const AppRouter = () => {
-	const dispatch = useDispatch();
-
-	const [checking, setChecking] = useState(true);
-
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-	
 
 	return (
 		<Router>
@@ -44,92 +34,78 @@ export const AppRouter = () => {
 						exact
 						path="/"
 						component={HomeScreen}
-						isAuth={isLoggedIn}
 					/>
 					<PublicRoute
 						exact
 						path="/Foros"
 						component={ForumScreen}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/Pasantias"
 						component={InternshipsScreen}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/Pasantia/:IdIntership"
 						component={FullIntership}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/Cursos"
 						component={CoursesScreen}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/Recursos"
 						component={ResourcesScreen}
-						isAuth={isLoggedIn}
 					/>
 					<PublicRoute
 						exact
 						path="/About"
 						component={AboutScreen}
-						isAuth={isLoggedIn}
 					/>
 					<PublicRoute
 						exact
 						path="/Login"
 						component={LoginScreen}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/New_Question"
 						component={NewQuestion}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/New_Course"
 						component={NewCourse}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/New_Resource"
 						component={NewResource}
-						isAuth={isLoggedIn}
 					/>
 					<PublicRoute
 						exact
 						path="/PageNoFound"
 						component={PageNoFound}
-						isAuth={isLoggedIn}
 					/>
 					<PrivateRoute
 						exact
 						path="/Profile/:userId"
 						component={ProfileScreen}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/MyProfile/:userId"
 						component={MyProfileScreen}
-						isAuth={isLoggedIn}
 					/>
-					<PrivateRoute
+					<PublicRoute
 						exact
 						path="/MyPime/:pymeId"
 						component={EnterpriseScreen}
-						isAuth={isLoggedIn}
 					/>
+					<Redirect to="/error404" />
 				</Switch>
 			</div>
 		</Router>
