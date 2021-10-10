@@ -110,7 +110,6 @@ const LoginScreen = () => {
                     O Inicia Sesión Con alguna de estas plataformas
                   </p>
                   <SocialIconsRegister />
-
                   <p className="text">
                     ¿Olvidaste tu contraseña?
                     <p>Consigue ayuda</p> iniciando sesión

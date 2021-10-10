@@ -1,9 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 
 import "../Styles/NavModalTooltip.css";
 
 export const Navbar = () => {
+
+  const {uid} = useSelector(state => state.auth)
+
   return (
     <>
       <nav className="fixed w-full top-0 z-20 select-none flex items-center justify-between flex-wrap bg-primary overflow-hidden shadow-xl transition-all ease-in-out duration-700">
@@ -23,8 +27,11 @@ export const Navbar = () => {
           />
         </div>
 
+        <div className='flex justify-between'>
         <div className="hidden md:flex transition-all ease-in-out duration-700">
-          <Link to="/Inicio">
+        {
+          !uid && (
+          <Link to="/">
             <div className="iconI cursor-pointer flex items-center p-2 relavite">
               <img
                 className="w-7 mx-5"
@@ -36,26 +43,14 @@ export const Navbar = () => {
                 Inicio
               </div>
             </div>
-          </Link>
+          </Link>)
+        }
 
-          <NavLink exact to="/Foros">
-            {
-              <div className="iconF cursor-pointer flex items-center p-2">
-                <img
-                  className="w-7 mx-5"
-                  src={`./assets/ICONS/FOROS.svg`}
-                  alt="icon-user"
-                />
-                <div className="absolute transition-all duration-500 ease-in-out bg-white rounded-xl z-50  shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip">
-                  <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 z-50"></div>
-                  Foros
-                </div>
-              </div>
-            }
-          </NavLink>
+        </div>
 
           <NavLink exact to="/About">
             {
+              !uid && (
               <div className="iconA cursor-pointer flex items-center font-md p-2 mt-2">
                 <img
                   className="w-7 mx-5"
@@ -66,12 +61,13 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   About
                 </div>
-              </div>
+              </div>)
             }
           </NavLink>
 
           <NavLink exact to="/Login">
             {
+              !uid && (
               <div className="iconL cursor-pointer flex items-center font-md p-2 mt-1">
                 <img
                   className="w-8 mx-5"
@@ -82,12 +78,31 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   Login
                 </div>
-              </div>
+              </div>)
             }
           </NavLink>
 
+          <NavLink exact to="/Foros">
+          {
+           
+
+            <div className="iconF cursor-pointer flex items-center p-2">
+              <img
+                className="w-7 mx-5"
+                src={`./assets/ICONS/FOROS.svg`}
+                alt="icon-user"
+              />
+              <div className="absolute transition-all duration-500 ease-in-out bg-white rounded-xl z-50  shadow-xl mt-24 opacity-0 ml-1 text-xs px-4 py-2 pointer-events-none tooltip">
+                <div className="bg-white pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 z-50"></div>
+                Foros
+              </div>
+            </div>
+          }
+        </NavLink>
+
           <NavLink exact to="/Pasantias">
             {
+              uid && (
               <div className="iconP cursor-pointer flex items-center font-md p-1 mt-2">
                 <img
                   className="w-6 mx-5"
@@ -99,12 +114,13 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-2/4 transform -translate-x-2/4 rotate-45 "></div>
                   Pasantias
                 </div>
-              </div>
+              </div>)
             }
           </NavLink>
 
           <NavLink exact to="/Cursos">
             {
+              uid && (
               <div className="iconR cursor-pointer flex items-center font-md p-2 mt-2">
                 <img
                   className="w-8 mx-5"
@@ -115,11 +131,12 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
                   Cursos
                 </div>
-              </div>
+              </div>)
             }
           </NavLink>
           <NavLink exact to="/Recursos">
             {
+              uid && (
               <div className="iconR cursor-pointer flex items-center">
                 <img
                   className="w-8 mx-5"
@@ -130,10 +147,10 @@ export const Navbar = () => {
                   <div className="bg-white z-50 pointer-events-none  absolute h-3 w-3 -mt-3 left-12 transform -translate-x-2/4 rotate-45 "></div>
                   Recursos
                 </div>
-              </div>
+              </div>)
             }
           </NavLink>
-        </div>
+          </div>
       </nav>
     </>
   );
