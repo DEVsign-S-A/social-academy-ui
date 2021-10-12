@@ -31,9 +31,9 @@ export const FullIntership = () => {
 
   const handleInterShip = () =>{
     Swal.fire("Pasantía", 'Has Aplicado con éxito', "success");
-    // setTimeout(() => {
-    //   history.push("/Pasantias");
-    // }, 600);
+    setTimeout(() => {
+      history.push("/Pasantias");
+    }, 600);
   }
 
   const {

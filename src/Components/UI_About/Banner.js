@@ -7,8 +7,10 @@ export const Banner = () => {
       <section className="flex flex-col items-center lg:flex-row lg:justify-between content-image">
         <div className="md:block xs:hidden">
           <div className="px-16 pt-10 flex flex-col items-center font-Montserrat">
-            <h3 className="text-3xl lg:text-4xl text-primary font-bold py-5 my-2 flex flex-col items-center">
-              Social Academy
+          <img src='https://res.cloudinary.com/socialacademy/image/upload/v1633466520/Social%20Academy%20Image/icons%20General/BLUEACADEM_Y_1_lj0ltd.png'
+          alt='Social Academy'
+          className='w-80'/>
+          <h3 className="text-3xl lg:text-4xl text-primary font-bold py-5 my-2 flex flex-col items-center">
               <span className="py-3">&</span>
               <span className="text-second py-1">DEVsign</span>
             </h3>
