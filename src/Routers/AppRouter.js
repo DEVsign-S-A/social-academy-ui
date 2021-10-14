@@ -1,6 +1,6 @@
 import React from "react";
 //, Redirect
-import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Redirect, Route } from "react-router-dom";
 import { Navbar } from "../Components/UI/Navbar";
 //import { NavbarAuth } from '../Components/UI/NavbarAuth';
 import AboutScreen from "../Views/AboutScreen";
@@ -42,11 +42,11 @@ export const AppRouter = () => {
 						component={HomeScreen}
 						isAuth={!!uid}
 					/>
-					<PublicRoute
+					<Route
 						exact
 						path="/Foros"
 						component={ForumScreen}
-						isAuth={!!uid}
+
 					/>
 					<PrivateRoute
 						exact
