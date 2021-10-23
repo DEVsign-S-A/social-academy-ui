@@ -10,3 +10,8 @@ export const setToggleForm = (setState) =>({
     type: types.toggleForm,
     payload: setState
 })
+
+export const setToggleNavbar = (setState) =>({
+    type: types.toggleNavbar,
+    payload: setState
+})

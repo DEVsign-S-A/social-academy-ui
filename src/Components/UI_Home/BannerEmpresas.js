@@ -7,7 +7,7 @@ export const BannerEmpresas = () => {
             <div className = "DescripcionBannerPasantes">
                 <h1> ¿Necesitas pasantes para tu empresa?</h1>
                 <h2>Publica tu oferta y encuentra a los estudiantes más calificados</h2>
-                <div class="contenedorBotonPasantes">
+                <div className="contenedorBotonPasantes">
                     <Link className = "btnPasantes pointer" 
                     to = "/Login">
                         Unete Ahora
