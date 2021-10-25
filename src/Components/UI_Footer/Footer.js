@@ -2,6 +2,8 @@ import React from 'react';
 import { FooterEnlaces } from './FooterEnlaces';
 import { FooterSocialItem } from './FooterSocialItem';
 
+import moment from 'moment';
+
 export const Footer = () => {
     const socialMedia = [
         {path: 'fab fa-facebook-f', enlace: 'https://www.facebook.com/Social-Academy-100105982404254'},
@@ -16,11 +18,13 @@ export const Footer = () => {
         {titulo: 'About', link: '/About'},
         {titulo: 'Login', link: '/Login'}
     ];
+
+    const year = moment().year();
     return (
         <footer>
             <img
             className = "footer__Logo"
-            src = {`./assets/Logos/LogoLetrasBlancas.png`}
+            src = {`./assets/ICONS/WHITEACADEM_Y2.svg`}
             alt = "Social Academy"/>
 
             <div className = "Enlaces flex-row">
@@ -46,8 +50,7 @@ export const Footer = () => {
             </div>
 
             <h1>
-                Social Academy © 2021 All rights reserved
-                
+                Social Academy © {year} All rights reserved
             </h1>
         </footer>
     )

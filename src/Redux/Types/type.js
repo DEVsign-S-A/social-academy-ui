@@ -9,6 +9,12 @@ export const types = {
   authLogin: "[AUTH] Login",
   authLogout: "[AUTH] Logout",
 
+  loadSetError: '[LOAD] set error',
+  loadRemoveError: '[LOAD] remove error',
+
+  loadStartLoading: '[LOAD] Start Loading',
+  loadFinishLoading: '[LOAD] Finish Loading',
+
   loadQuestions: "[FORUM] Load Questions & Answers",
   activeQuestion: "[FORUM] Active Question",
   createQuestion: "[FORUM] Create Question"                   

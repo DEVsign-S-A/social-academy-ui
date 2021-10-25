@@ -35,6 +35,17 @@ export const ItemsNavbar = () => {
 						</NavLink>
 					)}
 				</div>
+
+				<NavLink exact to="/Foros" className="hidden md:flex">
+					<div className="cursor-pointer flex items-center font-md m-3">
+						<img
+							className={`${uid ? "w-9 my-1 mx-4" : "w-8 mx-5 mb-1"}`}
+							src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/FOROS.svg?alt=media&token=f616856e-d5e7-4171-8207-3393de584ccf"
+							alt="icon-user"
+						/>
+					</div>
+				</NavLink>
+
 				{!uid && (
 					<NavLink exact to="/Login" className="hidden md:flex">
 						<div className="cursor-pointer flex items-center font-md m-3">
@@ -46,16 +57,6 @@ export const ItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
-
-				<NavLink exact to="/Foros" className="hidden md:flex">
-					<div className="cursor-pointer flex items-center font-md m-3">
-						<img
-							className={`${uid ? "w-9 my-1 mx-4" : "w-8 mx-5 mb-1"}`}
-							src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/FOROS.svg?alt=media&token=f616856e-d5e7-4171-8207-3393de584ccf"
-							alt="icon-user"
-						/>
-					</div>
-				</NavLink>
 
 				{uid && (
 					<NavLink exact to="/Pasantias" className="hidden md:flex">

@@ -8,10 +8,12 @@ export const BannerEmpresas = () => {
                 <h1> ¿Necesitas pasantes para tu empresa?</h1>
                 <h2>Publica tu oferta y encuentra a los estudiantes más calificados</h2>
                 <div className="contenedorBotonPasantes">
-                    <Link className = "btnPasantes pointer" 
-                    to = "/Login">
-                        Unete Ahora
-                    </Link>
+                    <a className = "btnPasantes pointer" 
+                        href = "https://social-academy-enterprise.netlify.app/" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                            Unete Ahora
+                    </a>
                 </div>
             </div>
             <img src ={`https://res.cloudinary.com/socialacademy/image/upload/v1630603813/Social%20Academy%20Image/HomeScreen/indexPasantes_jpk3es.png`} alt = "Banner Empresas"/>

@@ -5,7 +5,6 @@ export const setSidebar = (setState) =>({
     payload: setState
 })
 
-
 export const setToggleForm = (setState) =>({
     type: types.toggleForm,
     payload: setState

@@ -7,8 +7,37 @@ import {
 	githubAuthProvider,
 	googleAuthProvider,
 } from "../../firebase/firebase-config.js";
+import { finishLoading, startLoading } from "./loadActions";
 
-export const startLoginEmailPassword = () => {};
+export const startRegisterWithEmailPasswordName = (email, password, name) =>{
+	return (dispatch) =>{
+		firebase.auth().createUserWithEmailAndPassword(email, password)
+			.then(async ({user}) =>{
+				await user.updateProfile({
+					displayName: name
+				});
+				dispatch(login(user.uid, user.displayName))
+			})
+			.catch(e => {
+                Swal.fire('Error', e.message, 'error');
+            })
+	}
+}
+
+export const startLoginEmailPassword = (email, password) => {
+	return (dispatch) =>{
+		dispatch(startLoading());
+		return firebase.auth().signInWithEmailAndPassword(email, password)
+		.then(({user})=>{
+			dispatch(login(user.uid, user.displayName));
+			dispatch(finishLoading());
+			console.log(user);
+		}).catch(e =>{
+            Swal.fire('Error', e.message, 'error');
+            dispatch(finishLoading());
+        });
+	}
+};
 
 export const startLoginWhitGoogle = () => {
 	return (dispatch) => {
@@ -68,18 +97,24 @@ export const startLoginWhitFacebook = () => {
 	};
 };
 
-
-
-
-export const login = (uid, displayName, UserProfile) => {
-	return {
+export const login = (uid, displayName) => ({
 		type: types.authLogin,
 		payload: {
 			uid,
-			displayName,
-			profile: {
+			displayName
+			/*profile: {
 				...UserProfile,
-			},
-		},
-	};
-};
+			},*/
+		}
+});
+
+export const startLogout = () =>{
+	return async (dispatch) =>{
+		await firebase.auth().signOut();
+		dispatch(logout());
+	}
+}
+
+export const logout = () =>({
+	type: types.authLogout
+})
