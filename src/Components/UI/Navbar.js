@@ -22,10 +22,10 @@ export const Navbar = () => {
 					<i className="fas fa-bars text-3xl m-3 text-WhiteSocial cursor-pointer"></i>
 				</div>
 
-				<div className="flex text-white font-bold text-2xl m-5">
+				<div className="w-2/5 sm:w-4/12 md:w-3/12 lg:w-2/12 flex text-white font-bold text-2xl m-4 sm:m-3">
 					<img
-						className="w-9/12 mx-0"
-						src={`./assets/ICONS/SOCIALACADEMY_LOGO.svg`}
+						className="w-12/12 mx-0"
+						src={`./assets/ICONS/WHITEACADEM_Y2.svg`}
 						alt="icon-user"
 					/>
 				</div>

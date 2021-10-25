@@ -30,6 +30,9 @@ const AboutScreen = () => {
       <Cita cita={cita2} autor={autor2} image={`https://res.cloudinary.com/socialacademy/image/upload/v1630442077/Social%20Academy%20Image/6115_o8v8y1.jpg`} />
       <Team />
       <FormContact/>
+      <br/>
+      <br/>
+      <br/>
       <Footer/>
     </>
   );

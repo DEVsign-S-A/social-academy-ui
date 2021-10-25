@@ -27,3 +27,12 @@
 	text-align: center;
 	justify-content: center;
 }
+
+.alert-error{
+    width: 100%;
+    background-color: $SArosa;
+    color: white;
+    border-radius: 1vw;
+    padding: 2% 4%;
+    font-size: 1vw;
+}

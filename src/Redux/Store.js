@@ -4,6 +4,7 @@ import { authReducer } from "./Reducers/authReducer";
 import { docReducer } from "./Reducers/docReducer";
 import { uiReducer } from "./Reducers/uiReducer";
 import { forumReducer } from "./Reducers/forumReducer";
+import { loadReducer } from "./Reducers/loadReducer";
 // importar los reducers
 
 const composeEnhancers =
@@ -15,7 +16,8 @@ const reducers = combineReducers({
 	ui: uiReducer,
 	doc: docReducer,
 	auth: authReducer,
-	forum: forumReducer
+	forum: forumReducer,
+	load: loadReducer
 });
 
 export const store = createStore(

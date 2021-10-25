@@ -8,10 +8,11 @@ import { SocialIconsRegister } from "../Components/UI_Login/SocialIconsRegister"
 import { Footer } from "../Components/UI_Footer/Footer";
 import RegisterScreen from "./RegisterScreen";
 import { setToggleForm } from "../Redux/Actions/uiActions";
+import { useForm } from "../Hook/useForm";
+import { startLoginEmailPassword } from "../Redux/Actions/authActions";
+
 
 const LoginScreen = () => {
-
-  
 /**
  * Aqui esta una parte que me vale verga si esta en vaniallaJS
  * no pienso quitarme la vida haciendo algo inútil como quitar
@@ -42,14 +43,29 @@ const LoginScreen = () => {
 
   const {toggleForm} = useSelector(state => state.ui);
 
-  const dispatch = useDispatch();
-
   const handleToggleForm = () => {
     dispatch(setToggleForm(!toggleForm));
   }
 
+  const dispatch = useDispatch();
+
+  const {loading} = useSelector(state => state.load);
+  const [formValues, handleInputChange] = useForm({
+    email: '',
+    password: ''
+  });
+
+  const {email, password} = formValues;
+
+  const handleLogin = (e)=>{
+    e.preventDefault();
+    dispatch(startLoginEmailPassword(email, password));
+  }
+
   return (
     <>
+    <br/>
+    <br/>
     <br/>
     <br/>
     <br/>
@@ -65,6 +81,7 @@ const LoginScreen = () => {
                 autocomplete="off"
                 className="sign-in-form"
                 id="form"
+                onSubmit = {handleLogin}
               >
                 <div className="">
                   <img
@@ -91,6 +108,9 @@ const LoginScreen = () => {
                       autocomplete="off"
                       required
                       placeholder="Email"
+                      name = "email"
+                      value = {email}
+                      onChange = {handleInputChange}
                     />
                   </div>
 
@@ -102,6 +122,9 @@ const LoginScreen = () => {
                       autocomplete="off"
                       required
                       placeholder="Contraseña"
+                      name = "password"
+                      value = {password}
+                      onChange = {handleInputChange}
                     />
                   </div>
 
