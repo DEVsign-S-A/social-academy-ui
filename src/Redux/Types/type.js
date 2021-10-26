@@ -8,6 +8,7 @@ export const types = {
 
   authLogin: "[AUTH] Login",
   authLogout: "[AUTH] Logout",
+  authLoginService: "[AUTH] Login Service",
 
   loadSetError: '[LOAD] set error',
   loadRemoveError: '[LOAD] remove error',

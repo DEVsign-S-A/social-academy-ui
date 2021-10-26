@@ -8,6 +8,7 @@ import {
 	googleAuthProvider,
 } from "../../firebase/firebase-config.js";
 import { finishLoading, startLoading } from "./loadActions";
+import { activeUser, createNewProfile } from "./userInfoActions";
 
 export const startRegisterWithEmailPasswordName = (email, password, name) =>{
 	return (dispatch) =>{
@@ -16,7 +17,9 @@ export const startRegisterWithEmailPasswordName = (email, password, name) =>{
 				await user.updateProfile({
 					displayName: name
 				});
-				dispatch(login(user.uid, user.displayName))
+				dispatch(createNewProfile(user.uid, user.displayName, user.email));
+				//dispatch(login(user.uid, user.displayName));
+				dispatch(activeUser(user.uid));
 			})
 			.catch(e => {
                 Swal.fire('Error', e.message, 'error');
@@ -31,7 +34,7 @@ export const startLoginEmailPassword = (email, password) => {
 		.then(({user})=>{
 			dispatch(login(user.uid, user.displayName));
 			dispatch(finishLoading());
-			console.log(user);
+			dispatch(activeUser(user.uid));
 		}).catch(e =>{
             Swal.fire('Error', e.message, 'error');
             dispatch(finishLoading());
@@ -41,16 +44,10 @@ export const startLoginEmailPassword = (email, password) => {
 
 export const startLoginWhitGoogle = () => {
 	return (dispatch) => {
-		firebase
-			.auth()
-			.signInWithPopup(googleAuthProvider)
+		firebase.auth().signInWithPopup(googleAuthProvider)
 			.then((user) => {
                 dispatch(
-					login(
-						user.user.uid,
-						user.user.displayName,
-						user.additionalUserInfo.profile
-					)
+					loginService(user.user.uid, user.user.displayName, user.additionalUserInfo.profile)
 				);
 			})
 			.catch((e) => {
@@ -67,7 +64,7 @@ export const startLoginWhitGithub = () => {
 			.signInWithPopup(githubAuthProvider)
 			.then((user) => {
                 dispatch(
-					login(
+					loginService(
 						user.user.uid,
 						user.user.displayName,
 						user.additionalUserInfo.profile
@@ -97,16 +94,25 @@ export const startLoginWhitFacebook = () => {
 	};
 };
 
-export const login = (uid, displayName) => ({
+export const login = (userInfo) => ({
 		type: types.authLogin,
 		payload: {
-			uid,
-			displayName
-			/*profile: {
-				...UserProfile,
-			},*/
+			...userInfo
 		}
 });
+
+export const loginService = (uid, displayName, UserProfile) => {
+	return {
+		type: types.authLoginService,
+		payload: {
+			uid,
+			displayName,
+			UserData: {
+				...UserProfile,
+			},
+		},
+	};
+};
 
 export const startLogout = () =>{
 	return async (dispatch) =>{
