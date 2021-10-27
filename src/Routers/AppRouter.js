@@ -21,6 +21,7 @@ import EnterpriseScreen from "../Views/EnterpriseScreen";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 import { useSelector } from "react-redux";
+import ContactScreen from "../Views/ContactScreen";
 
 export const AppRouter = () => {
 
@@ -52,6 +53,12 @@ export const AppRouter = () => {
 						exact
 						path="/Pasantias"
 						component={InternshipsScreen}
+						isAuth={!!uid}
+					/>
+					<PrivateRoute
+						exact
+						path="/Contactanos"
+						component={ContactScreen}
 						isAuth={!!uid}
 					/>
 					<PrivateRoute
@@ -116,7 +123,7 @@ export const AppRouter = () => {
 					/>
 					<PrivateRoute
 						exact
-						path="/MyProfile/:userId"
+						path="/MyProfile"
 						component={MyProfileScreen}
 						isAuth={!!uid}
 					/>

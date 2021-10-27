@@ -17,7 +17,7 @@ export const SearchBar = () => {
     <br/>
     <br/>
     <br/>
-      <div className="flex justify-between items-center top-20 left-9 mx-20">
+      <div className="md:flex md:mx-20 md:flex-row mr-14 ml-5 justify-center items-center">
         <Grid $grid_search_bar>
           <img className="mx-5 cursor-pointer" src={search} alt="search icon" />
           <input

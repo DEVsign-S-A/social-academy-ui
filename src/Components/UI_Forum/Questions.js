@@ -26,7 +26,7 @@ export const Questions = ({
 
   return (
     <>
-      <div className="w-11/12 ml-12 select-none">
+      <div className="w-11/12 ml-12 select-none p-0">
         <Grid $grid_primary_container>
           <div className="flex m-5 p-5 justify-between">
             <div className="flex ">
