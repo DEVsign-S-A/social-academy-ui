@@ -9,7 +9,7 @@ export const PublicRoute = ({
     component: Component,
     ...rest
 }) => {
-    const lastPath = localStorage.getItem('lastPath') || '/MyProfile/:userId';
+    const lastPath = localStorage.getItem('lastPath') || '/MyProfile';
     return (
         <Route { ...rest }
             component={ (props) => (

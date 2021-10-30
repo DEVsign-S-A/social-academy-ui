@@ -23,7 +23,7 @@ export const GridModalItems = ({itemModal, setItemModal}) => {
 
     const handleMyProfile = () =>{
         setItemModal(false);
-        history.push('/MyProfile/:userId');
+        history.push('/MyProfile');
     }
     return (
         <div>

@@ -28,7 +28,7 @@ export const DashBoardRoutes = () => {
                     <Route exact path='/Register' component={RegisterScreen}/>
                     <Route exact path='/PageNoFound' component={PageNoFound}/>
                     <Route exact path='/Profile/:userId' component={ProfileScreen}/>
-                    <Route exact path='/MyProfile/:userId' component={MyProfileScreen}/>
+                    <Route exact path='/MyProfile' component={MyProfileScreen}/>
                     <Redirect to='/PageNoFound'/>
                </Switch>
            </div>

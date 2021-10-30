@@ -169,7 +169,7 @@ export const FullItemsNavbar = () => {
 				)}
         
 				{uid && (
-					<NavLink exact to="/MyProfile/:userId" className="md:flex">
+					<NavLink exact to="/MyProfile" className="md:flex">
 						<div
 							className="iconR cursor-pointer flex items-center"
 							onClick={handleClose}
