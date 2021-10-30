@@ -1,25 +1,28 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import {
-	startLoginWhitFacebook,
-	startLoginWhitGithub,
-	startLoginWhitGoogle,
+	startLoginWithFacebook,
+	startLoginWithGithub,
+	startLoginWithGoogle,
 } from "../../Redux/Actions/authActions";
 import { BtnSocialIcon } from "../Tailwind/LoginTW";
 
 export const SocialIconsRegister = () => {
 	const dispatch = useDispatch();
 
-	const handleLoginGoogle = () => {
-		dispatch(startLoginWhitGoogle());
+	const handleLoginGoogle = (e) => {
+		e.preventDefault();
+		dispatch(startLoginWithGoogle());
 	};
 
-	const handleLoginGithub = () => {
-		dispatch(startLoginWhitGithub());
+	const handleLoginGithub = (e) => {
+		e.preventDefault();
+		dispatch(startLoginWithGithub());
 	};
 
-	const handleLoginFacebook = () => {
-		dispatch(startLoginWhitFacebook());
+	const handleLoginFacebook = (e) => {
+		e.preventDefault();
+		dispatch(startLoginWithFacebook());
 	};
 
 	return (

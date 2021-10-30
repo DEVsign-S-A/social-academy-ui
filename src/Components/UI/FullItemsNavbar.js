@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import { startLogout } from "../../Redux/Actions/authActions";
 import { setToggleNavbar } from "../../Redux/Actions/uiActions";
 
 export const FullItemsNavbar = () => {
@@ -13,6 +14,11 @@ export const FullItemsNavbar = () => {
 		dispatch(setToggleNavbar(!toggleNavbar));
 	};
 
+	const handleLogout = async (e) =>{
+		e.preventDefault();
+        await dispatch(startLogout());
+        localStorage.removeItem('lastPath');
+    }
 	return (
 		<>
 			<div className=" w-full h-screen animate__animated animate__fadeInLeft">
@@ -55,24 +61,6 @@ export const FullItemsNavbar = () => {
 						</NavLink>
 					)}
 				</div>
-				{!uid && (
-					<NavLink exact to="/Login" className="md:flex">
-						<div
-							className="iconL cursor-pointer flex items-center font-md p-2 mt-1"
-							onClick={handleClose}
-						>
-							<img
-								className="w-10 mx-5 my-5"
-								src={`./assets/ICONS/LOGIN.svg`}
-								alt="icon-user"
-							/>
-							<p className="text-WhiteSocial font-Poppins font-semibold text-xl">
-								Inicio de Sesión
-							</p>
-						</div>
-					</NavLink>
-				)}
-
 				<NavLink exact to="/Foros" className="md:flex">
 					<div
 						className="iconF cursor-pointer flex items-center p-2"
@@ -140,6 +128,23 @@ export const FullItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+				{!uid && (
+					<NavLink exact to="/Login" className="md:flex">
+						<div
+							className="iconL cursor-pointer flex items-center font-md p-2 mt-1"
+							onClick={handleClose}
+						>
+							<img
+								className="w-10 mx-5 my-5"
+								src={`./assets/ICONS/LOGIN.svg`}
+								alt="icon-user"
+							/>
+							<p className="text-WhiteSocial font-Poppins font-semibold text-xl">
+								Inicio de Sesión
+							</p>
+						</div>
+					</NavLink>
+				)}
 				{uid && (
 					<NavLink exact to="/MyProfile/:userId" className="md:flex">
 						<div
@@ -148,14 +153,32 @@ export const FullItemsNavbar = () => {
 						>
 							<img
 								className="w-10 mx-5 my-4"
-								src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/HOME.svg?alt=media&token=295eee38-661b-4272-aa2c-6ec0df50759b"
-								alt="icon-user"
+								src={`https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/IconProfile.png?alt=media&token=bb0f201d-30eb-4094-bfbf-a05c553e80ec`}
+								alt="my profile"
 							/>
 							<p className="text-WhiteSocial font-Poppins font-semibold text-xl">
 								Mi Perfil
 							</p>
 						</div>
 					</NavLink>
+				)}
+				{uid && (
+					<button className="md:flex"
+						onClick = {handleLogout} >
+						<div
+							className="iconR cursor-pointer flex items-center"
+							onClick={handleClose}
+						>
+							<img
+								className="w-10 mx-5 my-4"
+								src= {`https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/IconLog.png?alt=media&token=0d50c618-e895-4012-8884-d1dd3b55ffb0`}
+								alt="logout"
+							/>
+							<p className="text-WhiteSocial font-Poppins font-semibold text-xl">
+								Cerrar Sesión
+							</p>
+						</div>
+					</button>
 				)}
 			</div>
 		</>

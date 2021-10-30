@@ -11,7 +11,6 @@ import { setToggleForm } from "../Redux/Actions/uiActions";
 import { useForm } from "../Hook/useForm";
 import { startLoginEmailPassword } from "../Redux/Actions/authActions";
 
-
 const LoginScreen = () => {
 /**
  * Aqui esta una parte que me vale verga si esta en vaniallaJS
@@ -49,7 +48,7 @@ const LoginScreen = () => {
 
   const dispatch = useDispatch();
 
-  const {loading} = useSelector(state => state.load);
+  //const {loading} = useSelector(state => state.load);
   const [formValues, handleInputChange] = useForm({
     email: '',
     password: ''

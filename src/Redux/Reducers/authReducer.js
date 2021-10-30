@@ -11,6 +11,7 @@ export const authReducer = (state = initialState, action)=>{
                 fotoPerfil: action.payload.fotoPerfil,
                 correo: action.payload.correo,
                 fechaNacimiento: action.payload.fechaNacimiento,
+                fechaCreacion: action.payload.fechaCreacion,
                 carrera: action.payload.carrera,
                 ciudad: action.payload.ciudad, 
                 departamento: action.payload.departamento, 
@@ -26,32 +27,6 @@ export const authReducer = (state = initialState, action)=>{
                 extracurricular: action.payload.extracurricular,
                 experiencia: action.payload.experiencia,
                 curriculumLink: action.payload.curriculumLink
-            }
-        case types.authLoginService:
-            console.log(action.payload.UserData.picture);
-            return {
-                ...state,
-                uid: action.payload.uid,
-                nombreUsuario: action.payload.displayName,
-                fotoPerfil: action.payload.UserData.picture,
-                correo: action.payload.UserData.email,
-                fechaNacimiento: '',
-                fechaCreacion: '',
-                carrera: '',
-                ciudad: '', 
-                departamento: '', 
-                pais: '',
-                telefono: '',
-                linkedin: '',
-                facebook: '',
-                instagram: '',
-                twitter: '',
-                descripcion: '',
-                habilidades: [],
-                idiomas: ['Español'],
-                extracurricular: [],
-                experiencia: [],
-                curriculumLink: '' 
             }
         case types.authLogout:
             return {}

@@ -8,7 +8,7 @@ import {
 	googleAuthProvider,
 } from "../../firebase/firebase-config.js";
 import { finishLoading, startLoading } from "./loadActions";
-import { activeUser, createNewProfile } from "./userInfoActions";
+import { activeUser, createNewProfile, existeUsuario } from "./userInfoActions";
 
 export const startRegisterWithEmailPasswordName = (email, password, name) =>{
 	return (dispatch) =>{
@@ -32,7 +32,6 @@ export const startLoginEmailPassword = (email, password) => {
 		dispatch(startLoading());
 		return firebase.auth().signInWithEmailAndPassword(email, password)
 		.then(({user})=>{
-			dispatch(login(user.uid, user.displayName));
 			dispatch(finishLoading());
 			dispatch(activeUser(user.uid));
 		}).catch(e =>{
@@ -42,13 +41,15 @@ export const startLoginEmailPassword = (email, password) => {
 	}
 };
 
-export const startLoginWhitGoogle = () => {
+export const startLoginWithGoogle = () => {
 	return (dispatch) => {
 		firebase.auth().signInWithPopup(googleAuthProvider)
-			.then((user) => {
-                dispatch(
-					loginService(user.user.uid, user.user.displayName, user.additionalUserInfo.profile)
-				);
+			.then(async (user) => {
+				const usuario = await existeUsuario(user.user.uid);
+				if(usuario === false){
+					dispatch(createNewProfile(user.user.uid, user.user.displayName, user.user.email));
+				}
+					dispatch(activeUser(user.user.uid));
 			})
 			.catch((e) => {
 				Swal.fire("Error", e.message, "error");
@@ -57,19 +58,17 @@ export const startLoginWhitGoogle = () => {
 	};
 };
 
-export const startLoginWhitGithub = () => {
+export const startLoginWithGithub = () => {
 	return (dispatch) => {
 		firebase
 			.auth()
 			.signInWithPopup(githubAuthProvider)
-			.then((user) => {
-                dispatch(
-					loginService(
-						user.user.uid,
-						user.user.displayName,
-						user.additionalUserInfo.profile
-					)
-				);
+			.then(async (user) => {
+                const usuario = await existeUsuario(user.user.uid);
+				if(usuario === false){
+					dispatch(createNewProfile(user.user.uid, user.user.displayName, user.user.email));
+				}
+					dispatch(activeUser(user.user.uid));
 			})
 			.catch((e) => {
 				Swal.fire("Error", e.message, "error");
@@ -79,7 +78,7 @@ export const startLoginWhitGithub = () => {
 };
 
 
-export const startLoginWhitFacebook = () => {
+export const startLoginWithFacebook = () => {
 	return (dispatch) => {
 		firebase
 			.auth()
@@ -100,19 +99,6 @@ export const login = (userInfo) => ({
 			...userInfo
 		}
 });
-
-export const loginService = (uid, displayName, UserProfile) => {
-	return {
-		type: types.authLoginService,
-		payload: {
-			uid,
-			displayName,
-			UserData: {
-				...UserProfile,
-			},
-		},
-	};
-};
 
 export const startLogout = () =>{
 	return async (dispatch) =>{

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
+import { GridModalItems } from "./GridModalItems";
 
 export const ItemsNavbar = () => {
-	const { uid } = useSelector((state) => state.auth);
-
+	const { uid, fotoPerfil } = useSelector((state) => state.auth);
+	const [itemModal, setItemModal] = useState(false);
 	return (
 		<>
 			<div className="flex justify-between">
@@ -91,17 +92,20 @@ export const ItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+
 				{uid && (
-					<NavLink exact to="/MyProfile/:userId" className="hidden md:flex">
-						<div className="cursor-pointer flex items-center font-md m-3">
+					<div className = "hidden md:flex">
+						<div className="flex mx-5 pt-5 mb-3 relative right-0 justify-center items-center">
 							<img
-								className="w-10 m-2"
-								src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/HOME.svg?alt=media&token=295eee38-661b-4272-aa2c-6ec0df50759b"
-								alt="icon-user"
+								src={fotoPerfil}
+								alt= "foto perfil"
+								className="w-9 rounded-full ring-2 ring-gray-200 drop-shadow-lg shadow-md cursor-pointer"
+								onClick={() => setItemModal(!itemModal)}
 							/>
+							<GridModalItems itemModal={itemModal} setItemModal={setItemModal} />
 						</div>
-					</NavLink>
-				)}
+					</div>	
+				)}		
 			</div>
 		</>
 	);

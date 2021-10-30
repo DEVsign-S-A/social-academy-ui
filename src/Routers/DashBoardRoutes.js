@@ -6,6 +6,7 @@ import CoursesScreen from '../Views/CoursesScreen';
 import ForumScreen from '../Views/ForumScreen';
 import InternshipsScreen from '../Views/InternshipsScreen';
 import LoginScreen from '../Views/LoginScreen';
+import { MyProfileScreen } from '../Views/MyProfileScreen';
 import PageNoFound from '../Views/PageNoFound';
 import ProfileScreen from '../Views/ProfileScreen';
 import RegisterScreen from '../Views/RegisterScreen';
@@ -27,6 +28,7 @@ export const DashBoardRoutes = () => {
                     <Route exact path='/Register' component={RegisterScreen}/>
                     <Route exact path='/PageNoFound' component={PageNoFound}/>
                     <Route exact path='/Profile/:userId' component={ProfileScreen}/>
+                    <Route exact path='/MyProfile/:userId' component={MyProfileScreen}/>
                     <Redirect to='/PageNoFound'/>
                </Switch>
            </div>
