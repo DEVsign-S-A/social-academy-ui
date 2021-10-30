@@ -5,14 +5,14 @@ import { startLogout } from "../../Redux/Actions/authActions";
 import { setToggleNavbar } from "../../Redux/Actions/uiActions";
 
 export const FullItemsNavbar = () => {
-	const { uid } = useSelector((state) => state.auth);
-	const { toggleNavbar } = useSelector((state) => state.ui);
+  const { uid } = useSelector((state) => state.auth);
+  const { toggleNavbar } = useSelector((state) => state.ui);
 
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-	const handleClose = () => {
-		dispatch(setToggleNavbar(!toggleNavbar));
-	};
+  const handleClose = () => {
+    dispatch(setToggleNavbar(!toggleNavbar));
+  };
 
 	const handleLogout = async (e) =>{
 		e.preventDefault();
@@ -61,6 +61,7 @@ export const FullItemsNavbar = () => {
 						</NavLink>
 					)}
 				</div>
+
 				<NavLink exact to="/Foros" className="md:flex">
 					<div
 						className="iconF cursor-pointer flex items-center p-2"
@@ -94,6 +95,7 @@ export const FullItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
 				{uid && (
 					<NavLink exact to="/Cursos" className="md:flex">
 						<div
@@ -111,6 +113,7 @@ export const FullItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
 				{uid && (
 					<NavLink exact to="/Recursos" className="md:flex">
 						<div
@@ -128,6 +131,25 @@ export const FullItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
+        {uid && (
+          <NavLink exact to="/Contactanos" className="md:flex">
+            <div
+              className="iconA cursor-pointer flex items-center font-md p-2 mt-2"
+              onClick={handleClose}
+            >
+              <img
+                className="w-10 mx-5 my-3"
+                src={`./assets/ICONS/CURSOS.svg`}
+                alt="icon-user"
+              />
+              <p className="text-WhiteSocial font-Poppins font-semibold text-xl">
+                Contactanos
+              </p>
+            </div>
+          </NavLink>
+        )}
+        
 				{!uid && (
 					<NavLink exact to="/Login" className="md:flex">
 						<div
@@ -145,6 +167,7 @@ export const FullItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
 				{uid && (
 					<NavLink exact to="/MyProfile/:userId" className="md:flex">
 						<div
@@ -162,6 +185,7 @@ export const FullItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
 				{uid && (
 					<button className="md:flex"
 						onClick = {handleLogout} >

@@ -18,9 +18,28 @@ import Smile from "../../assets/UI_Forum/Smile.svg";
 import Underline from "../../assets/UI_Forum/Underline.svg";
 import back from "../../assets/UI_Forum/Arrow-Left.svg";
 import { Footer } from "../UI_Footer/Footer";
+import { useForm } from "../../Hook/useForm";
+import { useDispatch } from "react-redux";
+import { startNewQuestion } from "../../Redux/Actions/forumActions";
 
 export const NewQuestion = () => {
   const history = useHistory();
+
+  const dispatch = useDispatch();
+
+  const [formValues, handleInputChange] = useForm({
+    title: "",
+    labelCategory: "",
+    bodyQuestion: "",
+  });
+
+  const { title, labelCategory, bodyQuestion } = formValues;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(startNewQuestion(title, labelCategory, bodyQuestion));
+  };
 
   const handleBack = () => {
     history.push("/Foros");
@@ -43,19 +62,13 @@ export const NewQuestion = () => {
           className="flex outline-none p-3 my-3 bg-second text-white mx-5 rounded-xl shadow-lg font-Poppins font-medium cursor-pointer"
           onClick={handleBack}
         >
-        <img
-          src={back}
-          alt='back'
-          className="mt-2 mx-2"
-        />
+          <img src={back} alt="back" className="mt-2 mx-2" />
           Regresar
         </button>
       </div>
 
       <Grid $grid_primary_container>
-        <form
-        // onSubmit={}
-        >
+        <form onSubmit={handleSubmit}>
           <div className="my-2 py-2">
             <p className="text-gray-600 font-Poppins font-medium text-lg p-5">
               Título
@@ -66,7 +79,10 @@ export const NewQuestion = () => {
             </p>
             <input
               required={true}
-              className="mx-8 w-11/12 bg-gray-100 ring-1 ring-gray-200 rounded-lg py-2 outline-none px-4 font-Poppins text-gray-700"
+              name="title"
+              value={title}
+              onChange={handleInputChange}
+              className="ml-5  lg:mx-8 w-11/12 bg-gray-100 ring-1 ring-gray-200 rounded-lg py-2 outline-none px-4 font-Poppins text-gray-700"
               type="text"
             />
           </div>
@@ -79,7 +95,10 @@ export const NewQuestion = () => {
             </p>
             <input
               required={true}
-              className="mx-8 w-11/12 bg-gray-100 ring-1 ring-gray-200 rounded-lg py-2 outline-none px-4 font-Poppins text-gray-700"
+              name="labelCategory"
+              value={labelCategory}
+              onChange={handleInputChange}
+              className="ml-5 lg:mx-8 w-11/12 bg-gray-100 ring-1 ring-gray-200 rounded-lg py-2 outline-none px-4 font-Poppins text-gray-700"
               type="text"
               placeholder="Programación, Diseño, Finanzas, etc."
             />
@@ -98,7 +117,7 @@ export const NewQuestion = () => {
              /> */}
             </div>
 
-            <div className="mx-8 w-11/12 ring-1 ring-gray-200 rounded-t-xl flex bg-gray-100 border-b-2 border-gray-200 py-4 items-baseline">
+            <div className="hidden md:mx-8 w-11/12 ring-1 ring-gray-200 rounded-t-xl md:flex bg-gray-100 border-b-2 border-gray-200 py-4 items-baseline">
               <button className="flex ml-6">
                 <img src={Font} alt="Font" className="mr-1" />
                 <img src={Arrow} alt="Arrow" className="mt-1" />
@@ -142,14 +161,18 @@ export const NewQuestion = () => {
             </div>
 
             <textarea
-              className="mx-8 w-11/12 bg-gray-100 ring-1 ring-gray-200 rounded-b-xl rounded-t-none py-2 outline-none px-5 font-Poppins text-gray-700 h-60 resize-none"
+              className="ml-5 lg:mx-8 w-11/12 bg-gray-100 ring-1 ring-gray-200 rounded-b-xl rounded-t-none py-2 outline-none px-5 font-Poppins text-gray-700 h-60 resize-none"
               required={true}
+              name="bodyQuestion"
+              value={bodyQuestion}
+              onChange={handleInputChange}
             ></textarea>
           </div>
           <input
             type="submit"
             className="py-3 px-3 rounded-lg text-center bg-BlueSocial shadow-xl m-5 cursor-pointer font-Poppins font-medium text-white"
             value="Guardar"
+            onClick={handleSubmit}
           />
         </form>
       </Grid>

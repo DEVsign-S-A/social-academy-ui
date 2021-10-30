@@ -23,42 +23,42 @@ export const ItemsNavbar = () => {
 					</div>
 				)}
 
-				<div>
-					{!uid && (
-						<NavLink exact to="/About" className="hidden md:flex">
-							<div className="cursor-pointer flex items-center font-md m-3">
-								<img
-									className="w-8 mx-5 mt-2"
-									src={`./assets/ICONS/CURSOS.svg`}
-									alt="icon-user"
-								/>
-							</div>
-						</NavLink>
-					)}
-				</div>
+        <div>
+          {!uid && (
+            <NavLink exact to="/About" className="hidden md:flex">
+              <div className="cursor-pointer flex items-center font-md m-3">
+                <img
+                  className="w-8 mx-5 mt-2"
+                  src={`./assets/ICONS/CURSOS.svg`}
+                  alt="icon-user"
+                />
+              </div>
+            </NavLink>
+          )}
+        </div>
 
-				<NavLink exact to="/Foros" className="hidden md:flex">
-					<div className="cursor-pointer flex items-center font-md m-3">
-						<img
-							className={`${uid ? "w-9 my-1 mx-4" : "w-8 mx-5 mb-1"}`}
-							src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/FOROS.svg?alt=media&token=f616856e-d5e7-4171-8207-3393de584ccf"
-							alt="icon-user"
-						/>
-					</div>
-				</NavLink>
+        <NavLink exact to="/Foros" className="hidden md:flex">
+          <div className="cursor-pointer flex items-center font-md m-3">
+            <img
+              className={`${uid ? "w-9 my-1 mx-4" : "w-8 mx-5 mb-1"}`}
+              src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/FOROS.svg?alt=media&token=f616856e-d5e7-4171-8207-3393de584ccf"
+              alt="icon-user"
+            />
+          </div>
+        </NavLink>
 
-				{!uid && (
-					<NavLink exact to="/Login" className="hidden md:flex">
-						<div className="cursor-pointer flex items-center font-md m-3">
-							<img
-								className="w-8 mx-5 mb-1"
-								src={`./assets/ICONS/LOGIN.svg`}
-								alt="icon-user"
-							/>
-						</div>
-					</NavLink>
-				)}
-
+        {!uid && (
+          <NavLink exact to="/Login" className="hidden md:flex">
+            <div className="cursor-pointer flex items-center font-md m-3">
+              <img
+                className="w-8 mx-5 mb-1"
+                src={`./assets/ICONS/LOGIN.svg`}
+                alt="icon-user"
+              />
+            </div>
+          </NavLink>
+        )}
+        
 				{uid && (
 					<NavLink exact to="/Pasantias" className="hidden md:flex">
 						<div className="cursor-pointer flex items-center font-md m-3">
@@ -70,6 +70,7 @@ export const ItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
 				{uid && (
 					<NavLink exact to="/Cursos" className="hidden md:flex">
 						<div className="cursor-pointer flex items-center font-md m-3">
@@ -81,6 +82,7 @@ export const ItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
 				{uid && (
 					<NavLink exact to="/Recursos" className="hidden md:flex">
 						<div className="iconR cursor-pointer flex items-center">
@@ -92,6 +94,18 @@ export const ItemsNavbar = () => {
 						</div>
 					</NavLink>
 				)}
+        
+        {uid && (
+          <NavLink exact to="/Contactanos" className="hidden md:flex">
+            <div className="cursor-pointer flex items-center font-md m-3">
+              <img
+                className="w-8 my-2 mx-4"
+                src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/PASANTIAS.svg?alt=media&token=ad0e3032-5d96-4e12-b460-fa9f89b46062"
+                alt="icon-user"
+              />
+            </div>
+          </NavLink>
+        )}
 
 				{uid && (
 					<div className = "hidden md:flex">

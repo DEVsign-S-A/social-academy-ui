@@ -16,7 +16,7 @@ const ForumScreen = () => {
       {
         dataForum.map(
           (question) => (
-            <div className="w-full flex flex-col justify-center items-center ">
+            <div className="w-full flex flex-col justify-center items-center p-0">
             <Questions
               key={question.IdQuestion}
               {...question}

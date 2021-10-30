@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from '../../assets/UI-About/Social-academy-logo1.svg'
 import "./style.css";
 export const AboutUs = () => {
   return (
