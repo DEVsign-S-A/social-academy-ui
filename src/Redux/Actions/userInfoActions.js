@@ -1,7 +1,8 @@
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 import {db} from '../../firebase/firebase-config';
+import { fileUpload } from '../../helpers/fileUpload';
+import { fileUploadFirestore } from '../../helpers/fileUploadFirestore';
 import { retornaDocumentos } from '../../helpers/retornaDocumentos';
-import {types} from '../Types/type';
 import { login } from './authActions';
 
 export const createNewProfile = (uid, name, email) =>{
@@ -30,10 +31,77 @@ export const createNewProfile = (uid, name, email) =>{
             curriculumLink: '' 
         }
         try {
-            const doc = await db.collection(`UsuarioAcademico`).doc(`${uid}`).set(newUser);
+            await db.collection(`UsuarioAcademico`).doc(`${uid}`).set(newUser);
         } catch (e) {
             console.log(e);
         }
+    }
+}
+
+export const updateUserProfile = (userInfo) => {
+    return async (dispatch) =>{
+        try {
+            Swal.fire({
+                title: 'Espere',
+                text: 'Actualizando perfil',
+                allowOutsideClick: false,
+                didOpen: ()=>{
+                    Swal.showLoading();
+                }
+            });
+            const {uid} = userInfo;
+            const usuariosRef = db.collection("UsuarioAcademico");
+            await usuariosRef.doc(uid).set(userInfo);
+            dispatch(activeUser(uid));
+            Swal.close();
+        } catch (e) {
+            console.log(e);
+        }
+    }
+}
+
+export const startUploadNewPhoto = (file, uid) =>{
+    return async (dispatch) =>{
+        Swal.fire({
+            title: 'Espere',
+            text: 'Subiendo foto',
+            allowOutsideClick: false,
+            didOpen: ()=>{
+                Swal.showLoading();
+            }
+        });
+
+        const photoURL = await fileUpload(file);
+        const usuariosRef = db.collection("UsuarioAcademico");
+        await usuariosRef.doc(uid).update({
+            fotoPerfil: photoURL
+        });
+        dispatch(activeUser(uid));
+        Swal.close();
+    }
+}
+
+export const startUploadNewCurriculum = (file, uid) =>{
+    return async (dispatch) =>{
+        Swal.fire({
+            title: 'Espere',
+            text: 'Subiendo foto',
+            allowOutsideClick: false,
+            didOpen: ()=>{
+                Swal.showLoading();
+            }
+        });
+        const curriculumURL = await fileUploadFirestore(file);
+
+        if(curriculumURL){
+            const usuariosRef = db.collection("UsuarioAcademico");
+            await usuariosRef.doc(uid).update({
+                curriculumLink: curriculumURL
+            });
+        }
+
+        dispatch(activeUser(uid));
+        Swal.close();
     }
 }
 
@@ -46,5 +114,16 @@ export const activeUser = (uid) =>{
         } catch (e) {
             console.log(e);
         }
+    }
+}
+
+export const existeUsuario = async (uid) =>{
+    const usuariosRef = db.collection("UsuarioAcademico");
+    const usuarios = usuariosRef.where("uid", "==", uid).get().then(retornaDocumentos);
+    const existe = await usuarios.then(resolve=> {return resolve});
+    if(existe.length === 0){
+        return false;
+    }else if (existe.length > 0){
+        return true;
     }
 }

@@ -147,7 +147,7 @@ const RegisterScreen = ({ props }) => {
             />
           </div>
 
-          <input type="submit" value="Resgistrate" className="sign-btn" />
+          <input type="submit" value="Registrate" className="sign-btn" />
 
           <p className="text">O Registrate Con alguna de estas plataformas</p>
 

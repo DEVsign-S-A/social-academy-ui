@@ -5,9 +5,6 @@ export const useForm = ( initialState = {} ) => {
     
     const [values, setValues] = useState(initialState);
 
-    const reset = () => {
-        setValues( initialState );
-    }
     const resetInput = (input) =>{
         if(input ==='date'){
             setValues({
@@ -27,5 +24,5 @@ export const useForm = ( initialState = {} ) => {
         });
     }
 
-    return [ values, handleInputChange, reset, resetInput ];
+    return [ values, handleInputChange, resetInput ];
 }

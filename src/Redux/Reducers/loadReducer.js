@@ -25,7 +25,7 @@ export const loadReducer = (state = initialState, action) =>{
                 loading: true
             }
 
-        case types.loadRemoveError:
+        case types.loadFinishLoading:
             return {
                 ...state,
                 loading: false

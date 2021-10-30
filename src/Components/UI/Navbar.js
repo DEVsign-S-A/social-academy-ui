@@ -17,7 +17,7 @@ export const Navbar = () => {
 
 	return (
 		<>
-			<nav className="fixed w-full top-0 z-20 select-none flex items-center justify-between flex-wrap bg-primary overflow-hidden shadow-xl transition-all ease-in-out duration-700">
+			<nav className="fixed w-full top-0 z-20 select-none flex items-center justify-between flex-wrap bg-primary shadow-xl transition-all ease-in-out duration-700">
 				<div className="flex md:hidden" onClick={handleClose}>
 					<i className="fas fa-bars text-3xl m-3 text-WhiteSocial cursor-pointer"></i>
 				</div>

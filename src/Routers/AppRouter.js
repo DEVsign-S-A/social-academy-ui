@@ -24,11 +24,7 @@ import { useSelector } from "react-redux";
 import ContactScreen from "../Views/ContactScreen";
 
 export const AppRouter = () => {
-
-
 	const {uid} = useSelector(state => state.auth);
-
-	console.log(uid);
 
 	return (
 		<Router>
