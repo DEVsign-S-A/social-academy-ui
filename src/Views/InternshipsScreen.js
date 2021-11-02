@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { CardsIntership } from "../Components/UI_Intership/CardsIntership";
 import { SearchBar } from "../Components/UI_Intership/searchBar";
 import { Sidebar } from "../Components/UI_Intership/Sidebar";
-import { dataIntership } from "../data/dataInternship";
 import { startLoadingInterships } from "../Redux/Actions/intershipsActions";
 
 const InternshipsScreen = () => {

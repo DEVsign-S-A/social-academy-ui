@@ -29,7 +29,7 @@ export const ItemsNavbar = () => {
               <div className="cursor-pointer flex items-center font-md m-3">
                 <img
                   className="w-8 mx-5 mt-2"
-                  src={`./assets/ICONS/CURSOS.svg`}
+                  src='https://res.cloudinary.com/socialacademy/image/upload/v1635888369/Social%20Academy%20Image/icons%20General/CURSOS_ldaubb.svg'
                   alt="icon-user"
                 />
               </div>
@@ -99,8 +99,8 @@ export const ItemsNavbar = () => {
           <NavLink exact to="/Contactanos" className="hidden md:flex">
             <div className="cursor-pointer flex items-center font-md m-3">
               <img
-                className="w-8 my-2 mx-4"
-                src="https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/PASANTIAS.svg?alt=media&token=ad0e3032-5d96-4e12-b460-fa9f89b46062"
+                className="w-9 mt-1"
+                src="https://res.cloudinary.com/socialacademy/image/upload/v1635888369/Social%20Academy%20Image/icons%20General/CURSOS_ldaubb.svg"
                 alt="icon-user"
               />
             </div>

@@ -1,5 +1,6 @@
 import { types } from "../Types/type";
 import { db } from "../../firebase/firebase-config";
+import Swal from "sweetalert2";
 
 export const startLoadingInterships = () => {
 	return async (dispatch) => {
@@ -47,43 +48,49 @@ export const startResponseInterships = (IdIntership, loadInter) => {
 			curriculumLink,
 		} = getState().auth;
 
-		const newResponse = {
-			uid,
-			nombreUsuario,
-			fotoPerfil,
-			correo,
-			fechaNacimiento,
-			fechaCreacion,
-			carrera,
-			ciudad,
-			departamento,
-			pais,
-			telefono,
-			linkedin,
-			facebook,
-			instagram,
-			twitter,
-			descripcion,
-			habilidades,
-			idiomas,
-			extracurricular,
-			experiencia,
-			curriculumLink,
-			Fecha: new Date().getTime(),
-		};
-		// console.log(newResponse);
-		let { solictudesRespustas } = loadInter;
+		try {
+			const newResponse = {
+				uid,
+				nombreUsuario,
+				fotoPerfil,
+				correo,
+				fechaNacimiento,
+				fechaCreacion,
+				carrera,
+				ciudad,
+				departamento,
+				pais,
+				telefono,
+				linkedin,
+				facebook,
+				instagram,
+				twitter,
+				descripcion,
+				habilidades,
+				idiomas,
+				extracurricular,
+				experiencia,
+				curriculumLink,
+				Fecha: new Date().getTime(),
+			};
+			// console.log(newResponse);
+			let { solictudesRespustas } = loadInter;
 
-		if (solictudesRespustas[0] === "") {
-			solictudesRespustas.push(newResponse);
-		} else {
-			solictudesRespustas = [...solictudesRespustas, newResponse];
+			if (solictudesRespustas[0] === "") {
+				solictudesRespustas.push(newResponse);
+			} else {
+				solictudesRespustas = [...solictudesRespustas, newResponse];
+			}
+
+			const usuariosRef = db.collection("Pasantias/Publicacion/Data");
+			await usuariosRef.doc(IdIntership).update({
+				solictudesRespustas: solictudesRespustas,
+			});
+
+			Swal.fire("Pasantía", "Has Aplicado con éxito", "success");
+		} catch (error) {
+			console.log(error);
 		}
-
-		const usuariosRef = db.collection("Pasantias/Publicacion/Data");
-		await usuariosRef.doc(IdIntership).update({
-			solictudesRespustas: solictudesRespustas,
-		});
 	};
 };
 
@@ -93,14 +100,19 @@ export const startDeleteResponseInterships = (
 	indexArray
 ) => {
 	return async () => {
-		let { solictudesRespustas } = loadInter;
+		try {
+			let { solictudesRespustas } = loadInter;
 
-		solictudesRespustas.splice(indexArray, 1);
-		// console.log(solictudesRespustas);
-		const usuariosRef = db.collection("Pasantias/Publicacion/Data");
-		await usuariosRef.doc(IdIntership).update({
-			solictudesRespustas: solictudesRespustas,
-		});
+			solictudesRespustas.splice(indexArray, 1);
+			// console.log(solictudesRespustas);
+			const usuariosRef = db.collection("Pasantias/Publicacion/Data");
+			await usuariosRef.doc(IdIntership).update({
+				solictudesRespustas: solictudesRespustas,
+			});
+			Swal.fire("Pasantía", "Has Removido tu solicitud con éxito", "success");
+		} catch (error) {
+			console.log(error);
+		}
 	};
 };
 
