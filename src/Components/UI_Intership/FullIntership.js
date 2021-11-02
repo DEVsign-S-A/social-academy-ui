@@ -57,7 +57,6 @@ export const FullIntership = () => {
 
 	const handleInterShip = () => {
 		dispatch(startResponseInterships(IdIntership, loadInter));
-		Swal.fire("Pasantía", "Has Aplicado con éxito", "success");
 		setTimeout(() => {
 			history.push("/Pasantias");
 		}, 600);
@@ -65,7 +64,6 @@ export const FullIntership = () => {
 
 	const HandleRemove = () => {
 		dispatch(startDeleteResponseInterships(IdIntership, loadInter, indexArray));
-		Swal.fire("Pasantía", "Has Removido tu solicitud con éxito", "success");
 		setTimeout(() => {
 			history.push("/Pasantias");
 		}, 600);
