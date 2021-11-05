@@ -71,6 +71,45 @@ export const startNewQuestion = (title, labelCategory, bodyQuestion) => {
 	///Foros/Publicacion/Data
 };
 
+export const startRequestAnswer = (BodyAnswer, idQuestion) => {
+	return async (dispatch, getState) => {
+		const { uid, nombreUsuario, fotoPerfil } = getState().auth;
+		const { QuestionsForum } = getState().forum;
+		const question = QuestionsForum.find(
+			(question) => question.id === idQuestion
+		);
+
+		const NewAnswer = {
+			uid,
+			nombreUsuario,
+			fotoPerfil,
+			idQuestion,
+			BodyAnswer,
+			Fecha: new Date().getTime(),
+		};
+
+		let { Respuestas } = question;
+		if (Respuestas.length === 0) {
+			Respuestas.push(NewAnswer);
+		} else {
+			Respuestas = [...Respuestas, NewAnswer];
+		}
+
+		try {
+
+			await db.doc(`/Foros/Publicacion/Data/${idQuestion}`).update({
+				Respuestas: Respuestas
+			});
+
+			Swal.fire("Foros", "Has respondido a la pregunta con éxito", "success");
+			dispatch(startLoadingForum());
+
+		} catch (error) {
+			console.log(error);
+		}
+	};
+};
+
 export const startUpdateQuestion = (id, title, labelCategory, bodyQuestion) => {
 	return async (dispatch, getState) => {
 		try {
@@ -83,6 +122,22 @@ export const startUpdateQuestion = (id, title, labelCategory, bodyQuestion) => {
 			Swal.fire("Foros", "Has acutailizado tu pregunta con éxito", "success");
 		} catch (error) {
 			console.log(error);
+		}
+	};
+};
+
+export const startDeleteQuestion = (idQuestion, indexArray) => {
+	return async (dispatch, getState) => {
+		const { QuestionsForum } = getState().forum;
+		QuestionsForum.splice(indexArray, 1);
+
+		try {
+			const usuariosRef = db.collection("/Foros/Publicacion/Data");
+			await usuariosRef.doc(idQuestion).delete();
+			Swal.fire("Foros", "Has eliminado tu pregunta con éxito", "success");
+			dispatch(loadForum(QuestionsForum));
+		} catch (error) {
+			Swal.fire("Error", error, "warning");
 		}
 	};
 };
