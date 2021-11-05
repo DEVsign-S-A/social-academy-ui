@@ -71,9 +71,24 @@ export const startNewQuestion = (title, labelCategory, bodyQuestion) => {
 	///Foros/Publicacion/Data
 };
 
+export const startUpdateQuestion = (id, title, labelCategory, bodyQuestion) => {
+	return async (dispatch, getState) => {
+		try {
+			const usuariosRef = db.collection("/Foros/Publicacion/Data");
+			await usuariosRef.doc(id).update({
+				Titulo: title,
+				Categoria: labelCategory,
+				ContenidoPregunta: bodyQuestion,
+			});
+			Swal.fire("Foros", "Has acutailizado tu pregunta con éxito", "success");
+		} catch (error) {
+			console.log(error);
+		}
+	};
+};
+
 export const startLoadingForum = () => {
 	return async (dispatch) => {
-
 		const infoForum = [];
 
 		const infoSnapGeneral = await db
@@ -91,8 +106,6 @@ export const startLoadingForum = () => {
 		dispatch(loadForum(infoForum));
 	};
 };
-
-
 
 export const toogleQuestion = (id) => ({
 	type: types.activeQuestion,

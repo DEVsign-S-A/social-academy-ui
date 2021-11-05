@@ -28,7 +28,7 @@ export const authReducer = (state = initialState, action)=>{
                 experiencia: action.payload.experiencia,
                 curriculumLink: action.payload.curriculumLink
             }
-        case types.authLogout:
+        case '[AUTH] Logout':
             return {}
         default:
             return state;

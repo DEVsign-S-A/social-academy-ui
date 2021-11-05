@@ -22,6 +22,7 @@ import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 import { useSelector } from "react-redux";
 import ContactScreen from "../Views/ContactScreen";
+import { EditQuestion } from "../Components/UI_Forum/EditQuestion";
 
 export const AppRouter = () => {
 	const {uid} = useSelector(state => state.auth);
@@ -127,6 +128,12 @@ export const AppRouter = () => {
 						exact
 						path="/MyPime/:pymeId"
 						component={EnterpriseScreen}
+						isAuth={!!uid}
+					/>
+					<PrivateRoute
+						exact
+						path="/forum/edit/:idQuestion"
+						component={EditQuestion}
 						isAuth={!!uid}
 					/>
 					<Redirect to="/error404" />

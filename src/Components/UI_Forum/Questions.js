@@ -1,15 +1,18 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
-import moment from 'moment';
+import moment from "moment";
 import "moment/locale/es-do";
+import { useSelector } from "react-redux";
 import { Grid } from "../Tailwind/Grid";
 import label from "../../assets/UI_Forum/Tag.svg";
 import Like from "../../assets/UI_Forum/Like.svg";
 import Chat from "../../assets/UI_Forum/Chat.svg";
+import Trash from "../../assets/UI_Intership/Delete.svg";
 import { Answers } from "./Answers";
 import { PostAnsewrs } from "./postAnsewrs";
 import { useDispatch } from "react-redux";
 import { toogleQuestion } from "../../Redux/Actions/forumActions";
+import { Link } from "react-router-dom";
 export const Questions = ({
 	Usuario,
 	id,
@@ -19,15 +22,14 @@ export const Questions = ({
 	Fecha,
 	Respuestas,
 }) => {
-
-  console.log(Fecha);
-
 	const dispatch = useDispatch();
 	const handleViewAnswer = () => {
 		dispatch(toogleQuestion(id));
 	};
+	const noteDate = moment(Fecha);
 
-  const noteDate = moment(Fecha);
+	const { uid } = useSelector((state) => state.auth);
+	const { uid: idUsuario } = Usuario;
 
 	return (
 		<>
@@ -36,7 +38,7 @@ export const Questions = ({
 					<div className="flex m-5 p-5 justify-between">
 						<div className="flex ">
 							<img
-								className="w-16 rounded-2xl"
+								className="w-16 h-16 rounded-2xl"
 								src={Usuario.fotoPerfil}
 								alt={Usuario.NanombreUsuariome}
 							/>
@@ -45,8 +47,8 @@ export const Questions = ({
 									{Usuario.nombreUsuario}
 								</p>
 								<p className="font-Poppins text-gray-400 text-sm">
-                {noteDate.startOf('hour').fromNow()}
-                </p>
+									{noteDate.startOf("hour").fromNow()}
+								</p>
 							</div>
 						</div>
 						<div className="flex">
@@ -54,6 +56,23 @@ export const Questions = ({
 								{Categoria}
 							</p>
 							<img src={label} alt="label" />
+
+							{uid === idUsuario && (
+								<div>
+									<Link
+										to={`/forum/edit/${id}`}
+										className="bg-BlueSocial py-2 px-3 m-2 rounded-md shadow-sm text-WhiteSocial text-sm font-Poppins font-medium"
+									>
+										editar
+									</Link>
+									<br />
+									<br />
+									<button className="bg-second flex justify-center items-center px-3 py-2 rounded-md shadow-sm text-WhiteSocial text-sm font-Poppins font-medium">
+										<img src={Trash} alt="del" />
+										eliminar
+									</button>
+								</div>
+							)}
 						</div>
 					</div>
 
