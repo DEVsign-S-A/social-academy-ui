@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory, useParams } from "react-router";
-import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
 import { Grid } from "../Tailwind/Grid";
 import { Div, P, Li } from "../Tailwind/IntershipComponets";
