@@ -131,6 +131,7 @@ export const existeUsuario = async (uid) =>{
 
 export const getUserInfo = (uid) =>{
     return async (dispatch) =>{
+        
         const usuariosRef = db.collection("UsuarioAcademico");
         const usuarioInfo = usuariosRef.where("uid", "==", uid).get().then(retornaDocumentos);
         const usuario = await usuarioInfo.then(resolve => {return resolve})

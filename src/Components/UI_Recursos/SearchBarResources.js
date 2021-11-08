@@ -24,9 +24,9 @@ export const SearchBarResources = () => {
                 <Link to="New_Resource">
                     <Button $border_lighi_con_grid>
                         <img src={ Plus } alt="plus icons" className="mr-4" />
-                        <p className="">Subir </p>
+                        <p className="mt-3">Subir </p>
                         &nbsp;
-                        <p className="">recurso</p>
+                        <p className="mt-3">recurso</p>
                     </Button>
                 </Link>
             </div>

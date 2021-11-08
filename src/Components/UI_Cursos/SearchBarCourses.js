@@ -24,9 +24,9 @@ export const SearchBarCourses = () => {
                 <Link to="New_Course">
                     <Button $border_lighi_con_grid>
                         <img src={ Plus } alt="plus icons" className="mr-4" />
-                        <p className="">Nuevo </p>
+                        <p className="mt-3">Nuevo </p>
                         &nbsp;
-                        <p className="">Curso</p>
+                        <p className="mt-3">Curso</p>
                     </Button>
                 </Link>
             </div>

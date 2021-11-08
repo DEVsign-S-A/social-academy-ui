@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import moment from 'moment';
+import moment from "moment";
 import "moment/locale/es-do";
 import "../UI_Forum/style.css";
 import Travel from "../../assets/UI_Intership/Travel.svg";
@@ -17,9 +17,9 @@ export const CardsIntership = ({
 	Puesto,
 	DescripcionBreve,
 	Salario,
-	Fecha
+	Fecha,
 }) => {
-    const noteDate = moment(Fecha);
+	const noteDate = moment(Fecha);
 
 	return (
 		<>
@@ -28,7 +28,9 @@ export const CardsIntership = ({
 					{/*Header*/}
 					<div className=" w-full">
 						<div className="flex justify-center items-center col-span-3">
-							<p className="font-Poppins w-full text-1.5s font-bold mx-2">{Titulo}</p>
+							<p className="font-Poppins w-full text-1.5s font-bold mx-2">
+								{Titulo}
+							</p>
 						</div>
 					</div>
 
@@ -60,17 +62,19 @@ export const CardsIntership = ({
 						<p className="font-Poppins text-1.5s text-gray-500 col-span-7">
 							<strong>Fecha de publicación: </strong>
 							<span className="tracking-wide">
-							&nbsp;
-							{noteDate.startOf('day').fromNow()}
+								&nbsp;
+								{noteDate.startOf("day").fromNow()}
 							</span>
 						</p>
 					</div>
 					<div className="flex">
 						<Link to={`./Pasantia/${id}`}>
-							<button className="flex font-Poppins text-sm bg-second text-white shadow-lg cursor-pointer rounded-lg justify-center items-center buttonInternship">
+							<div className="flex justify-center items-center font-Poppins text-sm bg-second text-white shadow-lg cursor-pointer rounded-lg px-5 ">
 								<img src={show} alt="show" className="mx-1" />
-								<p>Ver</p>
-							</button>
+								<p
+								className="mt-3"
+								>Ver</p>
+							</div>
 						</Link>
 					</div>
 				</div>

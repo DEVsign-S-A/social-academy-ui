@@ -17,6 +17,11 @@ import {
 	toogleQuestion,
 } from "../../Redux/Actions/forumActions";
 import { Link } from "react-router-dom";
+import { Button, Popover } from "antd";
+import "antd/dist/antd.css";
+import { ProfileDrawer } from "../UI_MyProfile/ProfileDrawer";
+import { getUserInfo } from "../../Redux/Actions/userInfoActions";
+
 export const Questions = ({
 	Usuario,
 	id,
@@ -28,38 +33,83 @@ export const Questions = ({
 }) => {
 	const dispatch = useDispatch();
 	const [modal, setModal] = useState(false);
+	const [pDrawer, setPDrawer] = useState(false);
 
 	const handleViewAnswer = () => {
 		dispatch(toogleQuestion(id));
 	};
 
 	const noteDate = moment(Fecha);
-
 	const { uid } = useSelector((state) => state.auth);
 	const { QuestionsForum } = useSelector((state) => state.forum);
-	const { uid: idUsuario } = Usuario;
+	const { uid: idUsuario, carrera, correo, ciudad } = Usuario;
 
 	const handelDelete = () => {
 		const indexArray = QuestionsForum.findIndex(
 			(question) => question.id === id
 		);
-
 		dispatch(startDeleteQuestion(id, indexArray));
 	};
+
+	const handlePerfil = () => {
+		dispatch(getUserInfo(idUsuario));
+		setTimeout(() => {
+			showDrawer();
+		}, 500);
+	};
+
+	const showDrawer = () => {
+		setPDrawer(true);
+	};
+
+	const onCloseDrawer = () => {
+		setPDrawer(false);
+	};
+
+	const content = (
+		<div>
+			<p>
+				<strong>Carrera: </strong>
+				{carrera}
+			</p>
+			<p>
+				<strong>Correo: </strong>
+				{correo}
+			</p>
+			<p>
+				<strong>Ciudad: </strong>
+				{ciudad}
+			</p>
+			<a onClick={handlePerfil}>Ver perfil</a>
+		</div>
+	);
 
 	return (
 		<>
 			{Usuario && (
 				<>
+					<ProfileDrawer
+						onCloseDrawer={onCloseDrawer}
+						pDrawer={pDrawer}
+						idUsuario={idUsuario}
+					/>
 					<div className="w-11/12 ml-12 select-none p-0">
 						<Grid $grid_primary_container>
 							<div className="flex m-5 p-5 justify-between">
 								<div className="flex ">
-									<img
-										className="w-16 h-16 rounded-2xl"
-										src={Usuario.fotoPerfil}
-										alt={Usuario.NanombreUsuariome}
-									/>
+									<Popover
+										content={content}
+										title={Usuario.nombreUsuario}
+										trigger="click"
+										className="cursor-pointer"
+									>
+										<img
+											className="w-16 h-16 rounded-2xl"
+											src={Usuario.fotoPerfil}
+											alt={Usuario.nombreUsuario}
+										/>
+									</Popover>
+
 									<div className="mx-4">
 										<p className="font-Poppins text-gray-600 font-medium">
 											{Usuario.nombreUsuario}
@@ -134,30 +184,32 @@ export const Questions = ({
 									</p>
 								</div>
 							</div>
+							{uid && (
+								<div>
+									{modal ? (
+										<p
+											onClick={() => setModal(false)}
+											className="mx-8 font-Poppins text-second text-sm font-medium cursor-pointer"
+										>
+											Cancelar
+										</p>
+									) : (
+										<p
+											onClick={() => setModal(true)}
+											className="mx-8 font-Poppins text-BlueSocial text-sm font-medium cursor-pointer"
+										>
+											Responder
+										</p>
+									)}
+									<br />
+									{modal && (
+										<div className="animate__animated animate__fadeInLeft">
+											<PostAnsewrs key={id} idQuestion={id} />
+										</div>
+									)}
+								</div>
+							)}
 
-							<div>
-								{modal ? (
-									<p
-										onClick={() => setModal(false)}
-										className="mx-8 font-Poppins text-second text-sm font-medium cursor-pointer"
-									>
-										Cancelar
-									</p>
-								) : (
-									<p
-										onClick={() => setModal(true)}
-										className="mx-8 font-Poppins text-BlueSocial text-sm font-medium cursor-pointer"
-									>
-										Responder
-									</p>
-								)}
-								<br />
-								{modal && (
-									<div className="animate__animated animate__fadeInLeft">
-										<PostAnsewrs key={id} idQuestion={id} />
-									</div>
-								)}
-							</div>
 							{Respuestas.map((answers) => (
 								<Answers key={answers.id} {...answers} id={id} />
 							))}

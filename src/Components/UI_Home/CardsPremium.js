@@ -26,9 +26,11 @@ export const CardsPremium = () => {
     return (
         <div className = "SeccionPrecios">
             <div className = "PreciosTexto">
-                <h2>Nuestros planes y precios</h2>
+                <h2 
+                    className = "font-bold"
+                >Nuestros planes y precios</h2>
                 <Link to = "/Login"
-                    className = "BotonUnete pointer">
+                    className = "BotonUnete pointer text-white">
                         Registrate Gratis
                 </Link>
             </div>

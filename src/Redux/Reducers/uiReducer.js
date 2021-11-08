@@ -23,6 +23,8 @@ export const uiReducer = (state = initialState, action) => {
 				...state,
 				toggleNavbar: action.payload,
 			};
+		case "[AUTH] Logout":
+			return {};
 		default:
 			return state;
 	}

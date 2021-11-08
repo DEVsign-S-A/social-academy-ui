@@ -17,6 +17,7 @@ export const forumReducer = (state = initialState, action) => {
                     ...state,
                     toogleAnswers: action.payload
                 }
+                
         default:
             return state;
     }

@@ -14,7 +14,8 @@ export const intershipReducer = (state = initalState, action) => {
 			return {
 				checking: true,
 			};
-
+			case '[AUTH] Logout':
+				return {}
 		default:
 			return state;
 	}

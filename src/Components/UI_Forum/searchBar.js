@@ -31,9 +31,9 @@ export const SearchBar = () => {
         <Link to="New_Question">
           <Button $border_lighi_con_grid>
               <img src={ Plus } alt="plus icons" className="mr-2" />
-              <p className="">Nueva </p>
+              <p className="mt-3">Nueva </p>
               &nbsp;
-              <p className="">Pregunta</p>
+              <p className="mt-3">Pregunta</p>
           </Button>
         </Link>
       </div>

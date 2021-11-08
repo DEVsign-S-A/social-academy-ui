@@ -9,23 +9,9 @@ export const startNewQuestion = (title, labelCategory, bodyQuestion) => {
 			nombreUsuario,
 			fotoPerfil,
 			correo,
-			fechaNacimiento,
-			fechaCreacion,
 			carrera,
 			ciudad,
-			departamento,
-			pais,
-			telefono,
-			linkedin,
-			facebook,
-			instagram,
-			twitter,
 			descripcion,
-			habilidades,
-			idiomas,
-			extracurricular,
-			experiencia,
-			curriculumLink,
 		} = getState().auth;
 
 		try {
@@ -35,23 +21,9 @@ export const startNewQuestion = (title, labelCategory, bodyQuestion) => {
 					nombreUsuario,
 					fotoPerfil,
 					correo,
-					fechaNacimiento,
-					fechaCreacion,
 					carrera,
 					ciudad,
-					departamento,
-					pais,
-					telefono,
-					linkedin,
-					facebook,
-					instagram,
-					twitter,
 					descripcion,
-					habilidades,
-					idiomas,
-					extracurricular,
-					experiencia,
-					curriculumLink,
 				},
 				Titulo: title,
 				Categoria: labelCategory,
@@ -73,7 +45,8 @@ export const startNewQuestion = (title, labelCategory, bodyQuestion) => {
 
 export const startRequestAnswer = (BodyAnswer, idQuestion, idAnswer) => {
 	return async (dispatch, getState) => {
-		const { uid, nombreUsuario, fotoPerfil } = getState().auth;
+		const { uid, nombreUsuario, fotoPerfil, carrera, correo, ciudad } =
+			getState().auth;
 		const { QuestionsForum } = getState().forum;
 		const question = QuestionsForum.find(
 			(question) => question.id === idQuestion
@@ -84,6 +57,9 @@ export const startRequestAnswer = (BodyAnswer, idQuestion, idAnswer) => {
 			uid,
 			nombreUsuario,
 			fotoPerfil,
+			carrera, 
+			correo, 
+			ciudad,
 			idQuestion,
 			BodyAnswer,
 			Fecha: new Date().getTime(),
@@ -97,14 +73,12 @@ export const startRequestAnswer = (BodyAnswer, idQuestion, idAnswer) => {
 		}
 
 		try {
-
 			await db.doc(`/Foros/Publicacion/Data/${idQuestion}`).update({
-				Respuestas: Respuestas
+				Respuestas: Respuestas,
 			});
 
 			Swal.fire("Foros", "Has respondido a la pregunta con éxito", "success");
 			dispatch(startLoadingForum());
-
 		} catch (error) {
 			console.log(error);
 		}
@@ -148,7 +122,7 @@ export const startDeleteAnswer = (idQuestion, Respuestas) => {
 		try {
 			const usuariosRef = db.collection("/Foros/Publicacion/Data");
 			await usuariosRef.doc(idQuestion).update({
-				Respuestas: Respuestas
+				Respuestas: Respuestas,
 			});
 			Swal.fire("Foros", "Has eliminado tu pregunta con éxito", "success");
 			dispatch(startLoadingForum());
@@ -157,7 +131,6 @@ export const startDeleteAnswer = (idQuestion, Respuestas) => {
 		}
 	};
 };
-
 
 export const startLoadingForum = () => {
 	return async (dispatch) => {
