@@ -1,10 +1,9 @@
 import { types } from "../Types/type";
 
-export const authReducer = (state = {}, action)=>{
+export const userReducer = (state = {}, action) =>{
     switch (action.type) {
-        case types.authLogin:
-            return{
-                ...state,
+        case types.userExists:
+            return {...state,
                 uid: action.payload.uid,
                 nombreUsuario: action.payload.nombreUsuario,
                 fotoPerfil: action.payload.fotoPerfil,
@@ -25,10 +24,10 @@ export const authReducer = (state = {}, action)=>{
                 idiomas: action.payload.idiomas,
                 extracurricular: action.payload.extracurricular,
                 experiencia: action.payload.experiencia,
-                curriculumLink: action.payload.curriculumLink
+                curriculumLink: action.payload.curriculumLink,
             }
-        case '[AUTH] Logout':
-            return {}
+        case types.userDoesnot:
+            return null;
         default:
             return state;
     }

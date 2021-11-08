@@ -23,40 +23,40 @@ export const CardsIntership = ({
 
 	return (
 		<>
-			<div className="bg-gray-50 mx-3 my-4 w-1/3 rounded-xl shadow-lg ring-1 ring-gray-200">
+			<div className="bg-gray-50 mx-3 my-8 rounded-xl shadow-lg ring-1 ring-gray-200 singleCardInternship">
 				<div className="m-3">
 					{/*Header*/}
-					<div className="grid grid-cols-4 gap-4 my-2">
+					<div className=" w-full">
 						<div className="flex justify-center items-center col-span-3">
-							<p className="font-Poppins text-1.5s font-bold mx-2">{Titulo}</p>
+							<p className="font-Poppins w-full text-1.5s font-bold mx-2">{Titulo}</p>
 						</div>
 					</div>
 
 					<div className="grid grid-cols-8 gap-4 my-4">
-						<img src={Contacts} alt="Contacts" className="mx-2" />
+						<img src={Contacts} alt="Contacts" className="internshipIcon" />
 						<p className="font-Poppins text-1.5s text-gray-500 col-span-7">
 							<strong>Descripcion: </strong>
 							{DescripcionBreve}
 						</p>
 
-						<img src={Dollar} alt="Dollar" className="mx-3" />
+						<img src={Dollar} alt="Dollar" className="internshipIconDollar" />
 						<p className="font-Poppins text-1.5s text-gray-500 col-span-7">
 							<strong>Salario: </strong>
 							{Salario}
 						</p>
 
-						<img src={Time} alt="Time" className="mx-2" />
+						<img src={Time} alt="Time" className="internshipIcon" />
 						<p className="font-Poppins text-1.5s text-gray-500 col-span-7">
 							<strong>Jornada: </strong>
 							{Jornada}
 						</p>
 
-						<img src={Travel} alt="Travel" className="mx-2" />
+						<img src={Travel} alt="Travel" className="internshipIcon" />
 						<p className="font-Poppins text-1.5s text-gray-500 col-span-7">
 							<strong>Puesto: </strong>
 							{Puesto}
 						</p>
-						<img src={cal} alt="Calendar" className="mx-2" />
+						<img src={cal} alt="Calendar" className="internshipIcon" />
 						<p className="font-Poppins text-1.5s text-gray-500 col-span-7">
 							<strong>Fecha de publicación: </strong>
 							<span className="tracking-wide">
@@ -67,7 +67,7 @@ export const CardsIntership = ({
 					</div>
 					<div className="flex">
 						<Link to={`./Pasantia/${id}`}>
-							<button className="flex font-Poppins text-sm bg-second text-white shadow-lg cursor-pointer px-4 py-3 rounded-lg mx-3 justify-center items-center">
+							<button className="flex font-Poppins text-sm bg-second text-white shadow-lg cursor-pointer rounded-lg justify-center items-center buttonInternship">
 								<img src={show} alt="show" className="mx-1" />
 								<p>Ver</p>
 							</button>

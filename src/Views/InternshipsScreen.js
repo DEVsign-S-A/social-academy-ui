@@ -22,7 +22,7 @@ const InternshipsScreen = () => {
 			<Sidebar />
 
 			<SearchBar />
-			<div className="ml-20 flex flex-row flex-wrap">
+			<div className="flex flex-row flex-wrap cardsInternships">
 				{interships &&
 					interships.map((intership) => (
 						<CardsIntership key={intership.id} {...intership} />

@@ -8,6 +8,7 @@ import { uiReducer } from "./Reducers/uiReducer";
 import { forumReducer } from "./Reducers/forumReducer";
 import { loadReducer } from "./Reducers/loadReducer";
 import { intershipReducer } from "./Reducers/intershipReducer";
+import { userReducer } from "./Reducers/userReducer";
 
 const persistConfig = {
     key: 'root',
@@ -21,7 +22,8 @@ const rootReducers = combineReducers({
 	auth: authReducer,
 	forum: forumReducer,
 	load: loadReducer,
-	intership: intershipReducer
+	intership: intershipReducer,
+	user: userReducer
 });
 
 export default persistReducer(persistConfig, rootReducers);

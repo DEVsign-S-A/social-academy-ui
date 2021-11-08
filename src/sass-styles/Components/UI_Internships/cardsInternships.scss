@@ -1,0 +1,172 @@
+.cardsInternships{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 75px;
+
+    .singleCardInternship{
+        width: 36%;
+        padding: 1%;
+
+        .internshipIcon{
+            width: 18px;
+            margin-left: 10px;
+        }
+
+        .internshipIconDollar{
+            width: 13px;
+            margin-left: 10px;
+        }
+
+        p{
+            font-size: 1rem;
+        }
+
+        .buttonInternship{
+            padding: 0.5rem 1rem;
+
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 970px){
+    .cardsInternships{
+    
+        .singleCardInternship{
+            width: 40%;
+            padding: 1%;
+    
+            .internshipIcon{
+                width: 15px;
+                margin-left: 8px;
+            }
+    
+            .internshipIconDollar{
+                width: 12px;
+                margin-left: 8px;
+            }
+
+            p{
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 820px){
+    .cardsInternships{
+    
+        .singleCardInternship{
+            width: 44%;
+            padding: 1%;
+    
+            .internshipIcon{
+                width: 12px;
+                margin-left: 6px;
+            }
+    
+            .internshipIconDollar{
+                width: 10px;
+                margin-left: 6px;
+            }
+
+            p{
+                font-size: 0.8rem;
+            }
+
+            .buttonInternship{
+                padding: 0.4rem 0.8rem;
+    
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px){
+    .cardsInternships{
+        margin-left: 0px;
+
+        .singleCardInternship{
+            width: 45%;
+    
+            .internshipIcon{
+                width: 14px;
+                margin-left: 8px;
+            }
+    
+            .internshipIconDollar{
+                width: 12px;
+                margin-left: 8px;
+            }  
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .cardsInternships{
+
+        .singleCardInternship{
+            width: 70%;
+    
+            .internshipIcon{
+                width: 13px;
+                margin-left: 5px;
+            }
+    
+            .internshipIconDollar{
+                width: 11px;
+                margin-left: 5px;
+            }
+
+            p{
+                font-size: 1rem;
+            }
+
+            .buttonInternship{
+                padding: 0.5rem 1rem;
+    
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .cardsInternships{
+
+        .singleCardInternship{
+            width: 80%;
+    
+            .internshipIcon{
+                width: 13px;
+                margin-left: 5px;
+            }
+    
+            .internshipIconDollar{
+                width: 11px;
+                margin-left: 5px;
+            }
+
+            p{
+                font-size: 0.9rem;
+            }
+
+            .buttonInternship{
+                padding: 0.4rem 0.8rem;
+    
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

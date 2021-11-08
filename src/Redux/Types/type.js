@@ -9,6 +9,9 @@ export const types = {
   authLogin: "[AUTH] Login",
   authLogout: "[AUTH] Logout",
 
+  userExists: "[USER] Exists",
+  userDoesnot: "[USER] Does not exist",
+
   loadSetError: '[LOAD] set error',
   loadRemoveError: '[LOAD] remove error',
 
