@@ -71,7 +71,7 @@ export const startNewQuestion = (title, labelCategory, bodyQuestion) => {
 	///Foros/Publicacion/Data
 };
 
-export const startRequestAnswer = (BodyAnswer, idQuestion) => {
+export const startRequestAnswer = (BodyAnswer, idQuestion, idAnswer) => {
 	return async (dispatch, getState) => {
 		const { uid, nombreUsuario, fotoPerfil } = getState().auth;
 		const { QuestionsForum } = getState().forum;
@@ -80,6 +80,7 @@ export const startRequestAnswer = (BodyAnswer, idQuestion) => {
 		);
 
 		const NewAnswer = {
+			idAnswer,
 			uid,
 			nombreUsuario,
 			fotoPerfil,
@@ -141,6 +142,22 @@ export const startDeleteQuestion = (idQuestion, indexArray) => {
 		}
 	};
 };
+
+export const startDeleteAnswer = (idQuestion, Respuestas) => {
+	return async (dispatch) => {
+		try {
+			const usuariosRef = db.collection("/Foros/Publicacion/Data");
+			await usuariosRef.doc(idQuestion).update({
+				Respuestas: Respuestas
+			});
+			Swal.fire("Foros", "Has eliminado tu pregunta con éxito", "success");
+			dispatch(startLoadingForum());
+		} catch (error) {
+			Swal.fire("Error", error, "warning");
+		}
+	};
+};
+
 
 export const startLoadingForum = () => {
 	return async (dispatch) => {

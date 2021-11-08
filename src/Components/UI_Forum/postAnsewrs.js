@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Picker, { SKIN_TONE_NEUTRAL } from "emoji-picker-react";
 import { useDispatch } from "react-redux";
-
+import { v4 as uuidv4 } from 'uuid';
 import smile from "../../assets/UI_Forum/Smile.svg";
 import send from "../../assets/UI_Forum/Send [Fill].svg";
 import { startRequestAnswer } from "../../Redux/Actions/forumActions";
@@ -26,8 +26,9 @@ export const PostAnsewrs = ({idQuestion}) => {
 	};
 
 	const handleSubmit = (e) => {
+		let idAnswer = uuidv4();
 		e.preventDefault();
-        dispatch(startRequestAnswer(postAnswer, idQuestion));
+        dispatch(startRequestAnswer(postAnswer, idQuestion, idAnswer));
 		setpostAnswer('');
         setModal(false);
 	};
