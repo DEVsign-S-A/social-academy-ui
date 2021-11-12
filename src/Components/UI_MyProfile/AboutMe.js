@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
-import { useForm } from '../../Hook/useForm';
+import { useFormProfile } from '../../Hook/useFormProfile';
 import { useDispatch, useSelector } from 'react-redux';
 import { NothingToShow } from '../UI_UserProfile/UserProfileComponents/NothingToShow';
 import Swal from 'sweetalert2';
@@ -28,7 +28,7 @@ export const AboutMe = () => {
 
     const hoy = moment().format("YYYY-MM-DD");
 
-    const [formValues, handleInputChange, resetInput] = useForm(inputAdd);
+    const [formValues, handleInputChange, resetInput] = useFormProfile(inputAdd);
     const {nombreUsuario, fotoPerfil, correo, 
         fechaNacimiento, carrera, ciudad, departamento, pais, telefono, 
         facebook, instagram, twitter, linkedin, descripcion, inputHabilidades, inputExperiencia,

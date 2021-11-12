@@ -92,7 +92,7 @@ export const startUploadNewCurriculum = (file, uid) =>{
                 Swal.showLoading();
             }
         });
-        const curriculumURL = await fileUploadFirestore(file);
+        const curriculumURL = await fileUploadFirestore(file, "Curriculums");
 
         if(curriculumURL){
             const usuariosRef = db.collection("UsuarioAcademico");

@@ -1,5 +1,5 @@
 export const tipoArchivo = [
-    "Documento", 'Video', "Recurso"
+    "Documento", 'Video'
 ];
 
 export const areaEstudio = [
