@@ -5,15 +5,12 @@ import { AboutUser } from '../Components/UI_UserProfile/AboutUser';
 import { UserExperience } from '../Components/UI_UserProfile/UserExperience';
 import { UserInfo } from '../Components/UI_UserProfile/UserInfo';
 import { getUserInfo } from '../Redux/Actions/userInfoActions';
-import { getUserById } from '../Services/getUserById';
 
 const ProfileScreen = () => {
   const {userId} = useParams();
   const dispatch = useDispatch()
-  //const userProfile = getUserById(userId);
   
   useEffect(() => {
-    //EaoQuDOdUoTB22SKaOxAQwpT5Yw2
     dispatch(getUserInfo(userId));
   }, [dispatch])
 

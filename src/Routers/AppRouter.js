@@ -23,6 +23,7 @@ import { PublicRoute } from "./PublicRoute";
 import { useSelector } from "react-redux";
 import ContactScreen from "../Views/ContactScreen";
 import { EditQuestion } from "../Components/UI_Forum/EditQuestion";
+import { FullResource } from "../Components/UI_Recursos/FullResource";
 
 export const AppRouter = () => {
 	const {uid} = useSelector(state => state.auth);
@@ -74,6 +75,12 @@ export const AppRouter = () => {
 						exact
 						path="/Recursos"
 						component={ResourcesScreen}
+						isAuth={!!uid}
+					/>
+					<PrivateRoute
+						exact
+						path="/Resource/:resourceId"
+						component={FullResource}
 						isAuth={!!uid}
 					/>
 					<PublicRoute

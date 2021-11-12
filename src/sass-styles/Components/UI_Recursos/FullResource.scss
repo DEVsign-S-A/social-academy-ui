@@ -1,0 +1,421 @@
+.mContenedor{
+    margin: 0 13%;
+    margin-top: -10vw;
+}
+
+.player-wrapper {
+    position: relative;
+    width: 66.66667%;
+    padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+  }
+  
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .tituloVideo{
+      font-family: $Poppins;
+      color: $AzulTitulo;
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-top: -15vw;
+  }
+
+  .videoRecursoUsuario, .videoRecursoDescripcion, .videoRecursoMore {
+      padding: 3%;
+      box-shadow: 0vw 0.3vw 0.8vw 0.1vw  rgba(0, 0, 0, 0.2);
+      border-radius: 1.4vw;
+      font-family: $Poppins;
+
+      h1{
+        font-size: 1.2rem;
+        color: $SArosa;
+        font-weight: 600;
+    }
+  }
+
+  .videoRecursoUsuario{
+      width: 25%;
+
+      h2{
+        margin-top: 0.5rem;
+        color: $AzulTitulo;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .linkProfile{
+        margin-top: 0.5rem;
+        width: 60%;
+
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+  }
+
+  .videoRecursoMore{
+      width: 25%;
+
+      h2{
+        margin-top: 0.5rem;
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+  }
+
+  .videoRecursoDescripcion{
+      width: 40%;
+
+     h2{
+        margin-top: 0.5rem;
+         font-size: 1.05rem;
+         font-weight: 500;
+     }
+  }
+
+  @media only screen and (max-width: 910px){
+    .mContenedor{
+        margin: 0 8%;
+        margin-top: -10vw;
+    }
+    
+    .player-wrapper {
+        position: relative;
+        width: 72%;
+        padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+      }
+      
+      .react-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    
+      .tituloVideo{
+          font-family: $Poppins;
+          color: $AzulTitulo;
+          font-weight: 600;
+          font-size: 1.3rem;
+          margin-top: -15vw;
+      }
+    
+      .videoRecursoUsuario, .videoRecursoDescripcion, .videoRecursoMore {
+          padding: 3%;
+          box-shadow: 0vw 0.3vw 0.8vw 0.1vw  rgba(0, 0, 0, 0.2);
+          border-radius: 1.6vw;
+          font-family: $Poppins;
+    
+          h1{
+            font-size: 1.05rem;
+            color: $SArosa;
+            font-weight: 600;
+        }
+      }
+    
+      .videoRecursoUsuario{
+          width: 25%;
+    
+          h2{
+            margin-top: 0.5rem;
+            color: $AzulTitulo;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    
+        .linkProfile{
+            margin-top: 0.5rem;
+            width: 60%;
+    
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+      }
+    
+      .videoRecursoMore{
+          width: 25%;
+    
+          h2{
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+      }
+    
+      .videoRecursoDescripcion{
+          width: 40%;
+    
+         h2{
+            margin-top: 0.5rem;
+             font-size: 0.9rem;
+         }
+      }
+  }
+
+  @media only screen and (max-width: 700px){
+    .mContenedor{
+        margin: 0 10%;
+        margin-top: -7vw;
+        justify-content: space-around;
+    }
+    
+    .player-wrapper {
+        position: relative;
+        width: 82%;
+        padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+      }
+      
+      .react-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    
+      .tituloVideo{
+          font-family: $Poppins;
+          color: $AzulTitulo;
+          font-weight: 600;
+          font-size: 1.3rem;
+          margin-top: -15vw;
+      }
+    
+      .videoRecursoUsuario, .videoRecursoDescripcion, .videoRecursoMore {
+          padding: 3%;
+          box-shadow: 0vw 0.3vw 0.8vw 0.1vw  rgba(0, 0, 0, 0.2);
+          border-radius: 1.6vw;
+          font-family: $Poppins;
+    
+          h1{
+            font-size: 1.05rem;
+            color: $SArosa;
+            font-weight: 600;
+        }
+      }
+    
+      .videoRecursoUsuario{
+          width: 40%;
+          order: 1;
+    
+          h2{
+            margin-top: 0.5rem;
+            color: $AzulTitulo;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    
+        .linkProfile{
+            margin-top: 0.5rem;
+            width: 60%;
+    
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+      }
+    
+      .videoRecursoMore{
+          width: 40%;
+          order: 2;
+    
+          h2{
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+      }
+    
+      .videoRecursoDescripcion{
+          width: 70%;
+          order: 3;
+          margin-top: 2rem;
+    
+         h2{
+            margin-top: 0.5rem;
+             font-size: 0.9rem;
+         }
+      }
+  }
+
+  @media only screen and (max-width: 515px){
+    .mContenedor{
+        margin: 0 10%;
+        margin-top: -3rem;
+        justify-content: space-around;
+    }
+
+    .marginButton{
+        margin-top: -4rem;
+    }
+    
+    .player-wrapper {
+        position: relative;
+        width: 95%;
+        height: 300px;
+        padding-top: 0; /* 720 / 1280 = 0.5625 */
+        margin-top: 3rem;
+      }
+      
+      .react-player {
+        position: absolute;
+        height: 75%;
+        top: 0;
+        left: 0;
+      }
+    
+      .tituloVideo{
+          font-family: $Poppins;
+          color: $AzulTitulo;
+          font-weight: 600;
+          font-size: 1.3rem;
+          margin-top: -4rem;
+      }
+    
+      .videoRecursoUsuario, .videoRecursoDescripcion, .videoRecursoMore {
+          padding: 5%;
+          box-shadow: 0vw 0.3vw 0.8vw 0.1vw  rgba(0, 0, 0, 0.2);
+          border-radius: 1.6vw;
+          font-family: $Poppins;
+    
+          h1{
+            font-size: 1.05rem;
+            color: $SArosa;
+            font-weight: 600;
+        }
+      }
+    
+      .videoRecursoUsuario{
+          width: 75%;
+          order: 1;
+          margin-top: 1rem;
+    
+          h2{
+            margin-top: 0.5rem;
+            color: $AzulTitulo;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    
+        .linkProfile{
+            margin-top: 0.5rem;
+            width: 40%;
+    
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+      }
+    
+      .videoRecursoMore{
+          width: 75%;
+          order: 2;
+          margin-top: 2rem;
+    
+          h2{
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+      }
+    
+      .videoRecursoDescripcion{
+          width: 75%;
+          order: 3;
+          margin-top: 2rem;
+    
+         h2{
+            margin-top: 0.5rem;
+             font-size: 0.9rem;
+         }
+      }
+  }
+
+  @media only screen and (max-width: 350px){
+    .mContenedor{
+        margin: 0 10%;
+        margin-top: -3rem;
+        justify-content: space-around;
+    }
+    
+    .player-wrapper {
+        position: relative;
+        width: 95%;
+        height: 280px;
+        padding-top: 0; /* 720 / 1280 = 0.5625 */
+      }
+      
+      .react-player {
+        position: absolute;
+        height: 75%;
+        top: 0;
+        left: 0;
+      }
+    
+      .tituloVideo{
+          font-family: $Poppins;
+          color: $AzulTitulo;
+          font-weight: 600;
+          font-size: 6vw;
+      }
+    
+      .videoRecursoUsuario, .videoRecursoDescripcion, .videoRecursoMore {
+          padding: 5%;
+          box-shadow: 0vw 0.3vw 0.8vw 0.1vw  rgba(0, 0, 0, 0.2);
+          border-radius: 1.6vw;
+          font-family: $Poppins;
+    
+          h1{
+            font-size: 5.5vw;
+            color: $SArosa;
+            font-weight: 600;
+        }
+      }
+    
+      .videoRecursoUsuario{
+          width: 85%;
+          order: 1;
+          margin-top: 1rem;
+    
+          h2{
+            margin-top: 0.5rem;
+            color: $AzulTitulo;
+            font-size: 4.5vw;
+            font-weight: 600;
+        }
+    
+        .linkProfile{
+            margin-top: 0.5rem;
+            width: 40%;
+    
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+      }
+    
+      .videoRecursoMore{
+          width: 85%;
+          order: 2;
+          margin-top: 2rem;
+    
+          h2{
+            margin-top: 0.5rem;
+            font-size: 4.5vw;
+        }
+      }
+    
+      .videoRecursoDescripcion{
+          width: 85%;
+          order: 3;
+          margin-top: 2rem;
+    
+         h2{
+            margin-top: 0.5rem;
+            font-size: 4.5vw;
+         }
+      }
+  }

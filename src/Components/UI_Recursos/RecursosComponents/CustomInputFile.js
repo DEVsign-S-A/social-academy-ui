@@ -2,11 +2,11 @@ import React from 'react'
 
 export const CustomInputFile = ({archivoPermitido}) => {
     return (
-        <div className = "my-4 py-2 flex flex-column items-center" >
+                    <div className = "my-4 py-2 flex flex-column items-center" >
                         <div className="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
                             <div className="flex justify-center">
                                  <div className="md:w-10/12 w-8/12">
-                                    <div className=" cursor-pointer relative border-dotted md:h-36 h-28 rounded-lg border-dashed border-2 border-blue-700 bg-gray-100 flex justify-center items-center">
+                                    <div className=" cursor-pointer relative border-dotted md:h-36 h-28 rounded-lg border-2 border-blue-700 bg-gray-100 flex justify-center items-center">
                                         <div className="absolute">
                                             <div className="flex flex-col items-center"> 
                                                 <i className="fa fa-folder-open fa-4x text-blue-700"></i> 

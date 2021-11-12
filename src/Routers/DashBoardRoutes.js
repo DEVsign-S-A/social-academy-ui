@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom';
 import {NavbarAuth} from '../Components/UI/NavbarAuth';
+import { FullResource } from '../Components/UI_Recursos/FullResource';
 import AboutScreen from '../Views/AboutScreen';
 import CoursesScreen from '../Views/CoursesScreen';
 import ForumScreen from '../Views/ForumScreen';
@@ -23,6 +24,7 @@ export const DashBoardRoutes = () => {
                     <Route exact path='/Pasantias' component={InternshipsScreen}/>
                     <Route exact path='/Cursos' component={CoursesScreen}/>
                     <Route exact path='/Recursos' component={ResourcesScreen}/>
+                    <Route exact path='/Resource/:resourceId' component={FullResource}/>
                     <Route exact path='/About' component={AboutScreen}/>
                     <Route exact path='/Login' component={LoginScreen}/>
                     <Route exact path='/Register' component={RegisterScreen}/>

@@ -9,11 +9,12 @@ import { forumReducer } from "./Reducers/forumReducer";
 import { loadReducer } from "./Reducers/loadReducer";
 import { intershipReducer } from "./Reducers/intershipReducer";
 import { userReducer } from "./Reducers/userReducer";
+import { resourceReducer } from "./Reducers/resourcesReducer";
 
 const persistConfig = {
     key: 'root',
     storage,
-    whiteList: ['auth', 'doc', 'ui', 'forum', 'load', 'intership']
+    whiteList: ['auth', 'doc', 'ui', 'forum', 'load', 'intership', 'resource']
 }
 
 const rootReducers = combineReducers({
@@ -23,7 +24,8 @@ const rootReducers = combineReducers({
 	forum: forumReducer,
 	load: loadReducer,
 	intership: intershipReducer,
-	user: userReducer
+	user: userReducer,
+	resource: resourceReducer
 });
 
 export default persistReducer(persistConfig, rootReducers);

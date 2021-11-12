@@ -22,5 +22,7 @@ export const types = {
   activeQuestion: "[FORUM] Active Question",
   createQuestion: "[FORUM] Create Question",
   
-  loadIntership: "[INTERSHIP] Load all Interships"
+  loadIntership: "[INTERSHIP] Load all Interships",
+  
+  loadResources: "[RESOURCES] Load all resources"
 };
