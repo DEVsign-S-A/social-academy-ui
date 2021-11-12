@@ -38,7 +38,7 @@ export const CardRecurso = ({
                     <p className = "DescripcionRecurso">
                         {descripcion}
                     </p>
-                    <div className="border-t-2 "></div>
+                    <div className="border-t-2 border-gray-200 w-full"></div>
 
                     <div className="flex items-center justify-between mtAvatar">
                         <Link to = {`/Profile/${uid}`} >

@@ -13,7 +13,7 @@ export const ItemsNavbar = () => {
 				{!uid && (
 					<div className="hidden md:flex">
 						<Link to="/">
-							<Tooltip title= {<h1 className = "text-sm font-Poppins" >Inicio</h1>}
+							<Tooltip title= {<h1 className = "text-sm font-Poppins text-white" >Inicio</h1>}
 										placement="bottom"
 										arrow>
 								<div className="cursor-pointer flex items-center font-md m-3" >
@@ -31,7 +31,7 @@ export const ItemsNavbar = () => {
         <div>
           {!uid && (
             <NavLink exact to="/About" className="hidden md:flex">
-				<Tooltip title= {<h1 className = "text-sm font-Poppins" >Acerca de</h1>}
+				<Tooltip title= {<h1 className = "text-sm font-Poppins text-white" >Acerca de</h1>}
 							placement="bottom"
 							arrow>
 					<div className="cursor-pointer flex items-center font-md m-3">
@@ -47,7 +47,7 @@ export const ItemsNavbar = () => {
         </div>
 
         <NavLink exact to="/Foros" className="hidden md:flex">
-				<Tooltip title= {<h1 className = "text-sm font-Poppins" >Foros</h1>}
+				<Tooltip title= {<h1 className = "text-sm font-Poppins text-white " >Foros</h1>}
 							placement="bottom"
 							arrow>
 					<div className="cursor-pointer flex items-center font-md m-3">
@@ -62,7 +62,7 @@ export const ItemsNavbar = () => {
 
         {!uid && (
           <NavLink exact to="/Login" className="hidden md:flex">
-			  <Tooltip title= {<h1 className = "text-sm font-Poppins" >Login</h1>}
+			  <Tooltip title= {<h1 className = "text-sm font-Poppins text-white" >Login</h1>}
 							placement="bottom"
 							arrow>
 					<div className="cursor-pointer flex items-center font-md m-3">
@@ -78,7 +78,7 @@ export const ItemsNavbar = () => {
         
 				{uid && (
 					<NavLink exact to="/Pasantias" className="hidden md:flex">
-						<Tooltip title= {<h1 className = "text-sm font-Poppins" >Pasantias</h1>}
+						<Tooltip title= {<h1 className = "text-sm font-Poppins text-white" >Pasantias</h1>}
 								placement="bottom"
 								arrow>
 							<div className="cursor-pointer flex items-center font-md m-3">
@@ -94,7 +94,7 @@ export const ItemsNavbar = () => {
         
 				{uid && (
 					<NavLink exact to="/Cursos" className="hidden md:flex">
-						<Tooltip title= {<h1 className = "text-sm font-Poppins" >Cursos</h1>}
+						<Tooltip title= {<h1 className = "text-sm font-Poppins text-white" >Cursos</h1>}
 								placement="bottom"
 								arrow>
 							<div className="cursor-pointer flex items-center font-md m-3">
@@ -110,7 +110,7 @@ export const ItemsNavbar = () => {
         
 				{uid && (
 					<NavLink exact to="/Recursos" className="hidden md:flex">
-						<Tooltip title= {<h1 className = "text-sm font-Poppins" >Recursos</h1>}
+						<Tooltip title= {<h1 className = "text-sm font-Poppins text-white" >Recursos</h1>}
 								placement="bottom"
 								arrow>
 							<div className="iconR cursor-pointer flex items-center">
@@ -126,7 +126,7 @@ export const ItemsNavbar = () => {
         
         {uid && (
           <NavLink exact to="/Contactanos" className="hidden md:flex">
-				<Tooltip title= {<h1 className = "text-sm font-Poppins" >Contactanos</h1>}
+				<Tooltip title= {<h1 className = "text-sm font-Poppins text-white" >Contactanos</h1>}
 									placement="bottom"
 									arrow>
 					<div className="cursor-pointer flex items-center font-md m-3">

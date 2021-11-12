@@ -1,5 +1,6 @@
 .mtAvatar{
     margin-top: 0.8vw;
+    width: 100%;
 }
 
 .CardsRecursos{
@@ -40,6 +41,9 @@
         .ContenidoCard{
             margin-top: 1.7vw;
             font-size: 1.1vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             .TituloRecurso{
                 font-weight: 600;
@@ -51,6 +55,7 @@
             .DescripcionRecurso{
                 margin-bottom: 0.5vw;
                 font-size: 1.04vw;
+                color: $GrisOscuro;
             }
     
             .AvatarRecurso{
@@ -251,7 +256,7 @@
         
                 .DescripcionRecurso{
                     margin-bottom: 1.2vw;
-                    font-size: 2.5vw;
+                    font-size: 2.9vw;
                 }
         
                 .AvatarRecurso{
@@ -273,6 +278,72 @@
         
                 .NombreUsuario{
                     font-size: 3.2vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .mtAvatar{
+        margin-top: 2.5vw;
+    }
+    
+    .TituloContenedorRecursos{
+        font-size: 5vw;
+        margin: 5% 0;
+    }
+    
+    .ContenedorRecursos{
+        margin: 5% 1%;
+    
+        .CardRecurso{
+            width: 85%;
+            margin: 9% 2%;
+            padding: 5vw;
+            box-shadow: 0vw 0.35vw 0.6vw 0.4vw  rgba(90, 62, 62, 0.3);
+        
+            .IconoRecurso{
+                width: 29%;
+                margin-left: 2vw;
+                margin-top: -13vw;
+            }
+        
+            .ContenidoCard{
+                margin-top: 13vw;
+    
+                .TituloRecurso{
+                    margin: 1.4vw 0;
+                    font-size: 4.5vw;
+                }
+        
+                .DescripcionRecurso{
+                    margin-bottom: 1.2vw;
+                    font-size: 4vw;
+                }
+        
+                .AvatarRecurso{
+                    width: 15vw;
+                    height: 15vw;
+                }
+        
+                .ContenedorFecha{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+    
+                    i{
+                        font-size: 4.5vw;
+                    }
+    
+                    h4{
+                        font-size: 4vw;
+                        margin-left: 1.5vw;
+                    }
+                }
+        
+                .NombreUsuario{
+                    font-size: 4vw;
                 }
             }
         }

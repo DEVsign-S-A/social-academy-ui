@@ -19,6 +19,10 @@ export const uploadNewVideo = (videoInfo) =>{
                 rid: uploaded.id
             });
             Swal.close();
+            Swal.fire({
+                icon: 'success',
+                title: 'Video compartido con éxito'
+              })
         } catch (error) {
             console.log(error);
         }
@@ -49,6 +53,10 @@ export const uploadNewDocument = (infoFile, file) =>{
             }
 
             Swal.close();
+            Swal.fire({
+                icon: 'success',
+                title: 'Archivo compartido con éxito'
+              })
         } catch (error) {
             console.log(error);
         }
