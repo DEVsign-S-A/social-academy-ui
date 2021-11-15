@@ -1,10 +1,9 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { useForm } from "../../Hook/useForm";
-import { startNewRequestContactCompany } from "../../Redux/Actions/contactActions";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 export const FormCompany = () => {
-  const dispatch = useDispatch();
 
   const [formValues, handleInputChange, reset] = useForm({
     NameCompany: "",
@@ -29,17 +28,19 @@ export const FormCompany = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(
-      startNewRequestContactCompany(
-        NameCompany,
-        SectorComercial,
-        Tipo,
-        SitioWeb,
-        email,
-        phone,
-        BodyMsg
-      )
-    );
+    emailjs
+    .sendForm(
+      "service_5ud6m2y",
+      "template_vwnku0l",
+      e.target,
+      "user_dksxROmQ2ygGn1u5eC9m8"
+    )
+    .then((result) => {
+      Swal.fire(result.text, "Correo Enviado exitosamente", "success")
+    })
+    .catch((error) => {
+      console.log(error.text);
+    });
 
     setTimeout(() => {
       reset();
@@ -140,7 +141,6 @@ export const FormCompany = () => {
           <input
             value="Enviar"
             type="submit"
-            onClick={handleSubmit}
             className="outline-none py-2 px-5 bg-BlueSocial text-white rounded-xl cursor-pointer font-Poppins font-medium"
           />
         </div>
