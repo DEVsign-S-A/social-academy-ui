@@ -3,6 +3,7 @@ import "../Components/UI_Login/style.css";
 import { SocialIconsRegister } from "../Components/UI_Login/SocialIconsRegister";
 import { useDispatch, useSelector } from "react-redux";
 import { setToggleForm } from "../Redux/Actions/uiActions";
+import { Link } from "react-router-dom";
 
 import validator from 'validator';
 import { useForm } from "../Hook/useForm";
@@ -148,6 +149,14 @@ const RegisterScreen = ({ props }) => {
           </div>
 
           <input type="submit" value="Registrate" className="sign-btn" />
+                <p className="text">
+                    Al registrarte aceptas nuestros 
+                    &nbsp; 
+                    <Link to = "/TermsAndConditions">
+                      terminos y condiciones
+                    </Link>            
+                </p>
+
 
           <p className="text">O Registrate Con alguna de estas plataformas</p>
 
