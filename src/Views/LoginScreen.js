@@ -11,6 +11,7 @@ import { setToggleForm } from "../Redux/Actions/uiActions";
 import { useForm } from "../Hook/useForm";
 import { startLoginEmailPassword } from "../Redux/Actions/authActions";
 
+
 const LoginScreen = () => {
 /**
  * Aqui esta una parte que me vale verga si esta en vaniallaJS
@@ -128,6 +129,7 @@ const LoginScreen = () => {
                   </div>
 
                   <input type="submit" value="Inicia" className="sign-btn" />
+
                   <p className="text">
                     O Inicia Sesión Con alguna de estas plataformas
                   </p>

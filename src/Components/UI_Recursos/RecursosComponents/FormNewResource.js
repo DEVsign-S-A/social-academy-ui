@@ -134,6 +134,7 @@ export const FormNewResource = () => {
                         className="mx-8 md:w-11/12 w-10/12 bg-gray-100 ring-1 ring-gray-200 rounded-lg py-2 outline-none px-4 font-Poppins text-sm sm:text-base text-gray-700"
                         type="text"
                         name = "titulo"
+                        maxLength = "60"
                         value = {titulo}
                         onChange = {handleInputChange}
                         />
@@ -155,6 +156,7 @@ export const FormNewResource = () => {
                         name = "descripcion"
                         value = {descripcion}
                         onChange = {handleInputChange}
+                        maxLength = "200"
                         ></textarea>
                     </div>
 

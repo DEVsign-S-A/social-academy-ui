@@ -27,6 +27,9 @@ export const AboutMe = () => {
     const {idiomas, habilidades, extracurricular, experiencia} = inputAdd;
 
     const hoy = moment().format("YYYY-MM-DD");
+    const currentYear = moment().year() - 70;
+    const minDateAllowed = `${currentYear}-01-01`;
+    console.log(minDateAllowed);
 
     const [formValues, handleInputChange, resetInput] = useFormProfile(inputAdd);
     const {nombreUsuario, fotoPerfil, correo, 
@@ -224,6 +227,7 @@ export const AboutMe = () => {
                         <div className = "MyName flex flex-row flex-column items-center">
                                 <h3><b>Nombre Usuario</b></h3>
                                 <input type = "text" name = "nombreUsuario" autoComplete = "none"
+                                maxLength = "60"
                                 value = {nombreUsuario}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyName" />
@@ -232,6 +236,7 @@ export const AboutMe = () => {
                         <div className = "MyName flex flex-row flex-column items-center">
                                 <h3><b>Carrera</b></h3>
                                 <input type = "text" name = "carrera" autoComplete = "none"
+                                maxLength = "100"
                                 value = {carrera}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyName" />
@@ -244,13 +249,14 @@ export const AboutMe = () => {
                                     <input type = "date" name = "fechaNacimiento" 
                                     value = {fechaNacimiento}
                                     onChange = {handleInputChange}
-                                    className = "focus:outline-none" max = {hoy} />
+                                    className = "focus:outline-none" min = {minDateAllowed} max = {hoy} />
                                 </div>
                             </div>
 
                             <div className = "MyInformation flex flex-row flex-wrap">
                                 <h4><b>Ciudad:</b></h4>
                                 <input type = "text" name = "ciudad" autoComplete = "none"
+                                maxLength = "40"
                                 value = {ciudad}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -259,12 +265,14 @@ export const AboutMe = () => {
                                 <h4><b>Departamento:</b></h4>
                                 <input type = "text" name = "departamento" autoComplete = "none"
                                 value = {departamento}
+                                maxLength = "40"
                                 onChange = {handleInputChange}  
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputDepartamento" />
                             </div>
                             <div className = "MyInformation flex flex-row flex-wrap">
                                 <h4><b>Pais:</b></h4>
-                                <input type = "text" name = "pais" autoComplete = "none" 
+                                <input type = "text" name = "pais" autoComplete = "none"
+                                maxLength = "40" 
                                 value = {pais}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -272,7 +280,8 @@ export const AboutMe = () => {
                             
                             <div className = "MyInformation flex flex-row flex-wrap">
                             <h4><b>Telefono:</b></h4>
-                                <input type = "text" name = "telefono" autoComplete = "none" 
+                                <input type = "text" name = "telefono" autoComplete = "none"
+                                maxLength = "20" 
                                 value = {telefono}
                                 onChange = {handleInputChange}
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -281,6 +290,7 @@ export const AboutMe = () => {
                             <div className = "MyInformation flex flex-row flex-wrap">
                                 <h4><b>Correo:</b></h4>
                                 <input type = "text" name = "correo" autoComplete = "none"
+                                maxLength = "100"
                                 value = {correo}
                                 onChange = {handleInputChange}  
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -321,6 +331,7 @@ export const AboutMe = () => {
                                     value = {descripcion}
                                     onChange = {handleInputChange} 
                                     name = "descripcion"
+                                    maxLength = "450"
                                 ></textarea>
                         </div>
 
@@ -334,6 +345,7 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "facebook" autoComplete = "none" 
                                         value = {facebook}
+                                        maxLength = "110"
                                         placeholder = "https://www.facebook.com/"
                                         onChange = {handleInputChange} 
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
@@ -345,6 +357,7 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "instagram" autoComplete = "none"
                                         value = {instagram}
+                                        maxLength = "110"
                                         placeholder = "https://www.instagram.com/"
                                         onChange = {handleInputChange}  
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
@@ -356,6 +369,7 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "linkedin" autoComplete = "none" 
                                         value = {linkedin}
+                                        maxLength = "110"
                                         placeholder = "https://www.linkedin.com/"
                                         onChange = {handleInputChange} 
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
@@ -367,6 +381,7 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "twitter" autoComplete = "none" 
                                         value = {twitter}
+                                        maxLength = "110"
                                         placeholder = "https://www.twitter.com/"
                                         onChange = {handleInputChange} 
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
@@ -379,7 +394,8 @@ export const AboutMe = () => {
                         <div className = "flex flex-row flex-wrap items-center AddLabel" >
                             <input type = "text" name = "inputIdiomas" autoComplete = "none"
                                 value = {inputIdiomas}
-                                onChange = {handleInputChange}  
+                                onChange = {handleInputChange} 
+                                maxLength = "50" 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                             <button
                             onClick = {(event)=>{handleAdd(event, inputIdiomas, languages, setLanguages, 'language', 'inputIdiomas')}}
@@ -413,7 +429,8 @@ export const AboutMe = () => {
                             <div className = "flex flex-row flex-wrap items-center mb-4 AddLabel" >
                                 <input type = "text" name = "inputExtracurricular" autoComplete = "none"
                                     value = {inputExtracurricular}
-                                    onChange = {handleInputChange}  
+                                    onChange = {handleInputChange}
+                                    maxLength = "150"  
                                     className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                                 <button
                                 onClick = {(event)=>{handleAdd(event, inputExtracurricular, activities, setActivities, 'activity', 'inputExtracurricular')}}  
@@ -448,6 +465,7 @@ export const AboutMe = () => {
                                 <input type = "text" name = "inputExperiencia" autoComplete = "none"
                                     value = {inputExperiencia}
                                     onChange = {handleInputChange}  
+                                    maxLength = "150"
                                     className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                                 <button
                                 onClick = {handleAddExperience}  
@@ -461,7 +479,7 @@ export const AboutMe = () => {
                                     <input type = "date" name = "fechaInicio" 
                                     value = {fechaInicio}
                                     onChange = {handleInputChange}
-                                    className = "focus:outline-none inputFechaExp" max = {fechaFinal} max = {hoy} />
+                                    className = "focus:outline-none inputFechaExp" min = {minDateAllowed} max = {fechaFinal} max = {hoy} />
                                 </div>
                                 <div className = "InputFecha">
                                     <h5>Fecha Final</h5>
@@ -503,7 +521,8 @@ export const AboutMe = () => {
                         <div className = "flex flex-row flex-wrap items-center AddLabel" >
                             <input type = "text" name = "inputHabilidades" autoComplete = "none"
                                 value = {inputHabilidades}
-                                onChange = {handleInputChange}  
+                                onChange = {handleInputChange} 
+                                maxLength = "100" 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                             <button
                             onClick = {(event)=>{handleAdd(event, inputHabilidades, abilities, setAbilities, 'ability', 'inputHabilidades')}}

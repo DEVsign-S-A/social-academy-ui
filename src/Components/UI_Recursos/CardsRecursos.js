@@ -14,7 +14,7 @@ export const CardsRecursos = () => {
     return (
         <div className = "CardsRecursos">
             <h1 className = "TituloContenedorRecursos">Encuentra la informacion que necesitas</h1>
-            <div className = "ContenedorRecursos">
+            <div className = "ContenedorRecursos animate__animated animate__fadeIn">
                 {
                     (resources)&&(resources.map(recurso =>(
                         <CardRecurso

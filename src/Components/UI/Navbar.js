@@ -25,7 +25,7 @@ export const Navbar = () => {
 				<div className="w-2/5 sm:w-4/12 md:w-3/12 lg:w-2/12 flex text-white font-bold text-2xl m-4 sm:m-3">
 					<img
 						className="w-12/12 mx-0"
-						src={`./assets/ICONS/WHITEACADEM_Y2.svg`}
+						src={`https://firebasestorage.googleapis.com/v0/b/social-academy-1c439.appspot.com/o/WHITEACADEM_Y2.svg?alt=media&token=93f9dbf5-c0be-4a3f-8bfc-2130f177b110`}
 						alt="icon-user"
 					/>
 				</div>

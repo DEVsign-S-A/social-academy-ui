@@ -24,6 +24,7 @@ import { useSelector } from "react-redux";
 import ContactScreen from "../Views/ContactScreen";
 import { EditQuestion } from "../Components/UI_Forum/EditQuestion";
 import { FullResource } from "../Components/UI_Recursos/FullResource";
+import { ConditionsScreen } from "../Views/ConditionsScreen";
 
 export const AppRouter = () => {
 	const {uid} = useSelector(state => state.auth);
@@ -45,7 +46,6 @@ export const AppRouter = () => {
 						exact
 						path="/Foros"
 						component={ForumScreen}
-
 					/>
 					<PrivateRoute
 						exact
@@ -142,6 +142,16 @@ export const AppRouter = () => {
 						path="/forum/edit/:idQuestion"
 						component={EditQuestion}
 						isAuth={!!uid}
+					/>
+					<Route
+						exact
+						path="/TermsAndConditions"
+						component={ConditionsScreen}
+					/>
+					<Route
+						exact
+						path="/error404"
+						component={PageNoFound}
 					/>
 					<Redirect to="/error404" />
 				</Switch>
