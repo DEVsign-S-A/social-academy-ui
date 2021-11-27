@@ -42,7 +42,7 @@ export const Button = tw.button`
     };  
 
     ${props => props.$border_lighi_con_grid && 
-        'px-6 text-white bg-BlueSocial border-blue-500 border-b-4 inline-flex items-center mx-5 my-8 rounded-lg font-Poppins font-medium outline-none'
+        'px-6 text-white bg-BlueSocial border-blue-500 border-b-4 inline-flex items-center mx-5 rounded-lg font-Poppins font-medium outline-none'
     };  
     
 

@@ -1,9 +1,9 @@
-import { Col, Divider, Drawer, Image, Row } from "antd";
+import { Button, Col, Divider, Drawer, Image, Row, Space } from "antd";
 import React from "react";
 import { useSelector } from "react-redux";
 // import { getUserInfo } from "../../Redux/Actions/userInfoActions";
 
-export const ProfileDrawer = ({ onCloseDrawer, pDrawer, idUsuario }) => {
+export const ProfileDrawer = ({ onCloseDrawer, pDrawer, idUsuario, screen }) => {
 	const user = useSelector((state) => state.user);
 	const {
 		nombreUsuario,
@@ -41,18 +41,21 @@ export const ProfileDrawer = ({ onCloseDrawer, pDrawer, idUsuario }) => {
 			{user && (
 				<>
 					<Drawer
-						width={640}
+						width={screen}
 						placement="right"
 						closable={false}
 						onClose={onCloseDrawer}
 						visible={pDrawer}
+						title={nombreUsuario}
+						
 					>
 						<Image
-							width={200}
+							width={150}
 							src={fotoPerfil}
 							alt="fotoPerfil"
 							className="rounded-2xl"
 						/>
+
 						<p
 							className="site-description-item-profile-p font-Montserrat font-semibold text-xl text-gray-600"
 							style={{ marginBottom: 24 }}
