@@ -35,18 +35,18 @@ export const CardCurso = ({
                             {descripcion}
                             </p>
                             <div className = "user flex items-center -ml-3 mt-2 ">
-                                <Link to = {`/Profile/${user.userId}`} >
+                                <div >
                                     <div className = "user-logo">
                                         <img className = "AvatarUsuario object-cover rounded-full mx-4  shadow" 
                                         src={user.fotoPerfil} 
                                         alt="avatar"/>
                                     </div>
-                                </Link>
+                                </div>
                                 
-                                <Link to = {`/Profile/${user.userId}`}
+                                <div
                                         className = "text-gray-500 NombreUsuario">
                                         {user.nombre}
-                                </Link>
+                                </div>
                             </div>
                             
                         </div>

@@ -166,7 +166,7 @@ export const AboutMe = () => {
       }
 
       const handleUploadPhoto = (e) =>{
-          e.preventDefault();
+        e.preventDefault();
         document.querySelector('#newPhoto').click();
       }
 
