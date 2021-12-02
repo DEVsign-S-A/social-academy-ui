@@ -50,7 +50,7 @@ export const DocumentResource = ({
                         <h2 className = "mt-8">Compartido por</h2>
                         <Link to = {`/Profile/${uid}`}
                         className = "w-8/12 flex flex-col justify-center" >
-                            <img src = {fotoPerfil} />
+                            <img src = {fotoPerfil} alt = "fotoUsuario" />
                             <h1 className = "text-center" >{nombreUsuario}</h1>
                         </Link>
                     </div>

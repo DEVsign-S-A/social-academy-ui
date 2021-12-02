@@ -16,7 +16,7 @@ export const CardRecurso = ({
 	fotoPerfil,
 	fechaSubida,
 	tipo,
-	categoria
+	categoria,
 }) => {
 	let iconoRecurso = "";
 	switch (tipo) {
@@ -70,7 +70,6 @@ export const CardRecurso = ({
 
 	const showDrawer = () => {
 		setPDrawer(true);
-        
 	};
 
 	const onCloseDrawer = () => {
@@ -87,7 +86,7 @@ export const CardRecurso = ({
 				<strong>Categoria: </strong>
 				{categoria}
 			</p>
-			
+
 			<a onClick={handlePerfil}>Ver perfil</a>
 		</div>
 	);
@@ -134,10 +133,17 @@ export const CardRecurso = ({
 								<h4>{noteDate.startOf("hour").fromNow()}</h4>
 							</div>
 
-							<div className="text-gray-500 NombreUsuario">{nombreUsuario}</div>
+							<div className="text-gray-500">{nombreUsuario}</div>
 						</div>
 					</div>
 				</div>
+				<br />
+				<Link
+					to={`/Resource/${rid}`}
+					className="p-2 bg-blue-500 rounded-lg text-white text-center font-semibold text-xl tracking-wide float-right hover:text-white"
+				>
+					ver
+				</Link>
 			</div>
 		</>
 	);

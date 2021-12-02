@@ -51,7 +51,8 @@ export const VideoResource = ({
                         <h1>Compartido por</h1>
                         <Link to = {`/Profile/${uid}`}
                         className = "linkProfile" >
-                            <img src = {fotoPerfil} />
+                            <img src = {fotoPerfil} 
+                            alt = "foto perfil" />
                         </Link>
                         <Link to = {`/Profile/${uid}`} >
                             <h2>{nombreUsuario}</h2>
