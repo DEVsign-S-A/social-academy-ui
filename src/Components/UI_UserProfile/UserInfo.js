@@ -38,7 +38,9 @@ export const UserInfo = ({nombreUsuario,
             
                     <div className = "UserInformation">
                         <h4><b>Edad:</b> {annos} años </h4>
+                          
                         <h4><b>Ciudad:</b> {ciudad} {departamento} {pais} </h4>
+
                         <h4><b>Telefono:</b> {telefono}</h4>
                         <h4><b>Correo:</b> {correo}</h4>
                     </div>
