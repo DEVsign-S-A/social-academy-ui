@@ -10,7 +10,9 @@ export const BannerEstadisticas = () => {
     ];
     return (
         <div className = "beneficiosSocialAcademy flex-column-center">
-            <h1>Interactúa, crea y comparte con otros universitarios</h1>
+            <h1
+            className='font-bold text-white'
+            >Interactúa, crea y comparte con otros universitarios</h1>
             <div className ="descripcionBeneficiosSA">
                 {
                     infoBeneficios.map(item =>(

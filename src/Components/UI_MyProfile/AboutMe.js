@@ -1,13 +1,18 @@
 import React, {useState} from 'react';
 import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
-import { useForm } from '../../Hook/useForm';
-import { useSelector } from 'react-redux';
+import { useFormProfile } from '../../Hook/useFormProfile';
+import { useDispatch, useSelector } from 'react-redux';
 import { NothingToShow } from '../UI_UserProfile/UserProfileComponents/NothingToShow';
 import Swal from 'sweetalert2';
 
+import { useHistory } from 'react-router';
+import { startUploadNewCurriculum, startUploadNewPhoto, updateUserProfile } from '../../Redux/Actions/userInfoActions';
+
 export const AboutMe = () => {
+    const dispatch = useDispatch();
     const MyUser = useSelector(state => state.auth);
+    const history = useHistory();
 
     const [inputAdd, setInputAdd] = useState({
         ...MyUser,
@@ -22,8 +27,11 @@ export const AboutMe = () => {
     const {idiomas, habilidades, extracurricular, experiencia} = inputAdd;
 
     const hoy = moment().format("YYYY-MM-DD");
+    const currentYear = moment().year() - 70;
+    const minDateAllowed = `${currentYear}-01-01`;
+    console.log(minDateAllowed);
 
-    const [formValues, handleInputChange, reset, resetInput] = useForm(inputAdd);
+    const [formValues, handleInputChange, resetInput] = useFormProfile(inputAdd);
     const {nombreUsuario, fotoPerfil, correo, 
         fechaNacimiento, carrera, ciudad, departamento, pais, telefono, 
         facebook, instagram, twitter, linkedin, descripcion, inputHabilidades, inputExperiencia,
@@ -42,8 +50,8 @@ export const AboutMe = () => {
         setState(values);
     }
 
-      const handleAdd = (e, inputValue, state, setState, property, inputReset) => {
-        e.preventDefault();
+      const handleAdd = (event, inputValue, state, setState, property, inputReset) => {
+        event.preventDefault();
         if(inputValue){
             setState([...state, 
                 { id: uuidv4(),  [property]: inputValue}]);
@@ -94,29 +102,132 @@ export const AboutMe = () => {
 
       const [experiences, setExperiences] = useState(nuevoExperiences);
 
+      const extractArrayWithoutId = (values, property) =>{
+          let arrayExtracted = [];
+          if(values && Array.isArray(values) && (values.length > 0)){
+            arrayExtracted = values.map(value => value[property]);
+          }
+          return arrayExtracted;
+      }
 
+      const extractObjectsWithoutId = (values) =>{
+          let objectsExtracted = [];
+          if(values && Array.isArray(values) && (values.length > 0)){
+            objectsExtracted = values.map((value) => {
+                delete value.id;
+                return value;
+            });
+          }
+          return objectsExtracted;
+      }
+
+      const getUpdatedInfo = () =>{
+        const savedIdiomas = extractArrayWithoutId(languages, "language");
+        const savedHabilidades = extractArrayWithoutId(abilities, "ability");
+        const savedExtracurricular = extractArrayWithoutId(activities, "activity");
+        const savedExperiencias = extractObjectsWithoutId(experiences);
+
+        const updatedInfo = {
+                uid: MyUser.uid,
+                nombreUsuario: nombreUsuario,
+                fotoPerfil: MyUser.fotoPerfil,
+                correo: correo,
+                fechaNacimiento: fechaNacimiento,
+                fechaCreacion: MyUser.fechaCreacion,
+                carrera: carrera,
+                ciudad: ciudad, 
+                departamento: departamento, 
+                pais: pais,
+                telefono: telefono,
+                linkedin: linkedin,
+                facebook: facebook,
+                instagram: instagram,
+                twitter: twitter,
+                descripcion: descripcion,
+                habilidades: savedHabilidades,
+                idiomas: savedIdiomas,
+                extracurricular: savedExtracurricular,
+                experiencia: savedExperiencias,
+                curriculumLink: MyUser.curriculumLink 
+            }
+
+        return updatedInfo;
+      }
+
+      const handleCancel = (e) =>{
+        e.preventDefault();
+        history.go(0);
+      }
+
+      const handleSaveProfile = (e) =>{
+            e.preventDefault();
+            const updatedInfo = getUpdatedInfo();
+            dispatch(updateUserProfile(updatedInfo));
+      }
+
+      const handleUploadPhoto = (e) =>{
+        e.preventDefault();
+        document.querySelector('#newPhoto').click();
+      }
+
+      const handlePhotoChange = (e) =>{
+        const photo = e.target.files[0];
+        if(photo){
+            dispatch(startUploadNewPhoto(photo, MyUser.uid));
+        }
+      }
+
+      const handleUploadCurriculum = (e) =>{
+          e.preventDefault();
+          document.querySelector('#newCurriculum').click();
+      }
+
+      const handleCurriculumChange = (e) =>{
+          const curriculum = e.target.files[0];
+          if(curriculum){
+              dispatch(startUploadNewCurriculum(curriculum, MyUser.uid))
+          }
+      }
     return (
         <form className = "flex flex-column">
             <div className = "flex flex-row flex-wrap mt-32">
                     <button
+                    onClick = {handleCancel}
                     className="py-3 px-3 rounded-lg text-center bgSArosa shadow-xl m-3 cursor-pointer font-Poppins font-medium text-white" >
                         Cancelar
                     </button>
-                    <input
-                        type="submit"
-                        className="py-3 px-3 rounded-lg text-center bgSAazul shadow-xl m-3 cursor-pointer font-Poppins font-medium text-white"
-                        value="Guardar cambios"/>
+                    <button
+                        onClick = {handleSaveProfile}
+                        className="py-3 px-3 rounded-lg text-center bgSAazul shadow-xl m-3 cursor-pointer font-Poppins font-medium text-white">
+                            Guardar cambios
+                    </button>
             </div>
             <div className = "flex flex-row MyProfileScreen">
                 <div className = "flex flex-col justify-center items-center ContenedoresPerfil UserInfo">
-                <img src = {fotoPerfil}
-                alt = "Foto de Perfil"
-                className = "UserImage" />
+                    <div className = "relative">
+                        <img src = {fotoPerfil}
+                        alt = "Foto de Perfil"
+                        className = "UserImage" />
+                        <button className="absolute transition-all duration-200 opacity-80 bottom-0 right-0 bg-gray-500 text-white font-Poppins p-2 rounded-lg sm:rounded-xl hover:bg-gray-700 m-2"
+                        onClick = {handleUploadPhoto} >
+                            <img className = "uploadPhotoSize"
+                                src = "https://res.cloudinary.com/socialacademy/image/upload/v1635524233/Social%20Academy%20Image/IconosRecursos/camera_1_rwhul2.png" 
+                                alt = "camara" />
+                        </button>
+                        <input id = "newPhoto"
+                            name = "photo"
+                            type = "file"
+                            className = "hidden"
+                            accept = "image/*"
+                            onChange = {handlePhotoChange}
+                        />
+                    </div>
                 
                     <div className = "flex flex-col justify-center items-center" >
                         <div className = "MyName flex flex-row flex-column items-center">
                                 <h3><b>Nombre Usuario</b></h3>
                                 <input type = "text" name = "nombreUsuario" autoComplete = "none"
+                                maxLength = "60"
                                 value = {nombreUsuario}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyName" />
@@ -125,6 +236,7 @@ export const AboutMe = () => {
                         <div className = "MyName flex flex-row flex-column items-center">
                                 <h3><b>Carrera</b></h3>
                                 <input type = "text" name = "carrera" autoComplete = "none"
+                                maxLength = "100"
                                 value = {carrera}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyName" />
@@ -137,13 +249,14 @@ export const AboutMe = () => {
                                     <input type = "date" name = "fechaNacimiento" 
                                     value = {fechaNacimiento}
                                     onChange = {handleInputChange}
-                                    className = "focus:outline-none" max = {hoy} />
+                                    className = "focus:outline-none" min = {minDateAllowed} max = {hoy} />
                                 </div>
                             </div>
 
                             <div className = "MyInformation flex flex-row flex-wrap">
                                 <h4><b>Ciudad:</b></h4>
                                 <input type = "text" name = "ciudad" autoComplete = "none"
+                                maxLength = "40"
                                 value = {ciudad}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -152,12 +265,14 @@ export const AboutMe = () => {
                                 <h4><b>Departamento:</b></h4>
                                 <input type = "text" name = "departamento" autoComplete = "none"
                                 value = {departamento}
+                                maxLength = "40"
                                 onChange = {handleInputChange}  
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputDepartamento" />
                             </div>
                             <div className = "MyInformation flex flex-row flex-wrap">
                                 <h4><b>Pais:</b></h4>
-                                <input type = "text" name = "pais" autoComplete = "none" 
+                                <input type = "text" name = "pais" autoComplete = "none"
+                                maxLength = "40" 
                                 value = {pais}
                                 onChange = {handleInputChange} 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -165,7 +280,8 @@ export const AboutMe = () => {
                             
                             <div className = "MyInformation flex flex-row flex-wrap">
                             <h4><b>Telefono:</b></h4>
-                                <input type = "text" name = "telefono" autoComplete = "none" 
+                                <input type = "text" name = "telefono" autoComplete = "none"
+                                maxLength = "20" 
                                 value = {telefono}
                                 onChange = {handleInputChange}
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -173,7 +289,8 @@ export const AboutMe = () => {
 
                             <div className = "MyInformation flex flex-row flex-wrap">
                                 <h4><b>Correo:</b></h4>
-                                <input type = "text" name = "email" autoComplete = "none"
+                                <input type = "text" name = "correo" autoComplete = "none"
+                                maxLength = "100"
                                 value = {correo}
                                 onChange = {handleInputChange}  
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputMyInformation" />
@@ -190,12 +307,17 @@ export const AboutMe = () => {
                                     </a>
                                 </div>
                             }
-                            <label className="cursor-pointer flex justify-center">
-                                    <span className="focus:outline-none BotonCurriculum">
-                                        Subir Curriculum
-                                    </span>
-                                    <input type="file" className="hidden" accept = ".pdf" />
-                            </label>
+                            <input type="file"
+                                id = "newCurriculum"
+                                name = "curriculum" 
+                                className="hidden" 
+                                accept = ".pdf"
+                                onChange = {handleCurriculumChange} />
+
+                            <button className = "cursor-pointer focus:outline-none BotonCurriculum"
+                            onClick = {handleUploadCurriculum} >
+                                Subir Curriculum
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -206,10 +328,10 @@ export const AboutMe = () => {
                             
                                 <textarea
                                     className="TextDescripcion bg-gray-100 ring-1 ring-gray-200 rounded-xl outline-none px-5 text-gray-700 resize-none"
-                                    required={true}
                                     value = {descripcion}
                                     onChange = {handleInputChange} 
                                     name = "descripcion"
+                                    maxLength = "450"
                                 ></textarea>
                         </div>
 
@@ -223,6 +345,8 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "facebook" autoComplete = "none" 
                                         value = {facebook}
+                                        maxLength = "110"
+                                        placeholder = "https://www.facebook.com/"
                                         onChange = {handleInputChange} 
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
                                     </div>
@@ -233,6 +357,8 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "instagram" autoComplete = "none"
                                         value = {instagram}
+                                        maxLength = "110"
+                                        placeholder = "https://www.instagram.com/"
                                         onChange = {handleInputChange}  
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
                                     </div>
@@ -243,6 +369,8 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "linkedin" autoComplete = "none" 
                                         value = {linkedin}
+                                        maxLength = "110"
+                                        placeholder = "https://www.linkedin.com/"
                                         onChange = {handleInputChange} 
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
                                     </div>
@@ -253,6 +381,8 @@ export const AboutMe = () => {
                                         </div>
                                         <input type = "text" name = "twitter" autoComplete = "none" 
                                         value = {twitter}
+                                        maxLength = "110"
+                                        placeholder = "https://www.twitter.com/"
                                         onChange = {handleInputChange} 
                                         className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputRedSocial" />
                                     </div>
@@ -264,7 +394,8 @@ export const AboutMe = () => {
                         <div className = "flex flex-row flex-wrap items-center AddLabel" >
                             <input type = "text" name = "inputIdiomas" autoComplete = "none"
                                 value = {inputIdiomas}
-                                onChange = {handleInputChange}  
+                                onChange = {handleInputChange} 
+                                maxLength = "50" 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                             <button
                             onClick = {(event)=>{handleAdd(event, inputIdiomas, languages, setLanguages, 'language', 'inputIdiomas')}}
@@ -298,7 +429,8 @@ export const AboutMe = () => {
                             <div className = "flex flex-row flex-wrap items-center mb-4 AddLabel" >
                                 <input type = "text" name = "inputExtracurricular" autoComplete = "none"
                                     value = {inputExtracurricular}
-                                    onChange = {handleInputChange}  
+                                    onChange = {handleInputChange}
+                                    maxLength = "150"  
                                     className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                                 <button
                                 onClick = {(event)=>{handleAdd(event, inputExtracurricular, activities, setActivities, 'activity', 'inputExtracurricular')}}  
@@ -333,6 +465,7 @@ export const AboutMe = () => {
                                 <input type = "text" name = "inputExperiencia" autoComplete = "none"
                                     value = {inputExperiencia}
                                     onChange = {handleInputChange}  
+                                    maxLength = "150"
                                     className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                                 <button
                                 onClick = {handleAddExperience}  
@@ -346,7 +479,7 @@ export const AboutMe = () => {
                                     <input type = "date" name = "fechaInicio" 
                                     value = {fechaInicio}
                                     onChange = {handleInputChange}
-                                    className = "focus:outline-none inputFechaExp" max = {fechaFinal} max = {hoy} />
+                                    className = "focus:outline-none inputFechaExp" min = {minDateAllowed} max = {fechaFinal} max = {hoy} />
                                 </div>
                                 <div className = "InputFecha">
                                     <h5>Fecha Final</h5>
@@ -388,7 +521,8 @@ export const AboutMe = () => {
                         <div className = "flex flex-row flex-wrap items-center AddLabel" >
                             <input type = "text" name = "inputHabilidades" autoComplete = "none"
                                 value = {inputHabilidades}
-                                onChange = {handleInputChange}  
+                                onChange = {handleInputChange} 
+                                maxLength = "100" 
                                 className = "bg-gray-100 ring-1 ring-gray-200 rounded-lg outline-none text-gray-700 InputLabels" />
                             <button
                             onClick = {(event)=>{handleAdd(event, inputHabilidades, abilities, setAbilities, 'ability', 'inputHabilidades')}}

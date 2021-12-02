@@ -5,10 +5,10 @@ import { CardPremium } from './HomeComponents/CardPremium';
 export const CardsPremium = () => {
     const beneficiosEstudiantes = [
         "Acceso ilimitado a documentacion",
-        "Obtén hasta 4 cursos de regalo",
+        "Obtén 1 curso de regalo",
         "Cursos y documentación exclusiva",
         "Soporte 24/7",
-        "Accede primero a ofertas de pasantías"
+        "Acceso a webinars exclusivos"
     ];
 
     const beneficiosEmpresas = [
@@ -20,15 +20,17 @@ export const CardsPremium = () => {
     ];
 
     const infoCardEstudiante = [
-        {titulo: "Estudiante", precio: 10, descripcion: beneficiosEstudiantes},
-        {titulo: "Empresas", precio: 50, descripcion: beneficiosEmpresas}
+        {titulo: "Estudiante", precio: 12, descripcion: beneficiosEstudiantes},
+        {titulo: "Empresas", precio: 45, descripcion: beneficiosEmpresas}
     ]
     return (
         <div className = "SeccionPrecios">
             <div className = "PreciosTexto">
-                <h2>Nuestros planes y precios</h2>
+                <h2 
+                    className = "font-bold"
+                >Nuestros planes y precios</h2>
                 <Link to = "/Login"
-                    className = "BotonUnete pointer">
+                    className = "BotonUnete pointer text-white">
                         Registrate Gratis
                 </Link>
             </div>

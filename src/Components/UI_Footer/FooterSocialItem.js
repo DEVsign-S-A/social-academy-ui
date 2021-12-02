@@ -5,7 +5,9 @@ export const FooterSocialItem = ({path, enlace}) => {
         <div className ="pointer media">
             <a href = {enlace} 
                 target="_blank" 
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                className='text-white'
+                >
                     <i className={path}></i>
             </a>
         </div>

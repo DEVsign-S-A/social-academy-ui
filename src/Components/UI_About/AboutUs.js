@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from '../../assets/UI-About/Social-academy-logo1.svg'
 import "./style.css";
 export const AboutUs = () => {
   return (
@@ -12,8 +11,8 @@ export const AboutUs = () => {
 
       <div className="flex items-center flex-col lg:flex-row lg:justify-between ">
       <div>
-      <div className='w-56 mt-3 mx-3 lg:mx-10 bg-gray-50 border-2 border-gray-200 lg:flex lg:items-center rounded-full shadow-2xl lg:-mt-28 '>
-          <img src={Logo} alt="Logo Social Academy" className='LogoImg py-16 px-6 sm:py-14 sm:px-4 xs:py-14 xs:px-4'/>
+      <div className='items-center flex justify-center w-48 mt-3 mx-3 lg:mx-10 bg-gray-50 border-2 border-gray-200 lg:flex lg:items-center rounded-full shadow-2xl lg:-mt-28'>
+          <img src='https://res.cloudinary.com/socialacademy/image/upload/v1634061697/Social%20Academy%20Image/icons%20General/ICONBLUEACADEM_Y_zzgxof.svg' alt="Logo Social Academy" className='py-6 ml-3'/>
       </div>
       </div>
 

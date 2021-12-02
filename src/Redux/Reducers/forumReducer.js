@@ -1,8 +1,7 @@
 import { types } from "../Types/type";
 
 const initialState = {
-    Questions: [],
-    Answers: [],
+    QuestionsForum: [],
     toogleAnswers: null
 }
 
@@ -11,14 +10,14 @@ export const forumReducer = (state = initialState, action) => {
         case types.loadQuestions:
             return {
                 ...state,
-                Questions:[...action.payload],
-                Answers: [...action.payload]
+                QuestionsForum:[...action.payload],
             };
             case types.activeQuestion:
                 return{
                     ...state,
                     toogleAnswers: action.payload
                 }
+                
         default:
             return state;
     }

@@ -17,10 +17,9 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
       <div
         onClick={() => setCard(!card)}
         className={`bg-WhiteSocial rounded-3xl text-sm md:text-base shadow-2xl card__inner pb-40 ${
-          card && "card__inner is-flipped "
+          card && "card__inner is-flipped"
         }`}
       >
-        <div>
           <div className="bg-WhiteSocial card__face face__card-front flex px-5 justify-around">
             <div>
               <p className="font-Montserrat font-bold text-gray-600 mt-5 ">
@@ -59,7 +58,6 @@ export const TeamCards = ({ nombre, cargo, image, description, cita }) => {
               <p className="mt-2 italic font-thin text-sm text-gray-600 ">{cita}</p>              
             </div>
           </div>
-        </div>
         <br/>
       </div>
     </>

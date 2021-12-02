@@ -9,15 +9,14 @@ export const PublicRoute = ({
     component: Component,
     ...rest
 }) => {
-
+    const lastPath = localStorage.getItem('lastPath') || '/MyProfile';
     return (
         <Route { ...rest }
             component={ (props) => (
                 ( !isAuth )
                     ? ( <Component { ...props } /> )
-                    : ( <Redirect to="/" /> )
+                    : ( <Redirect to={lastPath} /> )
             )}
-        
         />
     )
 }

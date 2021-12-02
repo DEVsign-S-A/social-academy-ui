@@ -3,6 +3,7 @@
     margin: 1.5vw 0 0;
     display:  inline-block;
     background-color: $SArosa;
+    color: white;
     padding: 0.5vw 3vw;
     border: 0.3vw solid $SArosa;
     border-radius: 2.5vw;
@@ -157,7 +158,7 @@
         margin-top: 70px;
 
          .ContenidoSlider{
-            padding-top: 6%;
+            padding-top: 7%;
 	        width: 97%;
     
             > img{
@@ -201,5 +202,11 @@
                 }
             }
          }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .BannerWelcome{
+        margin-top: 60px;
     }
 }

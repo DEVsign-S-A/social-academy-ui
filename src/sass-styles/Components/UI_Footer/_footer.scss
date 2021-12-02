@@ -14,8 +14,8 @@ footer{
     }
 
     .Enlaces{
-        width: 35%;
-        margin-top: 3%;
+        width: 45%;
+        margin-top: 2%;
 
         .Enlace{
             color: lightgrey;
@@ -30,13 +30,13 @@ footer{
     }
 
     .SocialBar{
-        width: 20%;
-        margin: 3% 0;
+        width: 25%;
+        margin: 2% 0;
 
         .media{
-            width: 3vw;
-            height: 3vw;
-            font-size: 1.3vw;
+            width: 3.6vw;
+            height: 3.6vw;
+            font-size: 1.5vw;
             color: lightgrey;
             border: lightgrey solid 2px;
             border-radius: 50%;
@@ -53,9 +53,17 @@ footer{
     }
 
     h1{
-        font-size: 1vw;
+        font-size: 1.1vw;
         color: white;
         font-family: $Montserrat;
+    }
+
+    .RightsAndConditions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 60%;
     }
 }
 
@@ -68,7 +76,7 @@ footer{
         }
     
         .Enlaces{
-            width: 40%;
+            width: 55%;
     
             .Enlace{
                 font-size: 2vw;
@@ -76,17 +84,21 @@ footer{
         }
     
         .SocialBar{
-            width: 25%;
+            width: 30%;
     
             .media{
-                width: 4vw;
-                height: 4vw;
-                font-size: 2vw;
+                width: 4.8vw;
+                height: 4.8vw;
+                font-size: 2.3vw;
             }
         }
     
         h1{
-            font-size: 1.5vw;
+            font-size: 1.65vw;
+        }
+
+        .RightsAndConditions{
+            width: 70%;
         }
     }
 }
@@ -101,22 +113,22 @@ footer{
         }
     
         .Enlaces{
-            width: 50%;
-            margin-top: 3%;
+            width: 70%;
+            margin-top: 2%;
     
             .Enlace{
-                font-size: 2.7vw;
+                font-size: 2.6vw;
             }
         }
     
         .SocialBar{
             width: 35%;
-            margin: 3% 0;
+            margin: 2% 0;
     
             .media{
-                width: 5.7vw;
-                height: 5.7vw;
-                font-size: 2.7vw;
+                width: 6vw;
+                height: 6vw;
+                font-size: 2.9vw;
                 border: lightgrey solid 2px;
     
                 &:hover{
@@ -126,7 +138,12 @@ footer{
         }
     
         h1{
-            font-size: 2.1vw;
+            font-size: 2.3vw;
+        }
+
+        .RightsAndConditions{
+            justify-content: center;
+            width: 80%;
         }
     }
 }
@@ -141,22 +158,22 @@ footer{
         }
     
         .Enlaces{
-            width: 70%;
-            margin-top: 5%;
+            width: 95%;
+            margin-top: 4%;
     
             .Enlace{
-                font-size: 3.8vw;
+                font-size: 3.5vw;
             }
         }
     
         .SocialBar{
-            width: 45%;
-            margin: 5% 0;
+            width: 50%;
+            margin: 4% 0;
     
             .media{
-                width: 7.3vw;
-                height: 7.3vw;
-                font-size: 3.7vw;
+                width: 9vw;
+                height: 9vw;
+                font-size: 4.5vw;
                 border: lightgrey solid 2px;
     
                 &:hover{
@@ -166,7 +183,7 @@ footer{
         }
     
         h1{
-            font-size: 2.7vw;
+            font-size: 3vw;
         }
     }
 }

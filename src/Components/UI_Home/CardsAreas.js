@@ -18,7 +18,7 @@ export const CardsAreas = () => {
     ];
     return (
         <div className = "Areas">
-            <h2>Areas de Estudio</h2>
+            <h2 className='font-bold'>Areas de Estudio</h2>
             <div className = "container-card">
                 {
                     infoCardsAreas.map((cardArea, index) =>(

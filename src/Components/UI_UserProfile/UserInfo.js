@@ -2,26 +2,29 @@ import React from 'react';
 import moment from 'moment';
 import { RedSocial } from './UserProfileComponents/RedSocial';
 
-
-
 export const UserInfo = ({nombreUsuario, 
     fotoPerfil, 
     fechaNacimiento, 
     carrera, 
-    direccion, 
+    ciudad,
+    departamento,
+    pais, 
     telefono, 
     correo, 
-    socialMedia, 
+    facebook,
+    instagram,
+    linkedin,
+    twitter, 
     curriculumLink}) => {
     
     const annos = moment().diff(fechaNacimiento, 'years', false);
 
     const redesSociales = [
         
-        {icono: 'fab fa-facebook-f', enlace: socialMedia.facebook, color: 'blue-900'},
-        {icono: 'fab fa-instagram', enlace: socialMedia.instagram, color: 'pink-600'},
-        {icono: 'fab fa-linkedin-in', enlace: socialMedia.linkedin, color: 'blue-700'},
-        {icono: 'fab fa-twitter', enlace: socialMedia.twitter, color: 'blue-400'}
+        {icono: 'fab fa-facebook-f', enlace: facebook, color: 'blue-900'},
+        {icono: 'fab fa-instagram', enlace: instagram, color: 'pink-600'},
+        {icono: 'fab fa-linkedin-in', enlace: linkedin, color: 'blue-700'},
+        {icono: 'fab fa-twitter', enlace: twitter, color: 'blue-400'}
     ]
     return (
         <div className = "flex flex-col justify-center items-center ContenedoresPerfil UserInfo">
@@ -35,7 +38,9 @@ export const UserInfo = ({nombreUsuario,
             
                     <div className = "UserInformation">
                         <h4><b>Edad:</b> {annos} años </h4>
-                        <h4><b>Ciudad:</b> {direccion.ciudad}, {direccion.departamento}, {direccion.pais} </h4>
+                          
+                        <h4><b>Ciudad:</b> {ciudad} {departamento} {pais} </h4>
+
                         <h4><b>Telefono:</b> {telefono}</h4>
                         <h4><b>Correo:</b> {correo}</h4>
                     </div>

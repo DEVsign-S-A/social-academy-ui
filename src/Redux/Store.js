@@ -1,24 +1,17 @@
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import thunk from 'redux-thunk';
-import { authReducer } from "./Reducers/authReducer";
-import { docReducer } from "./Reducers/docReducer";
-import { uiReducer } from "./Reducers/uiReducer";
-import { forumReducer } from "./Reducers/forumReducer";
-// importar los reducers
+import rootReducer from "./rootReducer";
+import { persistStore } from "redux-persist";
+
 
 const composeEnhancers =
 	(typeof window !== "undefined" &&
 		window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
 	compose;
 
-const reducers = combineReducers({
-	ui: uiReducer,
-	doc: docReducer,
-	auth: authReducer,
-	forum: forumReducer
-});
-
 export const store = createStore(
-	reducers,
+	rootReducer,
 	composeEnhancers(applyMiddleware(thunk))
 );
+
+export const persistor = persistStore(store);
