@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Footer } from "../Components/UI_Footer/Footer";
 import { CardsIntership } from "../Components/UI_Intership/CardsIntership";
 import { SearchBar } from "../Components/UI_Intership/searchBar";
 import { Sidebar } from "../Components/UI_Intership/Sidebar";
@@ -28,6 +29,8 @@ const InternshipsScreen = () => {
 						<CardsIntership key={intership.id} {...intership} />
 					))}
 			</div>
+
+			<Footer/>
 		</>
 	);
 };

@@ -12,7 +12,7 @@ export const Footer = () => {
 
     if(!uid){
         enlaces = [
-            {titulo: 'Inicio', link: '/Inicio'},
+            {titulo: 'Inicio', link: '/'},
             {titulo: 'Foros', link: '/Foros'},
             {titulo: 'About', link: '/About'},
             {titulo: 'Login', link: '/Login'}

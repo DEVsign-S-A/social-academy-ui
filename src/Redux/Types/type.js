@@ -12,6 +12,9 @@ export const types = {
   userExists: "[USER] Exists",
   userDoesnot: "[USER] Does not exist",
 
+  businessExists: "[BUSINESS] Exists",
+  businessDoesnot: "[BUSINESS] Does not exist",
+
   loadSetError: '[LOAD] set error',
   loadRemoveError: '[LOAD] remove error',
 

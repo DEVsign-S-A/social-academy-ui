@@ -43,8 +43,8 @@ export const FullIntership = () => {
 		solictudesRespustas,
 		EmpresaInfo,
 	} = loadInter;
-	const { NombreComercial, Telefono, Correo } = EmpresaInfo[0];
-	const { Direccion } = EmpresaInfo[1];
+
+	const { nombreEmpresa, telefono, direccion, email, fotoPerfil } = EmpresaInfo;
 
 	const uidValidate = solictudesRespustas.find((idUser) => idUser.uid === uid);
 
@@ -77,40 +77,39 @@ export const FullIntership = () => {
 				<Grid $grid_primary_container>
 					<div className="grid grid-cols-4 gap-3 my-2">
 						<div className="mx-3 my-2 flex items-center flex-col border-r-2 border-gray-300">
-							{
-								// <img
-								// 	src={Company.ProfilePhoto}
-								// 	alt={NombreComercial}
-								// 	className="rounded-full w-36 ring-1 ring-gray-300"
-								// />
-							}
+							<img
+								src={fotoPerfil}
+								alt={nombreEmpresa}
+								className="rounded-full w-36 ring-1 ring-gray-300 p-2"
+								/>
+						
 
 							<Div $littelContainer>
 								<img src={buil} alt="buil" className="mx-2" />
 								<P $textIntership>
 									<strong>Nombre del negocio: </strong>
-									{NombreComercial}
+									{nombreEmpresa}
 								</P>
 							</Div>
 							<Div $littelContainer>
 								<img src={pin} alt="buil" className="mx-2" />
 								<P $textIntership>
 									<strong>Dirección: </strong>
-									{Direccion}
+									{direccion}
 								</P>
 							</Div>
 							<Div $littelContainer>
 								<img src={Smartphone} alt="Smartphone" className="mx-2" />
 								<P $textIntership>
 									<strong>telf: </strong>
-									{Telefono}
+									{telefono}
 								</P>
 							</Div>
 							<Div $littelContainer>
 								<img src={Mail} alt="Mail" className="mx-2" />
 								<P $textIntership>
 									<strong>Correo: </strong>
-									{Correo}
+									{email}
 								</P>
 							</Div>
 						</div>
