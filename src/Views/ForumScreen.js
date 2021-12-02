@@ -19,8 +19,6 @@ const ForumScreen = () => {
 
 	return (
 		<>
-			<Sidebar />
-
 			<SearchBar />
 
 			{QuestionsForum.map((question) => (
