@@ -17,7 +17,7 @@ export const SearchBarCourses = () => {
 					<Link to="New_Course">
 						<Button
 							$border_lighi_con_grid
-							className="justify-center items-center"
+							className="flex justify-center items-center"
 						>
 							<img
 								src={Plus}
@@ -25,9 +25,10 @@ export const SearchBarCourses = () => {
 								className="w-28 ml-1 my-3 md:w-9 m-0"
 							/>
 							&nbsp;
-							<p className="hidden md:block mt-3">Nuevo </p>
 							&nbsp;
-							<p className="hidden md:block mt-3">Curso</p>
+							<p className="hidden md:block ">Nuevo </p>
+							&nbsp;
+							<p className="hidden md:block">Curso</p>
 						</Button>
 					</Link>
 				</Grid>

@@ -158,8 +158,8 @@ export const CardsIntership = ({
 					<div className="flex">
 						<Link to={`./Pasantia/${id}`}>
 							<div className="flex justify-center items-center font-Poppins text-sm bg-second text-white shadow-lg cursor-pointer rounded-lg px-5 py-2">
-								<img src={show} alt="show" className="mx-1" />
-								<p className="mt-2">Ver</p>
+								<img src={show} alt="show" className="mx-2" />
+								<p className="">Ver</p>
 							</div>
 						</Link>
 					</div>
