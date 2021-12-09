@@ -20,9 +20,10 @@ export const SearchBarResources = () => {
 						>
                         <img src={Plus} alt="plus icons" className='w-28 ml-1 my-3 md:w-9 m-0'/>
                         &nbsp;
-							<p className="hidden md:block mt-3">Subir </p>
+                        &nbsp;
+							<p className="hidden md:block">Subir </p>
 							&nbsp;
-							<p className="hidden md:block mt-3">recurso</p>
+							<p className="hidden md:block">recurso</p>
 						</Button>
 					</Link>
 				</Grid>
