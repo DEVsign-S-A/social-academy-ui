@@ -253,7 +253,7 @@ export const FullIntership = () => {
 									onClick={HandleRemove}
 									className="flex font-Poppins text-sm bg-second text-white font-medium shadow-lg cursor-pointer rounded-lg mx-3 justify-center items-center"
 								>
-									<img src={del} alt="send" className="mx-1" />
+									<img src={del} alt="send" className="mx-2" />
 									<p className="mt-3">Eliminar Solicitud </p>
 								</button>
 							</>
@@ -262,8 +262,8 @@ export const FullIntership = () => {
 								onClick={handleInterShip}
 								className="flex font-Poppins text-sm bg-BlueSocial text-white font-medium shadow-lg cursor-pointer px-3  rounded-lg mx-3 justify-center items-center"
 							>
-								<img src={send} alt="send" className="mx-1" />
-								<p className="mt-3">Aplicar</p>
+								<img src={send} alt="send" className="mx-2" />
+								<p className="mt-1">Aplicar</p>
 							</button>
 						)}
 					</div>
