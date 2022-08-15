@@ -1,7 +1,6 @@
 # [Social - Academy](https://social-academy.studio/) 👨‍🎓👩‍🎓
 
-<code><img height="120" src="![image](https://user-images.githubusercontent.com/54457637/184560714-edd33f28-ab4e-45ed-bd51-f43428b9f7a6.png)
-"/></code>
+<code><img height="120" src="https://user-images.githubusercontent.com/54457637/184560714-edd33f28-ab4e-45ed-bd51-f43428b9f7a6.png"/></code>
 
 
 Dependencias a Instalar: 
