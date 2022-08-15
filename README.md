@@ -34,7 +34,7 @@ Convertirnos en una plataforma referente en Latinoamérica en el ámbito de la r
 Social Academy ofrece a los estudiantes una biblioteca virtual en la que puedan encontrar información, pertinente para ellos y adaptada a su contexto, compartida por otros usuarios. Brindando, además, cursos que los ayuden a desarrollarse académicamente. Facilitando la obtención de asesorías académicas entre usuarios por medio de foros académicos.
 
 <code>
-<img width="200" src="https://res.cloudinary.com/devsing/image/upload/v1654288813/Portfolio/Untitled_qx3ael.png"/>
+<img width="300" src="https://res.cloudinary.com/devsing/image/upload/v1654288813/Portfolio/Untitled_qx3ael.png"/>
 </code>
 
 [Website](https://social-academy-1c439.firebaseapp.com/)
